@@ -1,0 +1,16 @@
+/*
+ * Geonaire.css
+ * CSS voor de Geonaire start pagina
+ * Gemaakt op 2016-11-24
+ * Het laatst veranderd op 2016-11-24
+ * door GeOdin
+ */
+
+body {
+	background-color: white;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}

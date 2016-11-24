@@ -1,0 +1,39 @@
+/*
+ * stylesheet.css
+ * CSS voor de Geonaire start pagina
+ * Gemaakt op 2016-11-24
+ * Het laatst veranderd op 2016-11-24
+ * door GeOdin
+ */
+
+body {
+	background-color: white;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+#wholePage {
+	height: 98vh;
+	width: 100%;
+}
+
+#title {
+	display: block;
+	position: relative;
+	top: 36vh;
+}
+
+#mainTitle {
+	display: block;
+	font-size: 6em;
+	color: #A0A0A0;
+}
+
+#subTitle {
+	display: block;
+	font-size: 2em;
+	color: #B0B0B0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- 
+	index.html
+	Startpagina voor de Geonaire
+	Gemaakt op 2016-11-24
+	Het laatst veranderd op 2016-11-24
+	door GeOdin
+-->
+
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
+		<script type="text/javascript">
+			function confirmStart() {
+				if (confirm("Ben je klaar om de vragenlijst in te vullen? ") == true) {
+					window.open("Geonaire.html", "_self");
+				}
+			}
+		</script>
+		<title>
+			Geonaire
+		</title>
+	</head>
+
+	<body>
+		<div id="wholePage">
+		<a href="#" onclick="confirmStart()">
+			<div id="title">
+				<div id="mainTitle">
+					Geonaire
+				</div>
+				<div id="subTitle">
+					Een vragenlijst over locatie en (computer)spellen
+				</div>
+			</div>
+		</a>
+		</div>
+	</body>
+</html>
