@@ -95,9 +95,13 @@
  ============
  * Features *
  ============
+ * Achievements (zie achievements kopje)
  * Entertainment
  * * cartoons/ comics per vraag
- * * staat boven de vraag
+ * * * elke vraag een stripje met een vraag die in de volgende vraag beantwoord wordt?
+ * * * of elke vraag een nieuw stripje/cartoon
+ * * referentie naar fantasy/ andere spelletjes/ subcultuur (idee van Wytze)
+ * * staat boven de vraag, binnen #body
  * Easter eggs
  * * vullen het beeld steeds meer naarmate de vragenlijst verder ingevuld wordt?
  * * spelletjes/ puzzels per vraag (bijvoorbeeld coockieclicker achtig spelletje)
@@ -112,10 +116,23 @@
  * Woordenboek
  * * Eventueel extra informatie geven door op bepaalde dingen te klikken  (door op bepaalde woorden te klikken/hoveren laag erover met beschrijving -> hogere z-index)
  * * walkthrough (evt extra informatie over hoe de vragen te beantwoorden)
+ * Possibilities
+ * * mouseHoover
+ * * * Tekstballonnetjes
+ * * * * https://www.sitepoint.com/pure-css3-speech-bubbles/
+ * * * * div?
+ * * * * vectorplaatjes met Adobe Illustrator?
+ * * mouceClick
+ * * * coockieclicker
  ============
  * Functies *
  ============
- * zipcodeZoom: inzoomen naar postcode na het invullen van de postcode
+ * zipcodeZoom(zipcode): inzoomen naar postcode na het invullen van de postcode
+ * * latitude en longitude in gevonden CSV-file
+ * * * is dit het midden van de postcode?
+ * * * gestandaardiseerd zoomLevel maken (bijvoorbeeld 14, zou mensen genoeg een idee moeten geven over waar ze zitten)?
+ * * * andere optie zou zijn om de box van de postcodes te achterhalen
+ * * * * evt via databank van ArcGIS
  ===========
  * Markers *
  ===========
@@ -178,6 +195,8 @@
  * #header
  * * cartoony poppetje dat steeds meer vrienden krijgt en onderdeel wordt van community
  * * evt veranderen aan de hand van het thema (steeds beter gedefineerd personage/ steeds meer superheld - van persoon die computerspel speelt en denkt een held te worden naar een held zijn/ steeds meer onderdeel van community)
+ * * elke x seconden / minuten (of random) een plaatje door de header laten gaan
+ * * * bijvoorbeeld een hond bij place attachment of een afgeronde div als tekstballon met daarin "Woof!"
  * #body
  * * #left
  * * * thema's voor vragen met horizontale progress bar (eventueel zelf maken met divs, dan evt ook verschillende kleuren voor verschillende thema's); bijvoorbeeld character creation (algemene vragen begin) dan evt ook een cartoony plaatje van de participant, experience (gaming experience) evt cartoony plaatje van iemand die achter de computer zit met gedachtenwolkje dat hij een superheld is), exploring/discovering (place attachment) hiervoor zou ook het plaatje gebruikt kunnen worden waarbij een poppetje langzaam meer vrienden krijgt een meer community wordt of eventueel een schatkist die zichzelf steeds meer vult
@@ -213,4 +232,20 @@
 /*
  * Om de start van de Geonaire te regelen
  * Voor onder andere het maken van het user object
+ * * user object
+ * * * user.age
+ * * * * check of het een nummer is (heel nummer, integer not float)
+ * * * * check of het meer is dan 0
+ * * * * anders opnieuw invoeren (while-loop)
+ * * * user.nationality
+ * * * * Drop-down list voor nationaliteit met Nederlands bovenaan, rest op alfabetische volgorde in het Nederlands (ergens een nationaliteitenlijst vandaan halen. In het rapport hiernaar refereren, want nationaliteiten kunnen in veranderen.) (drop-down list, want dat scheelt niet te hoeven programmeren wat er allemaal mis kan gaan.)
+ * * * user.zipcode
+ * * * * while loop (1e 4 characters moeten cijfers zijn, ook duidelijk maken in de vraag!)
+ * * * user.gametime
+ * * * user.gameCategories
+ * * * * array met categoriën en 1/0 voor wel/niet(?)
+ * * * user.personal(?)area
+ * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
+ * * * user.friction(?)area
+ * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
  */
