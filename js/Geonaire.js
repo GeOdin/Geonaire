@@ -273,3 +273,4 @@
  * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
  */
 
+//$(document).ready(function(){main});
