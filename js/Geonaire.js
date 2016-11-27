@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-24
+ * Het laatst veranderd op 2016-11-27
  * door GeOdin
  *
  *===================================
@@ -39,12 +39,13 @@
  ============
  * Planning:
  * * 21-27 november: vragen verzinnen (literatuur als onderbouwing van vragen, net als met oorspronkelijke vragenlijst)
+ * * * (v) site online -> geonaire.website.tk
+ * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
  * Zorg dat alles in het Nederlands is voor de doelgroep
  * Doelgroep: 18+ Nederlanders
  * U of jij voor de vragen? (Je is meer spreektaal en daardoor wss beter, toegankelijker)
  * Drafts maken van mogelijke visualisaties
- * Website online zetten
  * Link maken met database
  * Na afloop vragen of de vragenlijst naar waarheid is ingevuld (omdat je eventueel mogelijk andere visuals krijgt door het anders invullen van de vragenlijst, en omdat dit de aanname sterker maakt dat mensen de vragenlijst naar waarheid ingevuld hebben)
  * * Database van de universiteit gebruiken (vraag Ron) of eventueel een gratis online database gebruiken (met de kans dat de data op een gegeven moment niet bruikbaar meer is), eventueel in combinatie met een mail sturen naar een te maken emailadres
@@ -56,6 +57,9 @@
  * * user experience
  * * use cases
  * Front-end programming
+ * * HTML5
+ * * CSS3
+ * * * Add scrollbars to divs?
  * * JavaScript
  * * * user as object
  * * * * antwoorden op de vragen als aparte properties (niet verder specificeren naar thema)
@@ -63,13 +67,28 @@
  * * php
  * * * link met de server
  * * * * Ron vragen of ik gebruik kan maken van een server van de uniqueID
+ * * * * optioneel: https://db4free.net/ voor gratis database
  * * GeoJSON
+ * * * store JSON in SQL-database
  * * eventueel voor elke questionnaire een back-up mail sturen naar alternatieve e-mail (geoJSON/ csv/ ?) (want sommige gratis databases hebben niet de garantie dat de data onbeperkt en onveranderd beschikbaar blijft)
  * Learning/ revising
  * * html
+ * * * span tag
+ * * * header tag
+ * * * footer tag
  * * css (resizable met screen, don't resize images, unless they're vectors!)
+ * * * selectors -> http://www.w3schools.com/cssref/css_selectors.asp
+ * * * input invalid -> http://www.w3schools.com/cssref/css_selectors.asp
  * * JavaScript
  * * * jQuery
+ * * * * $(document).ready(function() {});
+ * * * * $('div').mouseenter(function() {});
+ * * * * $('div').mouseleave(function() {});
+ * * * * $('div').mouseclick(function() {});
+ * * * * $(this).animate({height: '+=10px'});
+ * * * * $("div").fadeOut(1000);
+ * * * * $('div').slideDown('slow');
+ * * * * $(this).toggle(1000);
  * * * Google Maps API
  * * * * tools voor op de kaart area tekenen (circle/square/polygon) (editable: true; draggable: true)
  * * php (link met database)
@@ -117,6 +136,9 @@
  * * Eventueel extra informatie geven door op bepaalde dingen te klikken  (door op bepaalde woorden te klikken/hoveren laag erover met beschrijving -> hogere z-index)
  * * walkthrough (evt extra informatie over hoe de vragen te beantwoorden)
  * Possibilities
+ * *  $('div').mouseenter(function() {});
+ * *  $('div').mouseleave(function() {});
+ * *  $('div').mouseclick(function() {});
  * * mouseHoover
  * * * Tekstballonnetjes
  * * * * https://www.sitepoint.com/pure-css3-speech-bubbles/
@@ -156,6 +178,7 @@
  * * augmented reality games (om eventueel te relateren aan mensen die naar buiten gaan en eerste opzet van concept)
  * * mobile games (ook als optie?)
  * THEMA: LOCATION
+ * switchen naar #header van #header2 en van #footer vaan #footer2
  * 6. Als u het over uw omgeving hebt, tot hoever reikt deze? (optie geven om met tools een cirkel (en eventueel ook een vierkant/ polygon) te tekenen (evt opslaan als GeoJSON))
  * 7. Stel de gemeente zou een windmolen (of eventueel opsplitsen tot 2 vragen, 1 voor positief en 1 voor negatieve verandering) willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden? (eventueel een marker van een windmolen laten plaatsen, of weer een cirkel/vierkant/polygon laten maken (evt opslaan als GeoJSON))
  * * Literatuur zoeken over NIMBY (Redenen voor NIMBY zoeken, uitzicht verstoren,...)
@@ -249,3 +272,4 @@
  * * * user.friction(?)area
  * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
  */
+

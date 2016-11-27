@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-24
+ * Het laatst veranderd op 2016-11-27
  * door GeOdin
  */
 
@@ -14,3 +14,146 @@ body {
 a {
 	text-decoration: none;
 }
+
+#header {
+	position: absolute;
+	top: 0vh;
+	left: 0%;
+	width: 100%;
+	height: 17.25vh;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#header2 {
+	position: absolute;
+	top: 5.5vh;
+	left: 0%;
+	width: 100%;
+	height: 11.75vh;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#main {
+}
+
+#overview{
+	position: absolute;
+	top: 17.25vh;
+	left: 0%;
+	width: 17.5%;
+	height: 75.25vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#content{
+	position: relative;
+	top: 17.25vh;
+	left: 17.5%;
+	width: 75%;
+	height: 75.25vh;
+	z-index: 99;
+	background-color: transparent;
+	background: white;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#cartoon{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 15vh;
+	z-index: 99;
+	background-color: transparent;
+	background: white;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#question{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 10vh;
+	z-index: 99;
+	background-color: transparent;
+	background: white;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#answer{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 47vh;
+	z-index: 99;
+	background-color: transparent;
+	background: white;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#toolbar{
+	position: absolute;
+	top: 17.25vh;
+	left: 92.5%;
+	width: 7.5%;
+	height: 75.25vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#footer {
+	position: absolute;
+	top: 92.5vh;
+	left: 0%;
+	width: 100%;
+	height: 7.5vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 1.2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#footer2 {
+	position: absolute;
+	top: 92.5vh;
+	left: 0%;
+	width: 95.75%;
+	height: 7.5vh;
+	z-index: 99;
+	background-color: transparent;
+	background: rgba(00, 99, 00, .23);
+	font-size: 1.2em;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
