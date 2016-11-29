@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-27
+ * Het laatst veranderd op 2016-11-29
  * door GeOdin
  *
  *===================================
@@ -22,11 +22,11 @@
  *========================================
  * Functies binnen deze JavaScript file: *
  *========================================
- * 
+ * main()
  *==========================================
  * Variabelen binnen deze JavaScript file: *
  *==========================================
- * 
+ *
  */
 
 //////////////
@@ -273,4 +273,17 @@
  * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
  */
 
-//$(document).ready(function(){main});
+$(document).ready(function(){
+	main();
+});
+
+////////////
+// main() //
+////////////
+
+// Function for regulating the JavaScript
+
+function main() {
+	toggleButtons();
+	toggleWindows();
+}

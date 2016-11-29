@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-27
+ * Het laatst veranderd op 2016-11-29
  * door GeOdin
  */
 
@@ -15,8 +15,16 @@ a {
 	text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 #header {
-	position: absolute;
+	position: fixed;
+	display: block;
 	top: 0vh;
 	left: 0%;
 	width: 100%;
@@ -30,7 +38,8 @@ a {
 }
 
 #header2 {
-	position: absolute;
+	position: fixed;
+	display: block;
 	top: 5.5vh;
 	left: 0%;
 	width: 100%;
@@ -44,11 +53,17 @@ a {
 }
 
 #main {
+	position: fixed;
+	display: block;
+	top: 17.25vh;
+	width: 100%;
+	left: 0%;
+	height: 75.25vh;
 }
 
 #overview{
 	position: absolute;
-	top: 17.25vh;
+	display: inline-block;
 	left: 0%;
 	width: 17.5%;
 	height: 75.25vh;
@@ -59,11 +74,16 @@ a {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+	cursor: pointer;
+}
+
+#overview:hover {
+	background: rgba(00, 00, 00, .46);
 }
 
 #content{
-	position: relative;
-	top: 17.25vh;
+	position: absolute;
+	display: inline-block;
 	left: 17.5%;
 	width: 75%;
 	height: 75.25vh;
@@ -86,6 +106,7 @@ a {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+	cursor: pointer;
 }
 
 #question{
@@ -106,7 +127,7 @@ a {
 	position: relative;
 	display: inline-block;
 	width: 100%;
-	height: 47vh;
+	height: 47.75vh;
 	z-index: 99;
 	background-color: transparent;
 	background: white;
@@ -117,8 +138,8 @@ a {
 
 #toolbar{
 	position: absolute;
-	top: 17.25vh;
-	left: 92.5%;
+	display: inline-block;
+	right: 0%;
 	width: 7.5%;
 	height: 75.25vh;
 	z-index: 99;
@@ -128,10 +149,17 @@ a {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+	overflow-x: hidden;
+	cursor: pointer;
+}
+
+#toolbar:hover {
+	background: rgba(00, 00, 00, .46);
 }
 
 #footer {
-	position: absolute;
+	position: fixed;
+	display: block;
 	top: 92.5vh;
 	left: 0%;
 	width: 100%;
@@ -146,7 +174,8 @@ a {
 }
 
 #footer2 {
-	position: absolute;
+	position: fixed;
+	display: block;
 	top: 92.5vh;
 	left: 0%;
 	width: 95.75%;
@@ -158,5 +187,19 @@ a {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+}
+
+.footer-item {
+	display: inline-block;
+	width: 30%;
+	height: 7.5vh;
+	background: rgba(00, 99, 00, .46);
+	font-size: 1.2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.footer-item:hover {
+	background: rgba(00, 99, 00, .23);
 }
 

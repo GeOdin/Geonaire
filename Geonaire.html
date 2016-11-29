@@ -3,7 +3,7 @@
 	Geonaire.html
 	Hoofd pagina voor de Geonaire
 	Gemaakt op 2016-11-24
-	Het laatst veranderd op 2016-11-27
+	Het laatst veranderd op 2016-11-29
 	door GeOdin
 -->
 
@@ -11,15 +11,18 @@
 	<head>
 		<link type="text/css" rel="stylesheet" href="css/Geonaire.css"/>
 		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Reference to the jQuery library, currentle not yet used -->
 		<script type="text/javascript" src="js/Geonaire.js"></script>
-		<script type="text/javascript" src="js/StartGeonaire.js"></script>
+		<script type="text/javascript" src="js/StartGeonaire.js"></script> 
 		<title>
 			Geonaire
 		</title>
 	</head>
 
 	<body>
-		<div id="header">De Geonaire</div>
+		<div id="header">
+			De Geonaire
+		</div>
 		<div id="main">
 			<div id="overview">
 				Overzicht
@@ -56,7 +59,11 @@
 			</div>
 		</div>
 		<div id="footer">
-			Footer
+			<ul>
+				<a class="footer-item"><div id="button-overview"><li> Overzicht </li></div></a>
+				<a class="footer-item"><li id="button-cartoon"> Cartoon </li></a>
+				<a class="footer-item"><li id="button-toolbar"> Toolbar </li></a>
+			</ul>
 		</div>
 	</body>
 </html>
