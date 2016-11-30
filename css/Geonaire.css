@@ -2,13 +2,16 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-29
+ * Het laatst veranderd op 2016-11-30
  * door GeOdin
  */
 
 body {
 	background-color: white;
+	font-size: 1em;
 	text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -39,7 +42,7 @@ ul {
 
 #header2 {
 	position: fixed;
-	display: block;
+	display: none;
 	top: 5.5vh;
 	left: 0%;
 	width: 100%;
@@ -50,6 +53,14 @@ ul {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+}
+
+#header-title {
+	position: absolute;
+	width: 100%;
+	top: 3.5vh;
+	left: 0%;
+	font-size: 1.2em;
 }
 
 #main {
@@ -74,11 +85,32 @@ ul {
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
-	cursor: pointer;
 }
 
 #overview:hover {
-	background: rgba(00, 00, 00, .46);
+	background: rgba(00, 00, 00, .23);
+}
+
+#tableofcontents-title {
+	display: block;
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 1.2em;
+	background: rgba(00, 00, 00, .23);
+	cursor: pointer;
+}
+
+.tableofcontents-item {
+	display: block;
+	padding: 5%;
+	font-size: 1em;
+	text-align: left;
+	cursor: pointer;
+}
+
+.tableofcontents-item:hover {
+	background: rgba(00, 00, 00, .23);
 }
 
 #content{
@@ -175,7 +207,7 @@ ul {
 
 #footer2 {
 	position: fixed;
-	display: block;
+	display: none;
 	top: 92.5vh;
 	left: 0%;
 	width: 95.75%;
@@ -190,12 +222,12 @@ ul {
 }
 
 .footer-item {
+	position: relative;
 	display: inline-block;
-	width: 30%;
-	height: 7.5vh;
-	background: rgba(00, 99, 00, .46);
-	font-size: 1.2em;
-	text-align: center;
+	height: 100%;
+	width: 25%;
+	height: 100%;
+	font-size: 0.8em;
 	cursor: pointer;
 }
 

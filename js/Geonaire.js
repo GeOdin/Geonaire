@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-29
+ * Het laatst veranderd op 2016-11-30
  * door GeOdin
  *
  *===================================
@@ -19,14 +19,14 @@
  * StartGeonaire.js
  * * moet nog gemaakt worden
  *
- *========================================
- * Functies binnen deze JavaScript file: *
- *========================================
- * main()
  *==========================================
  * Variabelen binnen deze JavaScript file: *
  *==========================================
  *
+ *========================================
+ * Functies binnen deze JavaScript file: *
+ *========================================
+ * main()
  */
 
 //////////////
@@ -215,6 +215,7 @@
 /*
  * Een kleine introductie geven over hoe de vragenlijst ingevuld moet worden en een teaser om mensen op eventuele extra functies/features te wijzen.
  * Lay-out
+ * * menu bar http://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black
  * #header
  * * cartoony poppetje dat steeds meer vrienden krijgt en onderdeel wordt van community
  * * evt veranderen aan de hand van het thema (steeds beter gedefineerd personage/ steeds meer superheld - van persoon die computerspel speelt en denkt een held te worden naar een held zijn/ steeds meer onderdeel van community)
@@ -284,6 +285,5 @@ $(document).ready(function(){
 // Function for regulating the JavaScript
 
 function main() {
-	toggleButtons();
-	toggleWindows();
+	startGeonaire();
 }

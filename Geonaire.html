@@ -3,7 +3,7 @@
 	Geonaire.html
 	Hoofd pagina voor de Geonaire
 	Gemaakt op 2016-11-24
-	Het laatst veranderd op 2016-11-29
+	Het laatst veranderd op 2016-11-30
 	door GeOdin
 -->
 
@@ -14,6 +14,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Reference to the jQuery library, currentle not yet used -->
 		<script type="text/javascript" src="js/Geonaire.js"></script>
 		<script type="text/javascript" src="js/StartGeonaire.js"></script> 
+		<script type="text/javascript" src="js/GeonaireQuestions.js"></script>
 		<title>
 			Geonaire
 		</title>
@@ -21,22 +22,24 @@
 
 	<body>
 		<div id="header">
-			De Geonaire
+			<div id="header-title">
+				De Geonaire
+			</div>
 		</div>
 		<div id="main">
 			<div id="overview">
-				Overzicht
 				<div id="progressbar">
 					<div id="progress"></div>
 				</div>
 				<div id="tableofcontents">
-					<div id="tableofcontents-item-1"></div>
-					<div id="tableofcontents-item-2"></div>
-					<div id="tableofcontents-item-3"></div>
-					<div id="tableofcontents-item-4"></div>
-					<div id="tableofcontents-item-5"></div>
-					<div id="tableofcontents-item-6"></div>
-					<div id="tableofcontents-item-7"></div>
+					<div id="tableofcontents-title">
+						Overzicht
+					</div>
+					<ul id="tableofcontents-buttons">
+						<li id="tableofcontents-introduction" class="tableofcontents-item"> Introductie </li>
+						<li id="tableofcontents-question1" class="tableofcontents-item"> Vraag 1 </li>
+						<li id="tableofcontents-nextquestion" class="tableofcontents-item"> Volgende vraag </li>
+					</ul>
 				</div>
 			</div>
 			<div id="content">
@@ -59,10 +62,10 @@
 			</div>
 		</div>
 		<div id="footer">
-			<ul>
-				<a class="footer-item"><div id="button-overview"><li> Overzicht </li></div></a>
-				<a class="footer-item"><li id="button-cartoon"> Cartoon </li></a>
-				<a class="footer-item"><li id="button-toolbar"> Toolbar </li></a>
+			<ul id="footer-buttons">
+				<li id="button-overview" class="footer-item"> Overzicht </li>
+				<li id="button-cartoon" class="footer-item"> Cartoon </li>
+				<li id="button-toolbar" class="footer-item"> Toolbar </li>
 			</ul>
 		</div>
 	</body>
