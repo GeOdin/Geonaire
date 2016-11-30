@@ -71,6 +71,7 @@
  * * GeoJSON
  * * * store JSON in SQL-database
  * * eventueel voor elke questionnaire een back-up mail sturen naar alternatieve e-mail (geoJSON/ csv/ ?) (want sommige gratis databases hebben niet de garantie dat de data onbeperkt en onveranderd beschikbaar blijft)
+ * * * PHP om dit te doen: http://www.buildwebsite4u.com/advanced/php.shtml
  * Learning/ revising
  * * html
  * * * span tag
@@ -89,6 +90,7 @@
  * * * * $("div").fadeOut(1000);
  * * * * $('div').slideDown('slow');
  * * * * $(this).toggle(1000);
+ * * * * $(this).fadeOut(1000);
  * * * Google Maps API
  * * * * tools voor op de kaart area tekenen (circle/square/polygon) (editable: true; draggable: true)
  * * php (link met database)
@@ -171,12 +173,12 @@
  * 2. Wat is uw nationaliteit? (drop-down list) (vragenlijst en website in het Nederlands versterkt dat de gebruikers in elk geval Nederlands zouden moeten kunnen)
  * 3. Wat zijn de 4 cijfers van uw postcode? (check of het inderdaad 4 cijfers zijn en een code vergelijkbaar met een van de postcodes) (inzoomen naar postcode gebied)
  * THEMA: GAMEN
- * 4. Hoeveel tijd speelt u over het algemeen computerspellen? (vul een getal in en kies de toepasbare tijdsaanduiding) (x uren per dag/week/maand/jaar)
- * * Cartoon: grapje maken over player (zowel iemand die computergames speelt als iemand die vrouwen bespeeld)
- * 5. Wat voor spellen/games speelt u zoal? (zie IGN voor genres, geef voorbeelden en voeg de optie augmented reality games toe met de voorbeelden Pokémon Go en Ingress) ((zelf categoriën aandragen, evt zelfde categoriën als Vera/ categoriën van IGN; zijn de categoriën van IGN vertaalbaar naar de thesis van Vera?) -> wel specificeren op games, zorgen dat er geen verwarring kan optreden met bordspellen ofzo!)
+ * 4. Wat voor spellen/games speelt u zoal? (zie IGN voor genres, geef voorbeelden en voeg de optie augmented reality games toe met de voorbeelden Pokémon Go en Ingress) ((zelf categoriën aandragen, evt zelfde categoriën als Vera/ categoriën van IGN; zijn de categoriën van IGN vertaalbaar naar de thesis van Vera?) -> wel specificeren op games, zorgen dat er geen verwarring kan optreden met bordspellen ofzo!)
  * * Cartoon: iemand die achter de computer spelletjes zit te spelen en in gedachten een superheld is en de wereld redt
  * * augmented reality games (om eventueel te relateren aan mensen die naar buiten gaan en eerste opzet van concept)
  * * mobile games (ook als optie?)
+ * 5. Hoeveel tijd speelt u over het algemeen computerspellen? (vul een getal in en kies de toepasbare tijdsaanduiding) (x uren per dag/week/maand/jaar)
+ * * Cartoon: grapje maken over player (zowel iemand die computergames speelt als iemand die vrouwen bespeeld)
  * THEMA: LOCATION
  * switchen naar #header van #header2 en van #footer vaan #footer2
  * 6. Als u het over uw omgeving hebt, tot hoever reikt deze? (optie geven om met tools een cirkel (en eventueel ook een vierkant/ polygon) te tekenen (evt opslaan als GeoJSON))
