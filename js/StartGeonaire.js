@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-11-30
+ * Het laatst veranderd op 2016-12-01
  * door GeOdin
  *
  *==========================================
@@ -14,7 +14,7 @@
  * startGeonaire()
  * toggleButtons()
  * toggleWindows()
- * toggleQuestions()
+ * toggleQuestions(questions, lastQuestion)
  */
 
 /////////////////////
@@ -30,7 +30,7 @@ function startGeonaire() {
 	// Make some windows toggable with buttons or by clicking on them
 	toggleButtons();
 	toggleWindows();
-	toggleQuestions();
+	toggleQuestions(questions, lastQuestion);
 	//nextQuestion(currentQuestion, questions, lastQuestion);
 	//showQuestions(questions);
 }
@@ -75,36 +75,54 @@ function toggleWindows() {
     });
 }
 
-///////////////////////
-// toggleQuestions() //
-///////////////////////
+//////////////////////////////////////////////
+// toggleQuestions(questions, lastQuestion) //
+//////////////////////////////////////////////
 
 // Function for toggling the questions
 
-function toggleQuestions() {
+function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-introduction").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon introductie");
+		$("#cartoonimage").html('<img src="img/'+questions[0][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Introductie");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Introductie tekst");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
+/*
+	for (i = 1; i < lastQuestion; i++) {
+		$("#tableofcontents-question"+i).click(function() {
+			$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
+			$("#cartoonimage").css("text-shadow", "none");
+			$("#cartoonimage").html('<img src="img/'+questions[i][1]+'.png">');
+			$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+			$("#questiontitle").css("text-shadow", "none");
+			$("#questiontitle").html(questions[i][0]);
+			$("#answer").css("color", "rgba(00, 00, 00, .46)");
+			$("#answer").css("text-shadow", "none");
+			$("#answer").html(questions[i][2]);
+			$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+			$(this).removeClass("tableofcontents-item");
+			$(this).addClass("tableofcontents-item tableofcontents-active");
+		});
+	}
+ */
 	$("#tableofcontents-question1").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon vraag 1");
+		$("#cartoonimage").html('<img src="img/'+questions[1][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Wat is uw leeftijd?");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Antwoord vraag 1");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
@@ -113,12 +131,12 @@ function toggleQuestions() {
 	$("#tableofcontents-question2").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon vraag 2");
+		$("#cartoonimage").html('<img src="img/'+questions[2][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Wat is uw nationaliteit?");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Antwoord vraag 2");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
@@ -127,12 +145,12 @@ function toggleQuestions() {
 	$("#tableofcontents-question3").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon vraag 3");
+		$("#cartoonimage").html('<img src="img/'+questions[3][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Wat zijn de 4 cijfers van uw postcode?");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Antwoord vraag 3");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
@@ -141,12 +159,12 @@ function toggleQuestions() {
 	$("#tableofcontents-question4").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon vraag 4");
+		$("#cartoonimage").html('<img src="img/'+questions[4][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Wat voor spellen/games speelt u zoal en op welk medium?");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Antwoord vraag 4");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
@@ -155,12 +173,12 @@ function toggleQuestions() {
 	$("#tableofcontents-question5").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html("Cartoon vraag 5");
+		$("#cartoonimage").html('<img src="img/'+questions[5][1]+'.png">');
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "none");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html("Hoeveel tijd speelt u over het algemeen computerspellen?");
 		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "none");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html("Antwoord vraag 5");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
@@ -169,7 +187,7 @@ function toggleQuestions() {
 	$("#tableofcontents-question6").click(function() {
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html("Cartoon vraag 6");
+		$("#cartoonimage").html('<img src="img/'+questions[6][1]+'.png">');
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html("Als u het over uw omgeving hebt, tot hoever reikt deze?");
@@ -183,7 +201,7 @@ function toggleQuestions() {
 	$("#tableofcontents-question7").click(function() {
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html("Cartoon vraag 7");
+		$("#cartoonimage").html('<img src="img/'+questions[7][1]+'.png">');
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html("Stel de gemeente zou een windmolen willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?");

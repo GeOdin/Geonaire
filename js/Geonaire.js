@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-11-30
+ * Het laatst veranderd op 2016-12-01
  * door GeOdin
  *
  *===================================
@@ -59,6 +59,8 @@
  * Front-end programming
  * * HTML5
  * * CSS3
+ * * * Other default font?
+ * * * * set other default when certain font is unavailable on some browsers/ computers
  * * * Add scrollbars to divs?
  * * JavaScript
  * * * user as object
@@ -204,6 +206,7 @@
 
 /*
  * Een kleine introductie geven over het hoe en wat van de vragenlijst (wat ik bovenaan de vragenlijst zou zetten als ik hem op zou sturen)
+ * Maak classes voor #cartoon #question en #answer
  */
 
 ////////////////////
