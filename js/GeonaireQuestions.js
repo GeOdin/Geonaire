@@ -7,14 +7,35 @@
  *==========================================
  * Variabelen binnen deze JavaScript file: *
  *==========================================
- * questions
+ * checkboxesGamecategories
+ * dropdownNationalities
  * lastQuestion
+ * questions
  *========================================
  * Functies binnen deze JavaScript file: *
  *========================================
+ * sendQuestionnaire()
  * showQuestion() (currently not active)
  * nextQuestion(currentQuestion, questions, lastQuestion) (currently not active)
  */
+
+//////////////////////////////////
+// var checkboxesGamecategories //
+//////////////////////////////////
+
+var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions);"><input type="checkbox" name="gamecategory" value="action">Actie<br/><input type="checkbox" name="gamecategory" value="action_adventure">Actie-avontuur<br/><input type="checkbox" name="gamecategory" value="adventure">Avontuur<br/><input type="checkbox" name="gamecategory" value="rpg">RPG<br/><input type="checkbox" name="gamecategory" value="simulation">Simulatie<br/><input type="checkbox" name="gamecategory" value="strategy">Strategie<br/><input type="checkbox" name="gamecategory" value="sports" class="white-space">Sport<br/> <input type="submit" value="Volgende"></form>';
+
+///////////////////////////////
+// var dropdownNationalities //
+///////////////////////////////
+
+var dropdownNationalities = '<form onsubmit="showQuestion3(questions);"><select name="nationality" class="white-space"><option value="nederland">Nederland</option><option value="afghanistan">Afghanistan</option><option value="albanie">Albanie</option><option value="algarije">Algarije</option><option value="andorra">Andorra</option><option value="angola">Angola</option><option value="antigue_en_barbuda">Antigue en Barbuda</option><option value="argentinie" class="white-space">Argentinie</option></select> <br/> <input type="submit" value="Volgende"></form>';
+
+//////////////////////
+// var lastQuestion //
+//////////////////////
+
+var lastQuestion = 7;
 
 ///////////////////
 // var questions //
@@ -22,57 +43,70 @@
 
 var questions = [
 	[
-		"Introductie",
 		"cartoon-introduction",
-		"Introductie tekst"
+		"Cartoon Introductie",
+		"Introductie",
+		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions);"><input type="submit" value="Begin"></form>'
 	],
 	[
-		"Wat is uw leeftijd?",
 		"cartoon-question1",
-		"Antwoord vraag 1"
+		"Cartoon vraag 1",
+		"Wat is uw leeftijd?",
+		'<form onsubmit="showQuestion2(questions);"><input type="text" name="age" maxlength="3" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
-		"Wat is uw nationaliteit?",
 		"cartoon-question2",
-		"Antwoord vraag 2"
+		"Cartoon vraag 2",
+		"Wat is uw nationaliteit?",
+		dropdownNationalities
 	],
 	[
-		"Wat zijn de 4 cijfers van uw postcode?",
 		"cartoon-question3",
-		"Antwoord vraag 3"
+		"Cartoon vraag 3",
+		"Wat is uw postcode?",
+		'<form onsubmit="showQuestion4(questions);"><input type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
-		"Wat voor spellen/games speelt u zoal en op welk medium?",
 		"cartoon-question4",
-		"Antwoord vraag 4"
+		"Cartoon vraag 4",
+		"Wat voor spellen/games speelt u zoal en op welk medium?",
+		checkboxesGamecategories
 	],
 	[
-		"Hoeveel tijd speelt u over het algemeen computerspellen?",
 		"cartoon-question5",
-		"Antwoord vraag 5"
+		"Cartoon vraag 5",
+		"Hoeveel tijd speelt u over het algemeen computerspellen?",
+		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" class="white-space"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
-		"Als u het over uw omgeving hebt, tot hoever reikt deze?",
 		"cartoon-question6",
-		"Antwoord vraag 6"
+		"Cartoon vraag 6",
+		"Als u het over uw omgeving hebt, tot hoever reikt deze?",
+		'<form onsubmit="showQuestion7(questions);"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
-		"Stel de gemeente zou een windmolen willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
 		"cartoon-question7",
-		"Antwoord vraag 7"
+		"Cartoon vraag 7",
+		"Stel de gemeente zou een windmolen willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
+		'<form onsubmit="sendQuestionnaire()"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
 	[
+		"CartoonSrc",
+		"CartoonAlt",
 		"vraagNummer",
-		"CartoonName",
 		"Antwoord"
 	]
 ];
 
-//////////////////////
-// var lastQuestion //
-//////////////////////
+/////////////////////////
+// sendQuestionnaire() //
+/////////////////////////
 
-var lastQuestion = 7;
+// Function that handles sending the information of the user to the server/database
+
+function sendQuestionnaire() {
+	alert("Heeft u de vragenlijst naar waarheid ingevuld?");
+}
 
 /////////////////////
 // showQuestions() //

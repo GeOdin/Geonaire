@@ -17,7 +17,7 @@
  * Geonaire.js
  * * momenteel geen dingen die nog gedaan moeten worden
  * StartGeonaire.js
- * * moet nog gemaakt worden
+ * GeonaireQuestions.js
  *
  *==========================================
  * Variabelen binnen deze JavaScript file: *
@@ -42,6 +42,8 @@
  * * * (v) site online -> geonaire.website.tk
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
+ * * * add new #content upon completing the questionnaire; versturen heeft momenteel tot gevolg dat je naar het beginscherm gaat
+ * var dropdownNationalities en var checkboxesGamecategories eventueel nog invoegen als argument voor de verschillende functies
  * Zorg dat alles in het Nederlands is voor de doelgroep
  * Doelgroep: 18+ Nederlanders
  * U of jij voor de vragen? (Je is meer spreektaal en daardoor wss beter, toegankelijker)
@@ -76,13 +78,16 @@
  * * * PHP om dit te doen: http://www.buildwebsite4u.com/advanced/php.shtml
  * Learning/ revising
  * * html
- * * * span tag
- * * * header tag
- * * * footer tag
+ * * * <span>
+ * * * <header>
+ * * * <footer>
+ * * * form tag -> 
+ * * * * Use the reset() method to reset the form. http://www.w3schools.com/jsref/met_form_submit.asp
  * * css (resizable met screen, don't resize images, unless they're vectors!)
  * * * selectors -> http://www.w3schools.com/cssref/css_selectors.asp
  * * * input invalid -> http://www.w3schools.com/cssref/css_selectors.asp
  * * JavaScript
+ * * * gebruik data van HTML-form input als JavaScript variable -> http://stackoverflow.com/questions/23982774/turn-html-form-input-into-javascript-variable
  * * * jQuery
  * * * * $(document).ready(function() {});
  * * * * $('div').mouseenter(function() {});
@@ -250,6 +255,10 @@
 // Geonaire.css //
 //////////////////
 
+/*
+ * vertically styling elements -> https://www.w3.org/Style/Examples/007/center.en.html#block
+ */
+
 /////////////////
 // Geonaire.js //
 /////////////////
@@ -277,6 +286,14 @@
  * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
  * * * user.friction(?)area
  * * * * geojson(?) mogelijk als onderdeel van object? anders omzetten naar string!
+ */
+
+//////////////////////////
+// GeonaireQuestions.js //
+//////////////////////////
+
+/*
+ * change alt of #cartoonimage into link to deviantart with cartoon
  */
 
 $(document).ready(function(){

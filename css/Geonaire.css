@@ -8,6 +8,7 @@
 
 body {
 	background-color: white;
+	font-family: "Georgia", "Times New Roman";
 	font-size: 1em;
 	text-align: center;
     margin: 0;
@@ -23,6 +24,10 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+}
+
+.white-space {
+	margin-bottom: 1em;
 }
 
 #header {
@@ -84,7 +89,7 @@ ul {
 	font-size: 1.2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
-	overflow-y: auto;
+	overflow: auto;
 }
 
 #overview:hover {
@@ -117,22 +122,32 @@ ul {
 	background: rgba(00, 00, 00, .23);
 }
 
+#tableofcontents-question1{
+	display: none;
+}
+
 #tableofcontents-question2{
+	display: none;
 }
 
 #tableofcontents-question3{
+	display: none;
 }
 
 #tableofcontents-question4{
+	display: none;
 }
 
 #tableofcontents-question5{
+	display: none;
 }
 
 #tableofcontents-question6{
+	display: none;
 }
 
 #tableofcontents-question7{
+	display: none;
 }
 
 #tableofcontents-nextquestion{
@@ -190,6 +205,10 @@ ul {
 	overflow-y: auto;
 }
 
+#questiontitle {
+	overflow-y: auto;
+}
+
 #answer{
 	position: relative;
 	display: inline-block;
@@ -218,6 +237,7 @@ ul {
 	overflow-y: auto;
 	overflow-x: hidden;
 	cursor: pointer;
+	overflow-x: auto;
 }
 
 #toolbar:hover {
