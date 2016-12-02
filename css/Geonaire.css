@@ -222,6 +222,10 @@ ul {
 	overflow-y: auto;
 }
 
+.answer-input-shorttext {
+	width: 5em;
+}
+
 #toolbar{
 	position: absolute;
 	display: inline-block;

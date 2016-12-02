@@ -23,7 +23,7 @@
 // var checkboxesGamecategories //
 //////////////////////////////////
 
-var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions);"><input type="checkbox" name="gamecategory" value="action">Actie<br/><input type="checkbox" name="gamecategory" value="action_adventure">Actie-avontuur<br/><input type="checkbox" name="gamecategory" value="adventure">Avontuur<br/><input type="checkbox" name="gamecategory" value="rpg">RPG<br/><input type="checkbox" name="gamecategory" value="simulation">Simulatie<br/><input type="checkbox" name="gamecategory" value="strategy">Strategie<br/><input type="checkbox" name="gamecategory" value="sports" class="white-space">Sport<br/> <input type="submit" value="Volgende"></form>';
+var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions);"><table align="center" border="1px solid rgba(00, 00, 00, .46)"><tr style="text-align:center"><th colspan="2">Game categori&euml;n</th><th>Game computer</th></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="action">Actie</td><td><input type="checkbox" name="gamecategory" value="facebook">Facebook spellen</td><td><input type="checkbox" name="gamecomputer" value="computer">PC/ Mac</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="action_adventure">Actie-avontuur</td><td><input type="checkbox" name="gamecategory" value="mobile">Mobiele telefoon spellen</td><td><input type="checkbox" name="gamecomputer" value="console">Console</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="adventure">Avontuur</td><td><input type="checkbox" name="gamecategory" value="augmentedreality">Augmented reality/ toegevoegde realiteit</td><td><input type="checkbox" name="gamecomputer" value="handheld">Handheld</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="rpg">RPG</td><td><input type="checkbox" name="gamecategory" value="seriousgame">Educationele/ serious games</td><td><input type="checkbox" name="gamecomputer" value="mobile">Mobiel</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="simulation">Simulatie</td><td></td><td><input type="checkbox" name="gamecomputer" value="ipad">iPad</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="strategy">Strategie</td></tr><tr style="text-align:left"><td><input type="checkbox" name="gamecategory" value="sports">Sport</td></tr></table><br/><input type="submit" value="Volgende"></form>';
 
 ///////////////////////////////
 // var dropdownNationalities //
@@ -52,7 +52,7 @@ var questions = [
 		"cartoon-question1",
 		"Cartoon vraag 1",
 		"Wat is uw leeftijd?",
-		'<form onsubmit="showQuestion2(questions);"><input type="text" name="age" maxlength="3" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion2(questions);"><input type="text" name="age" maxlength="3" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question2",
@@ -64,19 +64,19 @@ var questions = [
 		"cartoon-question3",
 		"Cartoon vraag 3",
 		"Wat is uw postcode?",
-		'<form onsubmit="showQuestion4(questions);"><input type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion4(questions);"><input type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question4",
 		"Cartoon vraag 4",
-		"Wat voor spellen/games speelt u zoal en op welk medium?",
+		"Wat voor spellen/games speelt u zoal en op wat voor een computer?",
 		checkboxesGamecategories
 	],
 	[
 		"cartoon-question5",
 		"Cartoon vraag 5",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
-		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" class="white-space"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question6",

@@ -184,6 +184,7 @@
  * * Cartoon: iemand die achter de computer spelletjes zit te spelen en in gedachten een superheld is en de wereld redt
  * * augmented reality games (om eventueel te relateren aan mensen die naar buiten gaan en eerste opzet van concept)
  * * mobile games (ook als optie?)
+ * * Wikipedia gebruikt als bron voor game categorien -> https://en.wikipedia.org/wiki/List_of_video_game_genres (IGN had geen overzichtelijke game categorien)
  * 5. Hoeveel tijd speelt u over het algemeen computerspellen? (vul een getal in en kies de toepasbare tijdsaanduiding) (x uren per dag/week/maand/jaar)
  * * Cartoon: grapje maken over player (zowel iemand die computergames speelt als iemand die vrouwen bespeeld)
  * THEMA: LOCATION
