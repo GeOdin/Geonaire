@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-12-01
+ * Het laatst veranderd op 2016-12-02
  * door GeOdin
  *
  *==========================================
@@ -53,7 +53,7 @@ function startGeonaire() {
 function showIntroduction(questions) {
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html('<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">');
+	$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[0][2]);
@@ -73,7 +73,7 @@ function showIntroduction(questions) {
 function showQuestion1(questions) {
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html('<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">');
+	$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[1][2]);
@@ -94,7 +94,7 @@ function showQuestion1(questions) {
 function showQuestion2(questions) {
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html('<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">');
+	$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[2][2]);
@@ -115,7 +115,7 @@ function showQuestion2(questions) {
 function showQuestion3(questions) {
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html('<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">');
+	$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[3][2]);
@@ -312,7 +312,7 @@ function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-introduction").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html('<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">');
+		$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[0][2]);
@@ -344,7 +344,7 @@ function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-question1").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html('<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">');
+		$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[1][2]);
@@ -358,7 +358,7 @@ function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-question2").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html('<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">');
+		$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[2][2]);
@@ -372,7 +372,7 @@ function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-question3").click(function() {
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html('<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">');
+		$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[3][2]);

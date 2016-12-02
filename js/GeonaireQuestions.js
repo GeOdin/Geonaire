@@ -1,7 +1,7 @@
 /* GeonaireQuestions.js
  * JavaScript file om de vragen te regelen voor de Geonaire
  * Gemaakt op 2016-11-30
- * Het laatst veranderd op 2016-12-01
+ * Het laatst veranderd op 2016-12-02
  * door GeOdin
  *
  *==========================================
@@ -15,8 +15,6 @@
  * Functies binnen deze JavaScript file: *
  *========================================
  * sendQuestionnaire()
- * showQuestion() (currently not active)
- * nextQuestion(currentQuestion, questions, lastQuestion) (currently not active)
  */
 
 //////////////////////////////////
@@ -44,49 +42,49 @@ var lastQuestion = 7;
 var questions = [
 	[
 		"cartoon-introduction",
-		"Cartoon Introductie",
+		"<h3>De Placeys</h3>Met onder andere 'Greet' de oma, 'Grumps' de opa,<br/>'Piet' de hardwerkende zoon, 'Karel' de sportieve kleinzoon en 'Doerak' de hond",
 		"Introductie",
 		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions);"><input type="submit" value="Begin"></form>'
 	],
 	[
 		"cartoon-question1",
-		"Cartoon vraag 1",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Karel viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Karel schrikt en schiet als een kat de gordijnen in.</p>",
 		"Wat is uw leeftijd?",
 		'<form onsubmit="showQuestion2(questions);"><input type="text" name="age" maxlength="3" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question2",
-		"Cartoon vraag 2",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Een wetenschapper belt Piet op en vraagt hem: 'Wat is uw nationaliteit?' Piet neemt de telefoon op in een forse regenbui en antwoord met: 'Vandaag vooral nat!'</p>",
 		"Wat is uw nationaliteit?",
 		dropdownNationalities
 	],
 	[
 		"cartoon-question3",
-		"Cartoon vraag 3",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoord hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
 		"Wat is uw postcode?",
 		'<form onsubmit="showQuestion4(questions);"><input type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question4",
-		"Cartoon vraag 4",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 4</p>",
 		"Wat voor spellen/games speelt u zoal en op wat voor een computer?",
 		checkboxesGamecategories
 	],
 	[
 		"cartoon-question5",
-		"Cartoon vraag 5",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 5</p>",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
 		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question6",
-		"Cartoon vraag 6",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 6</p>",
 		"Als u het over uw omgeving hebt, tot hoever reikt deze?",
 		'<form onsubmit="showQuestion7(questions);"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question7",
-		"Cartoon vraag 7",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 7</p>",
 		"Stel de gemeente zou een windmolen willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
 		'<form onsubmit="sendQuestionnaire()"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
@@ -109,93 +107,3 @@ function sendQuestionnaire() {
 		window.open("Geonaire.html", "_self");
 	}
 }
-
-/////////////////////
-// showQuestions() //
-/////////////////////
-
-// Function to show the question
-
-/*function showQuestions(questions) {
-	// Show the cartoon, question and answer for the according question
-	$("#tableofcontents-question1").click(function() {
-		$("#cartoonimage").html(questions[1][1]);
-    });
-	$("#tableofcontents-question2").click(function() {
-		$("#cartoonimage").html(questions[2][1]);
-    });
- */
-/*
-	// Show the cartoon, question and answer for the according question
-	$("#tableofcontents-question1").click(function() {
-		// Change the cartoon
-		$("#cartoonimage").html(questions[1][1]);
-		// Change the question
-		$("#questiontitle").html(questions[1][0]);
-		// Change the answer
-		$("#answer").html(questions[1][2]);
-		// Change the .tableofcontents-active to #tableofcontents-question1
-		$(".tableofcontents-item").removeClass("tableofcontents-active");
-		$("#tableofcontents-question1").addClass("tableofcontents-active");
-    });
-	$("#tableofcontents-question2").click(function() {
-		// Change the cartoon
-		$("#cartoonimage").html(questions[2][1]);
-		// Change the question
-		$("#questiontitle").html(questions[2][0]);
-		// Change the answer
-		$("#answer").html(questions[2][2]);
-		// Change the .tableofcontents-active to #tableofcontents-question2
-    });
-	$("#tableofcontents-question3").click(function() {
-		// Change the cartoon
-		$("#cartoonimage").html(questions[3][1]);
-		// Change the question
-		$("#questiontitle").html(questions[3][0]);
-		// Change the answer
-		$("#answer").html(questions[3][2]);
-		// Change the .tableofcontents-active to #tableofcontents-question2
-    });
- */
-/*
-}
-*/
-
-///////////////////////////////////
-// nextQuestion(currentQuestion) //
-///////////////////////////////////
-
-// Function to switch to the next questions
-
-/*
-function nextQuestion(currentQuestion, questions, lastQuestion) {
-	// Prepend the next question before #tableofcontents-nextquestion
-	$("#tableofcontents-nextquestion").click(function() {
-		// Check whether the current question is not the last question of the questionnaire
-		if (currentQuestion < lastQuestion) {
-			// Add 1 to var currentQuestion
-			currentQuestion++;
-
-			// Remove tableofcontents-active class from all tableofcontent-item elements
-			$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-			// Prepend button next question and show it as active
-			$(this).before('<li id="tableofcontents-question'+currentQuestion+'" class="tableofcontents-item tableofcontents-active"> Vraag '+currentQuestion+' </li>');
-			// Change the cartoon
-			$("#cartoonimage").html(questions[currentQuestion][1]);
-			// Change the question
-			$("#questiontitle").html(questions[currentQuestion][0]);
-			// Change the answer
-			$("#answer").html(questions[currentQuestion][2]);
-			
-			// Change the button from "Volgende vraag" to "Verstuur" after the 7th question
-			if (currentQuestion == lastQuestion) {
-				$(this).html("Verstuur");
-				$(this).css("background", "rgba(00, 00, 00, .23)");
-				$(this).click(function() {
-					// Ask user if he filled in the questionnaire according to truth, if yes -> send to server, if no -> back to questionnaire
-				});
-			}
-		}
-    });
-}
- */

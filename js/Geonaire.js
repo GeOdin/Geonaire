@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-01
+ * Het laatst veranderd op 2016-12-02
  * door GeOdin
  *
  *===================================
@@ -43,9 +43,11 @@
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
  * * * Algemeen:
- * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons)
+ * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons) (zie code in StartGeonaire functie show...(questions) achter $("#cartoonimage").html(.. voor de code voor de plaatjes)
+ * * * * * verander het in de functies showQuestion(...) en toggleQuestions(...)
  * * * * ingevoerde data opslaan tijdens het invoeren van de vragenlijst
  * * * * link met de server
+ * * * * improve color -> https://material.google.com/style/color.html#color-color-palette (indigo)
  * * * Introductie:
  * * * * hier komt een kleine introductie over de vragenlijst
  * * * Vraag 2:
@@ -271,6 +273,10 @@
 //////////////////
 
 /*
+ * Coloring
+ * * for with Google(Maps) -> https://material.google.com/style/color.html#color-color-palette
+ * * Color harmonies (in general) -> http://www.tigercolor.com/color-lab/color-theory/color-harmonies.htm
+ * * website of MGI student who helped me -> http://greatemerald.eu/uncodex-sources/
  * vertically styling elements -> https://www.w3.org/Style/Examples/007/center.en.html#block
  */
 
