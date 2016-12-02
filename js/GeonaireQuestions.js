@@ -105,7 +105,9 @@ var questions = [
 // Function that handles sending the information of the user to the server/database
 
 function sendQuestionnaire() {
-	alert("Heeft u de vragenlijst naar waarheid ingevuld?");
+	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld?") == true) {
+		window.open("Geonaire.html", "_self");
+	}
 }
 
 /////////////////////
