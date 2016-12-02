@@ -220,14 +220,39 @@ function showQuestion7(questions) {
 function toggleButtons() {
 	$("#button-overview").click(function() {
         $("#overview").toggle();
+		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "100%");
+		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "92.5%");
+		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "82.5%");
+		} else {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "75%");
+		}
     });
-   
     $("#button-cartoon").click(function() {
         $("#cartoon").toggle();
     });
    
     $("#button-toolbar").click(function() {
         $("#toolbar").toggle();
+		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "100%");
+		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "92.5%");
+		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "82.5%");
+		} else {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "75%");
+		}
     });
 }
 
@@ -239,15 +264,41 @@ function toggleButtons() {
 
 function toggleWindows() {
 	$("#tableofcontents-title").click(function() {
-        $("#overview").toggle();
+        $("#overview").css("display", "none");
+		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "100%");
+		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "92.5%");
+		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "82.5%");
+		} else {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "75%");
+		}
     });
    
     $("#cartoon").click(function() {
-        $("#cartoon").toggle();
+        $("#cartoon").css("display", "none");
     });
    
     $("#toolbar").click(function() {
-        $("#toolbar").toggle();
+        $("#toolbar").css("display", "none");
+		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "100%");
+		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+			$("#content").css("left", "0%");
+			$("#content").css("width", "92.5%");
+		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "82.5%");
+		} else {
+			$("#content").css("left", "17.5%");
+			$("#content").css("width", "75%");
+		}
     });
 }
 

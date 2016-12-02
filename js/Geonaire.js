@@ -42,7 +42,21 @@
  * * * (v) site online -> geonaire.website.tk
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
- * * * add new #content upon completing the questionnaire; versturen heeft momenteel tot gevolg dat je naar het beginscherm gaat
+ * * * Algemeen:
+ * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons)
+ * * * * ingevoerde data opslaan tijdens het invoeren van de vragenlijst
+ * * * * link met de server
+ * * * Introductie:
+ * * * * hier komt een kleine introductie over de vragenlijst
+ * * * Vraag 2:
+ * * * * uitgebreidere lijst van nationaliteiten
+ * * * Vraag 6/7
+ * * * * dit zijn momenteel nog placeholder vragen
+ * * * * laden van GoogleMaps
+ * * * * toolbar functioneel maken
+ * * * Laatste vraag
+ * * * * het versturen van de data naar de server in plaats van het vernieuwen van de pagina
+ * * * * add new #content upon completing the questionnaire; versturen heeft momenteel tot gevolg dat je naar het beginscherm gaat
  * var dropdownNationalities en var checkboxesGamecategories eventueel nog invoegen als argument voor de verschillende functies
  * Zorg dat alles in het Nederlands is voor de doelgroep
  * Doelgroep: 18+ Nederlanders
