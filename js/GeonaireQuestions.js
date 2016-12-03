@@ -1,7 +1,7 @@
 /* GeonaireQuestions.js
  * JavaScript file om de vragen te regelen voor de Geonaire
  * Gemaakt op 2016-11-30
- * Het laatst veranderd op 2016-12-02
+ * Het laatst veranderd op 2016-12-03
  * door GeOdin
  *
  *==========================================
@@ -42,7 +42,7 @@ var lastQuestion = 7;
 var questions = [
 	[
 		"cartoon-introduction",
-		"<h3>De Placeys</h3>Met onder andere 'Greet' de oma, 'Grumps' de opa,<br/>'Piet' de hardwerkende zoon, 'Karel' de sportieve kleinzoon en 'Doerak' de hond",
+		"<h3>De Placeys</h3><p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Karel' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>",
 		"Introductie",
 		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions);"><input type="submit" value="Begin"></form>'
 	],
@@ -78,14 +78,14 @@ var questions = [
 	],
 	[
 		"cartoon-question6",
-		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 6</p>",
+		"<h3 style='background: rgba(00, 00, 00, .36);'>De Placeys</h3><p align='left' style='margin:1em;background: rgba(00, 00, 00, .36);'>Opa Grumps is vandaag een beetje in een warrige bui. Hij loopt de buurtsuper 'De Vriendelijke Bloemkool' in. Na enigszins zoeken tussen verscheidene schappen, komt hij er niet uit en komt een van de werknemers hem helpen. Werknemer: 'Wat zoekt u, meneer?' Grumps: 'Ik been op zoek naar de gemeenschap.' De werknemer kijkt enigszins verbaasd. Vervolgens kijkt Grumps verder de schappen in en zegt: 'Waar kan ik anders de gemeenschapsgoederen vinden?'</p>",
 		"Als u het over uw omgeving hebt, tot hoever reikt deze?",
 		'<form onsubmit="showQuestion7(questions);"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question7",
-		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 7</p>",
-		"Stel de gemeente zou een windmolen willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
+		"<h3 style='background: rgba(00, 00, 00, .36);'>De Placeys</h3><p align='left' style='margin:1em;background: rgba(00, 00, 00, .36);'>Karel en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park en zien dat er een nieuwe parkeergarage is opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Karel reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
+		"Stel de gemeente zou een parkeergarage willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
 		'<form onsubmit="sendQuestionnaire()"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
 	[

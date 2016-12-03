@@ -212,7 +212,7 @@ function showQuestion5(questions) {
 function showQuestion6(questions) {
 	$("#cartoonimage").css("color", "white");
 	$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-	$("#cartoonimage").html('<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">');
+	$("#cartoonimage").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 	$("#questiontitle").css("color", "white");
 	$("#questiontitle").css("text-shadow", "1px 1px #000000");
 	$("#questiontitle").html(questions[6][2]);
@@ -254,7 +254,7 @@ function showQuestion7(questions) {
 	$("#map").css("display", "block");
 	$("#cartoonimage").css("color", "white");
 	$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-	$("#cartoonimage").html('<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">');
+	$("#cartoonimage").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 	$("#questiontitle").css("color", "white");
 	$("#questiontitle").css("text-shadow", "1px 1px #000000");
 	$("#questiontitle").html(questions[7][2]);
@@ -476,7 +476,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$("#map").css("display", "block");
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html('<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">');
+		$("#cartoonimage").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html(questions[6][2]);
@@ -491,7 +491,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$("#map").css("display", "block");
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html('<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">');
+		$("#cartoonimage").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html(questions[7][2]);
