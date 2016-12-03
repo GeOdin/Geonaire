@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-12-02
+ * Het laatst veranderd op 2016-12-03
  * door GeOdin
  *
  *==========================================
@@ -188,6 +188,23 @@ function showQuestion6(questions) {
 	$("#tableofcontents-question6").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
+	// Show the toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$("#content").css("left", "0%");
+		$("#content").css("width", "100%");
+	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+		$("#content").css("left", "0%");
+		$("#content").css("width", "92.5%");
+	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$("#content").css("left", "17.5%");
+		$("#content").css("width", "82.5%");
+	} else {
+		$("#content").css("left", "17.5%");
+		$("#content").css("width", "75%");
+	}
 }
 
 //////////////////////////////

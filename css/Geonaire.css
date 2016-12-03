@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-02
+ * Het laatst veranderd op 2016-12-03
  * door GeOdin
  */
 
@@ -160,7 +160,7 @@ ul {
 	position: absolute;
 	display: inline-block;
 	left: 17.5%;
-	width: 75%;
+	width: 82.5%;
 	height: 75.25vh;
 	z-index: 99;
 	background-color: transparent;
@@ -227,7 +227,7 @@ ul {
 
 #toolbar{
 	position: absolute;
-	display: inline-block;
+	display: none;
 	right: 0%;
 	width: 7.5%;
 	height: 75.25vh;
