@@ -3,7 +3,7 @@
 	Geonaire.html
 	Hoofd pagina voor de Geonaire
 	Gemaakt op 2016-11-24
-	Het laatst veranderd op 2016-12-01
+	Het laatst veranderd op 2016-12-03
 	door GeOdin
 -->
 
@@ -11,7 +11,8 @@
 	<head>
 		<link type="text/css" rel="stylesheet" href="css/Geonaire.css"/>
 		<link rel="shortcut icon" type="image/png" href="favicon.png" />
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Reference to the jQuery library, currentle not yet used -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Reference to the jQuery library -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfbd7SbhQEtzxsnaMTMhE3lgSqdBLSE7w&libraries=drawing"></script> <!-- Google Maps API key for this project -->
 		<script type="text/javascript" src="js/Geonaire.js"></script>
 		<script type="text/javascript" src="js/StartGeonaire.js"></script> 
 		<script type="text/javascript" src="js/GeonaireQuestions.js"></script>
@@ -26,7 +27,9 @@
 				De Geonaire
 			</div>
 		</div>
-		<div id="main">
+		<div id="map" class="main">
+		</div>
+		<div id="main" class="main">
 			<div id="overview">
 				<div id="progressbar">
 					<div id="progress"></div>
@@ -48,7 +51,7 @@
 					</ul>
 				</div>
 			</div>
-			<div id="content">
+			<div id="content" class="content">
 				<div id="cartoon">
 					<div id="cartoonimage" class="cartoonimage"></div>
 				</div>

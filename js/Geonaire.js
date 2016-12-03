@@ -44,8 +44,10 @@
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
  * * * 3 december
  * * * * StartGeonaire.js -> drawMap()
+ * * * * * use zipcode from questions and CSV-file -> http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
  * * * * GeonaireUser.js -> user Object
  * * * * #cartoonimage -> write down cartoons as placeholders
+ * * * * laat ook zien of de footer-buttons actief zijn met een .active
  * * * Algemeen:
  * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons) (zie code in StartGeonaire functie show...(questions) achter $("#cartoonimage").html(.. voor de code voor de plaatjes)
  * * * * * verander het in de functies showQuestion(...) en toggleQuestions(...)
@@ -108,6 +110,7 @@
  * * * input invalid -> http://www.w3schools.com/cssref/css_selectors.asp
  * * JavaScript
  * * * gebruik data van HTML-form input als JavaScript variable -> http://stackoverflow.com/questions/23982774/turn-html-form-input-into-javascript-variable
+ * * * change the id of a div -> http://stackoverflow.com/questions/16584121/change-div-id-by-javascript
  * * * jQuery
  * * * * $(document).ready(function() {});
  * * * * $('div').mouseenter(function() {});

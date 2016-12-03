@@ -70,13 +70,23 @@ ul {
 	font-size: 1.2em;
 }
 
-#main {
+.main {
 	position: fixed;
 	display: block;
 	top: 17.25vh;
 	width: 100%;
 	left: 0%;
 	height: 75.25vh;
+	background-color: transparent;
+}
+
+#map {
+	display: none;
+	z-index: 0;
+}
+
+#main {
+	z-index: 1;
 }
 
 #overview{
@@ -156,18 +166,19 @@ ul {
 	display: none;
 }
 
-#content{
+.content{
 	position: absolute;
 	display: inline-block;
 	left: 17.5%;
 	width: 82.5%;
 	height: 75.25vh;
 	z-index: 99;
-	background-color: transparent;
-	background: white;
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
+}
+
+#content {
 }
 
 #cartoon{
@@ -176,7 +187,6 @@ ul {
 	width: 100%;
 	height: 15vh;
 	background-color: transparent;
-	background: white;
 	color: rgba(00, 00, 00, .46);
 	text-shadow: none;
 	overflow-y: auto;
@@ -198,7 +208,6 @@ ul {
 	margin-top: 1.5vh;
 	margin-bottom: 1vh;
 	background-color: transparent;
-	background: white;
 	font-size: 1.2em;
 	color: rgba(00, 00, 00, .46);
 	text-shadow: 1px 1px rgba(00, 00, 00, .05);
@@ -215,7 +224,6 @@ ul {
 	width: 100%;
 	height: 45.25vh;
 	background-color: transparent;
-	background: white;
 	color: rgba(00, 00, 00, .46);
 	text-shadow: 1px 1px rgba(00, 00, 00, .05);
 	overflow-y: auto;

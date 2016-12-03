@@ -12,6 +12,7 @@
  * Functies binnen deze JavaScript file: *
  *========================================
  * startGeonaire()
+ * drawMap()
  * showIntroduction(questions)
  * showQuestion1(questions)
  * showQuestion2(questions)
@@ -44,6 +45,33 @@ function startGeonaire() {
 	//showQuestions(questions);
 }
 
+///////////////
+// drawMap() //
+///////////////
+
+// Function to draw the map
+
+function drawMap() {
+	// Set the variables
+	var zoomLevel = 14;
+	var lat = 51.974151;
+	var lon = 5.664084;
+
+	// Create and draw the map
+	var map = new google.maps.Map(document.getElementById("map"), {
+		zoom: zoomLevel,
+		center: new google.maps.LatLng(lat, lon),
+		mapTypeId: google.maps.MapTypeId.TERRAIN
+	});
+	
+	// Show the map
+	$("#map").css("display", "block");
+	
+	// Show #overview, #cartoon, #question, #answer and #toolbar
+	$("#overview").css("display", "inline-block");
+	$("#overview").css("z-index", "99");
+}
+
 /////////////////////////////////
 // showIntroduction(questions) //
 /////////////////////////////////
@@ -51,6 +79,7 @@ function startGeonaire() {
 // Function for showing the introduction on startGeonaire
 
 function showIntroduction(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
@@ -71,6 +100,7 @@ function showIntroduction(questions) {
 // Function for showing question 1
 
 function showQuestion1(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
@@ -92,6 +122,7 @@ function showQuestion1(questions) {
 // Function for showing question 2
 
 function showQuestion2(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
@@ -113,6 +144,7 @@ function showQuestion2(questions) {
 // Function for showing question 3
 
 function showQuestion3(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
@@ -134,6 +166,7 @@ function showQuestion3(questions) {
 // Function for showing question 4
 
 function showQuestion4(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html('<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">');
@@ -155,6 +188,7 @@ function showQuestion4(questions) {
 // Function for showing question 5
 
 function showQuestion5(questions) {
+	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
 	$("#cartoonimage").html('<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">');
@@ -188,22 +222,25 @@ function showQuestion6(questions) {
 	$("#tableofcontents-question6").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
-	// Show the toolbar
+	// Draw the map
+	drawMap();
+	// Show #toolbar
 	if ($("#toolbar").css("display").toLowerCase() == "none") {
 		$("#toolbar").css("display", "inline-block");
 	}
+	// Reset the width of #content
 	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#content").css("left", "0%");
-		$("#content").css("width", "100%");
+		$(".content").css("left", "0%");
+		$(".content").css("width", "100%");
 	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-		$("#content").css("left", "0%");
-		$("#content").css("width", "92.5%");
+		$(".content").css("left", "0%");
+		$(".content").css("width", "92.5%");
 	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#content").css("left", "17.5%");
-		$("#content").css("width", "82.5%");
+		$(".content").css("left", "17.5%");
+		$(".content").css("width", "82.5%");
 	} else {
-		$("#content").css("left", "17.5%");
-		$("#content").css("width", "75%");
+		$(".content").css("left", "17.5%");
+		$(".content").css("width", "75%");
 	}
 }
 
@@ -214,6 +251,7 @@ function showQuestion6(questions) {
 // Function for showing question 7
 
 function showQuestion7(questions) {
+	$("#map").css("display", "block");
 	$("#cartoonimage").css("color", "white");
 	$("#cartoonimage").css("text-shadow", "1px 1px #000000");
 	$("#cartoonimage").html('<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">');
@@ -238,17 +276,17 @@ function toggleButtons() {
 	$("#button-overview").click(function() {
         $("#overview").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "100%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "92.5%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "82.5%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "82.5%");
 		} else {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "75%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "75%");
 		}
     });
     $("#button-cartoon").click(function() {
@@ -258,17 +296,17 @@ function toggleButtons() {
     $("#button-toolbar").click(function() {
         $("#toolbar").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "100%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "92.5%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "82.5%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "82.5%");
 		} else {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "75%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "75%");
 		}
     });
 }
@@ -283,17 +321,17 @@ function toggleWindows() {
 	$("#tableofcontents-title").click(function() {
         $("#overview").css("display", "none");
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "100%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "92.5%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "82.5%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "82.5%");
 		} else {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "75%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "75%");
 		}
     });
    
@@ -304,17 +342,17 @@ function toggleWindows() {
     $("#toolbar").click(function() {
         $("#toolbar").css("display", "none");
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "100%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#content").css("left", "0%");
-			$("#content").css("width", "92.5%");
+			$(".content").css("left", "0%");
+			$(".content").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "82.5%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "82.5%");
 		} else {
-			$("#content").css("left", "17.5%");
-			$("#content").css("width", "75%");
+			$(".content").css("left", "17.5%");
+			$(".content").css("width", "75%");
 		}
     });
 }
@@ -327,6 +365,7 @@ function toggleWindows() {
 
 function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-introduction").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
@@ -359,6 +398,7 @@ function toggleQuestions(questions, lastQuestion) {
 	}
  */
 	$("#tableofcontents-question1").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
@@ -373,6 +413,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question2").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
@@ -387,6 +428,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question3").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
@@ -401,6 +443,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question4").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html('<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">');
@@ -415,6 +458,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question5").click(function() {
+		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
 		$("#cartoonimage").html('<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">');
@@ -429,6 +473,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question6").click(function() {
+		$("#map").css("display", "block");
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
 		$("#cartoonimage").html('<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">');
@@ -443,6 +488,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question7").click(function() {
+		$("#map").css("display", "block");
 		$("#cartoonimage").css("color", "white");
 		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
 		$("#cartoonimage").html('<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">');
