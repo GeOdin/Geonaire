@@ -169,7 +169,7 @@ function showQuestion4(questions) {
 	$("#map").css("display", "none");
 	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html('<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">');
+	$("#cartoonimage").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[4][2]);
@@ -446,7 +446,7 @@ function toggleQuestions(questions, lastQuestion) {
 		$("#map").css("display", "none");
 		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
 		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html('<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">');
+		$("#cartoonimage").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[4][2]);
