@@ -63,13 +63,21 @@ function drawMap() {
 		center: new google.maps.LatLng(lat, lon),
 		mapTypeId: google.maps.MapTypeId.TERRAIN
 	});
-	
+
 	// Show the map
 	$("#map").css("display", "block");
-	
-	// Show #overview, #cartoon, #question, #answer and #toolbar
-	$("#overview").css("display", "inline-block");
-	$("#overview").css("z-index", "99");
+
+	// Adjust #header to go down a little bit for the GoogleMaps buttons in the top-left corner
+/*
+	$("#header").css("top", "8.5vh");
+	$("#header").css("height", "8.75vh");
+ */
+/*
+	if ($("#header").css("top") == "0vh" && $("#header").css("height") == "17.25vh") {
+		$("#header").css("top", "5.5vh");
+		$("#header").css("height", "11.75vh");
+	}
+ */
 }
 
 /////////////////////////////////

@@ -42,8 +42,10 @@
  * * * (v) site online -> geonaire.website.tk
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
- * * * 3 december
+ * * * 4 december
  * * * * StartGeonaire.js -> drawMap()
+ * * * * * pas de z-index aan voor de verscheidenen divs, zodat de goede boven de #map liggen
+ * * * * * verander de width van #cartoonimage #questiontitle en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
  * * * * * use zipcode from questions and CSV-file -> http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
  * * * * GeonaireUser.js -> user Object
  * * * * #cartoonimage -> write down cartoons as placeholders
@@ -83,6 +85,7 @@
  * Front-end programming
  * * HTML5
  * * CSS3
+ * * * Click through divs -> http://stackoverflow.com/questions/3680429/click-through-a-div-to-underlying-elements
  * * * Other default font?
  * * * * set other default when certain font is unavailable on some browsers/ computers
  * * * Add scrollbars to divs?

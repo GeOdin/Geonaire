@@ -2,8 +2,17 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-03
+ * Het laatst veranderd op 2016-12-04
  * door GeOdin
+ */
+
+/*
+ * z-index
+ * 5voverview, vcartoonimage, vquestiontitle, vanswer, vtoolbar
+ * 3vcartoon, vquestion
+ * 2vcontent
+ * 1vheader, vfooter
+ * 0vmap
  */
 
 body {
@@ -41,6 +50,14 @@ ul {
 	margin-bottom: 1em;
 }
 
+#map {
+	display: none;
+	top: 0vh;
+	width: 100%;
+	height: 100vh;
+	z-index: 0;
+}
+
 #header {
 	position: fixed;
 	display: block;
@@ -48,7 +65,7 @@ ul {
 	left: 0%;
 	width: 100%;
 	height: 17.25vh;
-	z-index: 99;
+	z-index: 1;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 2em;
@@ -58,13 +75,13 @@ ul {
 }
 
 #header2 {
-	position: fixed;
+	position: relative;
 	display: none;
 	top: 5.5vh;
 	left: 0%;
 	width: 100%;
 	height: 11.75vh;
-	z-index: 99;
+	z-index: 1;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 2em;
@@ -74,11 +91,25 @@ ul {
 }
 
 #header-title {
-	position: absolute;
-	width: 100%;
-	top: 3.5vh;
+	position: relative;
+	top: 0vh;
 	left: 0%;
-	font-size: 1.2em;
+	width: 100%;
+	height: 17.25vh;
+	z-index: 1;
+	color: white;
+	text-shadow: 1px 1px #000000;
+	overflow-y: auto;
+}
+
+#header-title-text {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 100%;
+	left: 0%;
+	font-size: 7.5vh;
+	overflow-y: auto;
 }
 
 .main {
@@ -91,11 +122,6 @@ ul {
 	background-color: transparent;
 }
 
-#map {
-	display: none;
-	z-index: 0;
-}
-
 #main {
 	z-index: 1;
 }
@@ -106,7 +132,7 @@ ul {
 	left: 0%;
 	width: 17.5%;
 	height: 75.25vh;
-	z-index: 99;
+	z-index: 5;
 	background-color: transparent;
 	background: rgba(00, 00, 00, .23);
 	font-size: 1.2em;
@@ -183,7 +209,7 @@ ul {
 	left: 17.5%;
 	width: 82.5%;
 	height: 75.25vh;
-	z-index: 99;
+	z-index: 2;
 	color: white;
 	text-shadow: 1px 1px #000000;
 	overflow-y: auto;
@@ -197,6 +223,7 @@ ul {
 	display: inline-block;
 	width: 100%;
 	height: 15vh;
+	z-index: 3;
 	background-color: transparent;
 	color: rgba(00, 00, 00, .46);
 	text-shadow: none;
@@ -208,6 +235,7 @@ ul {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	z-index: 5;
 	overflow: auto;
 }
 
@@ -218,6 +246,7 @@ ul {
 	height: 5vh;
 	margin-top: 1.5vh;
 	margin-bottom: 1vh;
+	z-index: 3;
 	background-color: transparent;
 	font-size: 1.2em;
 	color: rgba(00, 00, 00, .46);
@@ -226,6 +255,7 @@ ul {
 }
 
 #questiontitle {
+	z-index: 5;
 	overflow-y: auto;
 }
 
@@ -234,6 +264,7 @@ ul {
 	display: inline-block;
 	width: 100%;
 	height: 45.25vh;
+	z-index: 5;
 	background-color: transparent;
 	color: rgba(00, 00, 00, .46);
 	text-shadow: 1px 1px rgba(00, 00, 00, .05);
@@ -250,7 +281,7 @@ ul {
 	right: 0%;
 	width: 7.5%;
 	height: 75.25vh;
-	z-index: 99;
+	z-index: 5;
 	background-color: transparent;
 	background: rgba(00, 00, 00, .23);
 	font-size: 1.2em;
@@ -273,7 +304,7 @@ ul {
 	left: 0%;
 	width: 100%;
 	height: 7.5vh;
-	z-index: 99;
+	z-index: 1;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 1.2em;
@@ -289,7 +320,7 @@ ul {
 	left: 0%;
 	width: 95.75%;
 	height: 7.5vh;
-	z-index: 99;
+	z-index: 1;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 1.2em;

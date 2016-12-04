@@ -42,13 +42,13 @@ var lastQuestion = 7;
 var questions = [
 	[
 		"cartoon-introduction",
-		"<h3>De Placeys</h3><p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Karel' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>",
+		"<h3>De Placeys</h3><p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Steven' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>",
 		"Introductie",
 		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions);"><input type="submit" value="Begin"></form>'
 	],
 	[
 		"cartoon-question1",
-		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Karel viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Karel schrikt en schiet als een kat de gordijnen in.</p>",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Steven viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Steven schrikt en schiet als een kat de gordijnen in.</p>",
 		"Wat is uw leeftijd?",
 		'<form onsubmit="showQuestion2(questions);"><input type="text" name="age" maxlength="3" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
@@ -66,13 +66,13 @@ var questions = [
 	],
 	[
 		"cartoon-question4",
-		"<h3>De Placeys</h3><p style='text-align:center;'>Charlotte.<br/>Overdag is zij een student,<br/>maar 's avonds, als haar computer aangaat, redt zij de levens van velen.</p>",
+		"<h3>De Placeys</h3><p style='text-align:center;'>Charlotte.<br/>Overdag is zij een studente,<br/>maar 's avonds, als haar computer aangaat, redt zij de levens van velen.</p>",
 		"Wat voor spellen/games speelt u zoal en op wat voor een computer?",
 		checkboxesGamecategories
 	],
 	[
 		"cartoon-question5",
-		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 5</p>",
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 5</p>", // Cartoon over player -> Dit weekend houdt Charlotte een LAN-party met haar vrienden. ... 1 van de net iets te dikke vrienden die online vraagt (tik tik tik op z'n toetsenbord): 'Schone jonkvrouw ... en iets met pizza'. Charlotte die antwoord irl: 'Je bent ook zo'n player'.
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
 		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
@@ -84,7 +84,7 @@ var questions = [
 	],
 	[
 		"cartoon-question7",
-		"<h3 style='background: rgba(00, 00, 00, .36);'>De Placeys</h3><p align='left' style='margin:1em;background: rgba(00, 00, 00, .36);'>Karel en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage is opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Karel reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
+		"<h3 style='background: rgba(00, 00, 00, .36);'>De Placeys</h3><p align='left' style='margin:1em;background: rgba(00, 00, 00, .36);'>Steven en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Steven reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
 		"Stel de gemeente zou een parkeergarage willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
 		'<form onsubmit="sendQuestionnaire()"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
