@@ -72,7 +72,7 @@ var questions = [
 	],
 	[
 		"cartoon-question5",
-		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Cartoon vraag 5</p>", // Cartoon over player -> Dit weekend houdt Charlotte een LAN-party met haar vrienden. ... 1 van de net iets te dikke vrienden die online vraagt (tik tik tik op z'n toetsenbord): 'Schone jonkvrouw ... en iets met pizza'. Charlotte die antwoord irl: 'Je bent ook zo'n player'.
+		"<h3>De Placeys</h3><p align='left' style='margin:1em;'>Dit weekend houdt Charlotte een LAN-party voor haar 3 vrienden. Ze zitten allemaal gekluisterd aan hun beeldscherm, zich wanend in een andere wereld. Opeens begint het getik op het toetsenbord van een van de vrienden wel erg enthousiast te worden. 'Romia, schone jonkvrouwe, zijt gij het een genoegen met mij en twee andere companen te genieten van een delicatesse, maagdelijk en vol liefde gekleurd?' Even later zegt Charlotte hardop: 'Als je wilt dat ik een pizza met mozarella en tomaat in de oven stop, mag je het ook gewoon zeggen. Je bent ook zo'n player!'</p>",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
 		'<form onsubmit="showQuestion6(questions);"><input type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],

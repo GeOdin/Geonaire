@@ -67,6 +67,7 @@
  * * * Laatste vraag
  * * * * het versturen van de data naar de server in plaats van het vernieuwen van de pagina
  * * * * add new #content upon completing the questionnaire; versturen heeft momenteel tot gevolg dat je naar het beginscherm gaat
+ * * * * verander de font-sizes naar % in plaats van em(?)
  * var dropdownNationalities en var checkboxesGamecategories eventueel nog invoegen als argument voor de verschillende functies
  * Zorg dat alles in het Nederlands is voor de doelgroep
  * Doelgroep: 18+ Nederlanders
