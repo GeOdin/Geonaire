@@ -42,7 +42,7 @@ var lastQuestion = 7;
 var questions = [
 	[
 		"cartoon-introduction",
-		"<h3>De Placeys</h3><p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Steven' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>",
+		"<h3>De Placeys</h3><p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Steven' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>", // Pechvogel Piet
 		"Introductie",
 		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions);"><input type="submit" value="Begin"></form>'
 	],
