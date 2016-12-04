@@ -13,7 +13,6 @@
  * * momenteel geen dingen die nog gedaan moeten worden
  * Geonaire.html
  * Geonaire.css
- * * momenteel geen dingen die nog gedaan moeten worden
  * Geonaire.js
  * * momenteel geen dingen die nog gedaan moeten worden
  * StartGeonaire.js
