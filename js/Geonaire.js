@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-03
+ * Het laatst veranderd op 2016-12-04
  * door GeOdin
  *
  *===================================
@@ -48,7 +48,7 @@
  * * * * * verander de width van #cartoonimage #questiontitle en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
  * * * * * use zipcode from questions and CSV-file -> http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
  * * * * GeonaireUser.js -> user Object
- * * * * #cartoonimage -> write down cartoons as placeholders
+ * * * * (v) #cartoonimage -> write down cartoons as placeholders
  * * * * laat ook zien of de footer-buttons actief zijn met een .active
  * * * Algemeen:
  * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons) (zie code in StartGeonaire functie show...(questions) achter $("#cartoonimage").html(.. voor de code voor de plaatjes)
@@ -56,18 +56,17 @@
  * * * * ingevoerde data opslaan tijdens het invoeren van de vragenlijst
  * * * * link met de server
  * * * * improve color -> https://material.google.com/style/color.html#color-color-palette (indigo)
+ * * * * verander de font-sizes naar % in plaats van em(?)
  * * * Introductie:
  * * * * hier komt een kleine introductie over de vragenlijst
  * * * Vraag 2:
  * * * * uitgebreidere lijst van nationaliteiten
  * * * Vraag 6/7
  * * * * dit zijn momenteel nog placeholder vragen
- * * * * laden van GoogleMaps
  * * * * toolbar functioneel maken
  * * * Laatste vraag
  * * * * het versturen van de data naar de server in plaats van het vernieuwen van de pagina
  * * * * add new #content upon completing the questionnaire; versturen heeft momenteel tot gevolg dat je naar het beginscherm gaat
- * * * * verander de font-sizes naar % in plaats van em(?)
  * var dropdownNationalities en var checkboxesGamecategories eventueel nog invoegen als argument voor de verschillende functies
  * Zorg dat alles in het Nederlands is voor de doelgroep
  * Doelgroep: 18+ Nederlanders
