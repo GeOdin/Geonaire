@@ -252,29 +252,28 @@ ul {
 
 #question{
 	position: relative;
-	display: inline-block;
-	width: 100%;
-	height: 5vh;
-	margin-top: 1.5vh;
-	margin-bottom: 1vh;
+	display: block;
+	margin: 1.5vh;
 	z-index: 3;
 	background-color: transparent;
-	font-size: 1.2em;
-	color: rgba(00, 00, 00, .46);
-	text-shadow: 1px 1px rgba(00, 00, 00, .05);
 	overflow-y: auto;
 }
 
 #questiontitle {
 	z-index: 5;
+	font-size: 2em;
+	color: rgba(00, 00, 00, .46);
+	text-shadow: 1px 1px rgba(00, 00, 00, .05);
 	overflow-y: auto;
 }
 
 #answer{
 	position: relative;
-	display: inline-block;
+	display: block;
+/*
 	width: 100%;
 	height: 45.25vh;
+ */
 	z-index: 5;
 	background-color: transparent;
 	color: rgba(00, 00, 00, .46);
