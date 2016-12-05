@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-12-04
+ * Het laatst veranderd op 2016-12-05
  * door GeOdin
  *
  *==========================================
@@ -41,8 +41,6 @@ function startGeonaire() {
 	toggleWindows();
 	toggleQuestions(questions, lastQuestion);
 	showIntroduction(questions);
-	//nextQuestion(currentQuestion, questions, lastQuestion);
-	//showQuestions(questions);
 }
 
 ///////////////
@@ -87,10 +85,9 @@ function drawMap() {
 // Function for showing the introduction on startGeonaire
 
 function showIntroduction(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
+	$("#header-title-text").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[0][2]);
@@ -108,10 +105,9 @@ function showIntroduction(questions) {
 // Function for showing question 1
 
 function showQuestion1(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
+	$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[1][2]);
@@ -130,10 +126,9 @@ function showQuestion1(questions) {
 // Function for showing question 2
 
 function showQuestion2(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
+	$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[2][2]);
@@ -152,10 +147,9 @@ function showQuestion2(questions) {
 // Function for showing question 3
 
 function showQuestion3(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
+	$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[3][2]);
@@ -174,10 +168,9 @@ function showQuestion3(questions) {
 // Function for showing question 4
 
 function showQuestion4(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
+	$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[4][2]);
@@ -196,10 +189,9 @@ function showQuestion4(questions) {
 // Function for showing question 5
 
 function showQuestion5(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "none");
-	$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-	$("#cartoonimage").css("text-shadow", "none");
-	$("#cartoonimage").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
+	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[5][2]);
@@ -218,9 +210,9 @@ function showQuestion5(questions) {
 // Function for showing question 6
 
 function showQuestion6(questions) {
-	$("#cartoonimage").css("color", "white");
-	$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-	$("#cartoonimage").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
+	$("*").scrollTop(0);
+	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
+//	$("#header-title-logo").css("background", "rgba(00, 00, 00, .36)");
 	$("#questiontitle").css("color", "white");
 	$("#questiontitle").css("text-shadow", "1px 1px #000000");
 	$("#questiontitle").html(questions[6][2]);
@@ -259,10 +251,9 @@ function showQuestion6(questions) {
 // Function for showing question 7
 
 function showQuestion7(questions) {
+	$("*").scrollTop(0);
 	$("#map").css("display", "block");
-	$("#cartoonimage").css("color", "white");
-	$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-	$("#cartoonimage").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 	$("#questiontitle").css("color", "white");
 	$("#questiontitle").css("text-shadow", "1px 1px #000000");
 	$("#questiontitle").html(questions[7][2]);
@@ -282,6 +273,7 @@ function showQuestion7(questions) {
 
 function toggleButtons() {
 	$("#button-overview").click(function() {
+		$("*").scrollTop(0);
         $("#overview").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
 			$(".content").css("left", "0%");
@@ -297,11 +289,30 @@ function toggleButtons() {
 			$(".content").css("width", "75%");
 		}
     });
+	
     $("#button-cartoon").click(function() {
-        $("#cartoon").toggle();
+		$("*").scrollTop(0);
+        $("#header").toggle();
+		if ($("#header").css("display").toLowerCase() == "fixed") {
+			$(".main").css("top", "17.25vh");
+			$(".main").css("height", "75.25vh");
+			$("#overview").css("height", "75.25vh");
+			$("#toolbar").css("height", "75.25vh");
+		} else if ($("#header").css("display").toLowerCase() == "block") {
+			$(".main").css("top", "17.25vh");
+			$(".main").css("height", "75.25vh");
+			$("#overview").css("height", "75.25vh");
+			$("#toolbar").css("height", "75.25vh");
+		} else if ($("#header").css("display").toLowerCase() == "none") {
+			$(".main").css("top", "0vh");
+			$(".main").css("height", "92.5vh");
+			$("#overview").css("height", "92.5vh");
+			$("#toolbar").css("height", "92.5vh");
+		}
     });
    
     $("#button-toolbar").click(function() {
+		$("*").scrollTop(0);
         $("#toolbar").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
 			$(".content").css("left", "0%");
@@ -327,6 +338,7 @@ function toggleButtons() {
 
 function toggleWindows() {
 	$("#tableofcontents-title").click(function() {
+		$("*").scrollTop(0);
         $("#overview").css("display", "none");
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
 			$(".content").css("left", "0%");
@@ -343,11 +355,8 @@ function toggleWindows() {
 		}
     });
    
-    $("#cartoon").click(function() {
-        $("#cartoon").css("display", "none");
-    });
-   
     $("#toolbar").click(function() {
+		$("*").scrollTop(0);
         $("#toolbar").css("display", "none");
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
 			$(".content").css("left", "0%");
@@ -373,10 +382,9 @@ function toggleWindows() {
 
 function toggleQuestions(questions, lastQuestion) {
 	$("#tableofcontents-introduction").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
+		$("#header-title-text").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[0][2]);
@@ -390,9 +398,9 @@ function toggleQuestions(questions, lastQuestion) {
 /*
 	for (i = 1; i < lastQuestion; i++) {
 		$("#tableofcontents-question"+i).click(function() {
-			$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-			$("#cartoonimage").css("text-shadow", "none");
-			$("#cartoonimage").html('<img src="img/'+questions[i][1]+'.png" alt="'+questions[i][3]+'">');
+			$("*").scrollTop(0);
+			$("#map").css("display", "none");
+			$("#header-title-text").html(questions[i][1]); // '<img src="img/'+questions[i][0]+'.png" alt="'+questions[i][1]+'">'
 			$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 			$("#questiontitle").css("text-shadow", "none");
 			$("#questiontitle").html(questions[i][0]);
@@ -406,10 +414,9 @@ function toggleQuestions(questions, lastQuestion) {
 	}
  */
 	$("#tableofcontents-question1").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
+		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[1][2]);
@@ -421,10 +428,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question2").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
+		$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[2][2]);
@@ -436,10 +442,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question3").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
+		$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[3][2]);
@@ -451,10 +456,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question4").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
+		$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[4][2]);
@@ -466,10 +470,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question5").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "none");
-		$("#cartoonimage").css("color", "rgba(00, 00, 00, .46)");
-		$("#cartoonimage").css("text-shadow", "none");
-		$("#cartoonimage").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
+		$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
 		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[5][2]);
@@ -481,10 +484,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question6").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "block");
-		$("#cartoonimage").css("color", "white");
-		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
+		$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html(questions[6][2]);
@@ -496,10 +498,9 @@ function toggleQuestions(questions, lastQuestion) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 	});
 	$("#tableofcontents-question7").click(function() {
+		$("*").scrollTop(0);
 		$("#map").css("display", "block");
-		$("#cartoonimage").css("color", "white");
-		$("#cartoonimage").css("text-shadow", "1px 1px #000000");
-		$("#cartoonimage").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+		$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 		$("#questiontitle").css("color", "white");
 		$("#questiontitle").css("text-shadow", "1px 1px #000000");
 		$("#questiontitle").html(questions[7][2]);

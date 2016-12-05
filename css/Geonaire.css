@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-04
+ * Het laatst veranderd op 2016-12-05
  * door GeOdin
  */
 
@@ -29,13 +29,11 @@ a {
 }
 
 h3 {
-	margin: 1em;
+	margin: 20%;
 	background: rgba(00, 00, 00, .10);
 }
 
 p {
-	margin: 1em;
-	background: rgba(00, 00, 00, .10);
 	text-align: left;
 }
 
@@ -102,13 +100,24 @@ ul {
 	overflow-y: auto;
 }
 
+#header-title-logo {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0, -50%);
+	width: 17.5%;
+	font-size: 2.5vh;
+	overflow-y: auto;
+}
+
 #header-title-text {
 	position: absolute;
 	top: 50%;
+	left: 17.5%;
+	height: 17.25vh;
 	transform: translate(0, -50%);
-	width: 100%;
-	left: 0%;
-	font-size: 7.5vh;
+	width: 82.5%;
+	font-size: 3.5vh;
 	overflow-y: auto;
 }
 
@@ -218,6 +227,7 @@ ul {
 #content {
 }
 
+/*
 #cartoon{
 	position: relative;
 	display: inline-block;
@@ -238,6 +248,7 @@ ul {
 	z-index: 5;
 	overflow: auto;
 }
+ */
 
 #question{
 	position: relative;

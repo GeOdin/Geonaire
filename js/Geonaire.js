@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-04
+ * Het laatst veranderd op 2016-12-05
  * door GeOdin
  *
  *===================================
@@ -85,6 +85,7 @@
  * * HTML5
  * * CSS3
  * * * Click through divs -> http://stackoverflow.com/questions/3680429/click-through-a-div-to-underlying-elements
+ * * * resize: both; -> http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_resize // does not work on Internet Explorer, though
  * * * Other default font?
  * * * * set other default when certain font is unavailable on some browsers/ computers
  * * * Add scrollbars to divs?
