@@ -455,9 +455,9 @@ function showQuestion7(questions, user) {
 
 	// Save the data from question 6 and add it to the user object
 /*
-	var nationality = $("#data-question2").val();
-	user.nationality = nationality;
-	//alert(user.nationality);
+	var living_environment = $("#data-question6").val();
+	user.livingenvironment = living_environment;
+	//alert(user.livingenvironment);
  */
 
 	// Reset the scrollbars to the top
@@ -486,6 +486,13 @@ function showQuestion7(questions, user) {
 // Function that handles sending the information of the user to the server/database
 
 function sendQuestionnaire(user) {
+
+	// Save the data from question 7 and add it to the user object
+/*
+	var friction = $("#data-question7").val();
+	user.friction = friction;
+	//alert(user.friction);
+ */
 	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld?") == true) {
 		window.open("Geonaire.html", "_self");
 	}
