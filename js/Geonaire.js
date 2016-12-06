@@ -45,6 +45,7 @@
  * * * * StartGeonaire.js -> drawMap()
  * * * * * GeonaireUser.js -> user Object
  * * * * * * sla antwoord van vragen op als user properties
+ * * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
  * * * * * zorg dat #map binnen #content valt, dan kan je de interactiviteit gebruiken!
  * * * * * * beter nog -> achtergrond als kaart, net als bij TopoPets
  * * * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen
