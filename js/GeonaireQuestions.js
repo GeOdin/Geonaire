@@ -82,7 +82,7 @@ var questions = [
 		"cartoon-question5",
 		"<p align='left' style='margin:1em;'>Dit weekend houdt Charlotte een LAN-party voor haar 3 vrienden. Ze zitten allemaal gekluisterd aan hun beeldscherm, zich wanend in een andere wereld. Opeens begint het getik op het toetsenbord van een van de vrienden wel erg enthousiast te worden. 'Romia, schone jonkvrouwe, zijt gij het een genoegen met mij en twee andere companen te genieten van een delicatesse, maagdelijk en vol liefde gekleurd?' Even later zegt Charlotte hardop: 'Als je wilt dat ik een pizza met mozarella en tomaat in de oven stop, mag je het ook gewoon zeggen. Je bent ook zo'n player!'</p>",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
-		'<form onsubmit="showQuestion6(questions, user);"><input type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion6(questions, user);"><input id="data-question5-gametime-hours" type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select id="data-question5-gametime-categories" name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question6",
@@ -165,7 +165,7 @@ function showQuestion1(questions, user) {
 
 function showQuestion2(questions, user) {
 
-	// Save the data from question 1 and ad it to the user object
+	// Save the data from question 1 and add it to the user object
 	var age = $("#data-question1").val();
 	user.age = age;
 
@@ -196,7 +196,7 @@ function showQuestion2(questions, user) {
 
 function showQuestion3(questions, user) {
 
-	// Save the data from question 2 and ad it to the user object
+	// Save the data from question 2 and add it to the user object
 	var nationality = $("#data-question2").val();
 	user.nationality = nationality;
 
@@ -227,7 +227,7 @@ function showQuestion3(questions, user) {
 
 function showQuestion4(questions, user) {
 
-	// Save the data from question 3 and ad it to the user object
+	// Save the data from question 3 and add it to the user object
 	var zipcode = $("#data-question3").val();
 	user.zipcode = zipcode;
 
@@ -281,7 +281,8 @@ function showQuestion5(questions, user) {
 		["mobilephone", "no"],
 		["ipad", "no"]
 	];
-	// Save the data from question 4 and ad it to the user object
+
+	// Save the data from question 4 and add it to the user object
 	// Save the different game categories to the user object
 	if ($("#data-question4-gamecategories-action").is(":checked")) {
 		game_categories[1][1] = "yes";
@@ -367,7 +368,6 @@ function showQuestion5(questions, user) {
 		game_computers[5][1] = "no";
 	}
 	user.gamecomputers = game_computers;
-	alert(user.gamecomputers);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -396,12 +396,11 @@ function showQuestion5(questions, user) {
 
 function showQuestion6(questions, user) {
 
-	// Save the data from question 5 and ad it to the user object
-/*
-	var nationality = $("#data-question2").val();
-	user.nationality = nationality;
-	//alert(user.nationality);
- */
+	// Save the data from question 5 and add it to the user object
+	var gametime_hours = $("#data-question5-gametime-hours").val();
+	user.gametimehours = gametime_hours;
+	var gametime_categories = $("#data-question5-gametime-categories").val();
+	user.gametimecategories = gametime_categories;
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -454,7 +453,7 @@ function showQuestion6(questions, user) {
 
 function showQuestion7(questions, user) {
 
-	// Save the data from question 6 and ad it to the user object
+	// Save the data from question 6 and add it to the user object
 /*
 	var nationality = $("#data-question2").val();
 	user.nationality = nationality;

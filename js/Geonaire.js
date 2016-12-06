@@ -45,10 +45,11 @@
  * * * * StartGeonaire.js -> drawMap()
  * * * * * GeonaireUser.js -> user Object
  * * * * * * sla antwoord van vragen op als user properties
- * * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
+(M) * * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
+ * * * * * * * anders slaat hij de nieuwe lege velden op als informatie!!!
  * * * * * zorg dat #map binnen #content valt, dan kan je de interactiviteit gebruiken!
- * * * * * * beter nog -> achtergrond als kaart, net als bij TopoPets
- * * * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen
+(M) * * * * * * beter nog -> achtergrond als kaart, net als bij TopoPets
+ * * * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
  * * * * * pas de z-index aan voor de verscheidenen divs, zodat de goede boven de #map liggen
  * * * * * verander de width van #cartoonimage #questiontitle en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
  * * * * * use zipcode from questions and CSV-file -> http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript

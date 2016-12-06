@@ -53,6 +53,8 @@ function createUser() {
 		["mobilephone", "no"],
 		["ipad", "no"]
 	];
+	var gametime_hours = 0;
+	var gametime_categories = "hours";
 	var living_environment = "";
 	var friction = "";
 
@@ -71,10 +73,16 @@ function createUser() {
 	// Add the game computers of the user
 	this.gamecomputers = user_game_computers;
 	
-	// Add the game time of the user
+	// Add the game time hours of the user
+	this.gametimehours = gametime_hours;
+	
+	// Add the game time category of the user
+	this.gametimecategories = gametime_categories;
+	
+	// Add the living environment of the user
 	this.livingenvironment = living_environment;
 	
-	// Add the game time of the user
+	// Add the friction of the user
 	this.friction = friction;
 }
  
