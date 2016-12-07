@@ -1,7 +1,7 @@
 /* GeonaireUser.js
  * JavaScript file om de user iput te verwerken voor de Geonaire
  * Gemaakt op 2016-12-04
- * Het laatst veranderd op 2016-12-06
+ * Het laatst veranderd op 2016-12-07
  * door GeOdin
  *
  *==========================================
@@ -28,13 +28,13 @@ var user;
 
 function createUser() {
 	// Set the variables
-	var age = 18;
+	var age = 0;
 	var nationality; "Nederland";
 	var zipcode = "1234AB";
 	var user_game_categories = [
 		["gamecategory", "yes_or_no"],
 		["action", "no"],
-		["action_adventure", "no"],
+		["actionadventure", "no"],
 		["adventure", "no"],
 		["roleplay", "no"],
 		["simulation", "no"],
@@ -85,4 +85,3 @@ function createUser() {
 	// Add the friction of the user
 	this.friction = friction;
 }
- 

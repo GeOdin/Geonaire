@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-05
+ * Het laatst veranderd op 2016-12-07
  * door GeOdin
  *
  *===================================
@@ -345,5 +345,9 @@ $(document).ready(function(){
 // Function for regulating the JavaScript
 
 function main() {
+	// Create the user object
+	user = new createUser();
+
+	// Start the Geonaire
 	startGeonaire();
 }
