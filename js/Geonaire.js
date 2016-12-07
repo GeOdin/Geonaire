@@ -41,22 +41,34 @@
  * * * (v) site online -> geonaire.website.tk
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
- * * * 4 december
+ * * * 7 december
  * * * * StartGeonaire.js -> drawMap()
- * * * * * GeonaireUser.js -> user Object
- * * * * * * sla antwoord van vragen op als user properties
-(M) * * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
-(M) * * * * * * data wordt alleen opgeslagen bij het klikken op de button "Volgende", niet bij het toggelen tussen de vragen
- * * * * * * * anders slaat hij de nieuwe lege velden op als informatie!!!
- * * * * * zorg dat #map binnen #content valt, dan kan je de interactiviteit gebruiken!
-(M) * * * * * * beter nog -> achtergrond als kaart, net als bij TopoPets
- * * * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
- * * * * * pas de z-index aan voor de verscheidenen divs, zodat de goede boven de #map liggen
+(v) * * * * * sla antwoord van vragen op als user properties
+(v) * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
+(M) * * * * achtergrond als kaart, net als bij TopoPets
+(M) * * * * * #map binnen #main
+(M) * * * * * andere divs op zelfde z-index als #map, met position: relative;
+(M) * * * * * * z-index lijstje veranderen van bovenkant css-file (kan eventueel weg als de map werkt)
+(M) * * * * * toolbar -> https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
+ * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
  * * * * * verander de width van #cartoonimage #questiontitle en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
- * * * * * use zipcode from questions and CSV-file -> http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
- * * * * (v) #cartoonimage -> write down cartoons as placeholders
- * * * * als je bij vraag 6 cartoon(#header) 2xtoggled, wordt hij bij het verschijnen van #header niet meer onder #header geplaatst
+ * * * * * use zipcode from questions and CSV-file
+ * * * * * * http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
+ * * * * * * https://tools.ietf.org/html/rfc4180
+ * * * * * * http://evanplaice.github.io/jquery-csv/examples/basic-usage.html
+(M) * * * * link met server -> http://stackoverflow.com/questions/8591488/google-maps-api-v3-how-to-set-zoom-level-and-map-center-to-user-submitted-locat
+(M) * * * * landenlijst
+* * * * * https://ind.nl/Paginas/Landenlijst-behoud-nationaliteit.aspx
+* * * * * https://nl.speaklanguages.com/engels/woordenschat/landen-en-nationaliteiten
+(v) * * * * #cartoonimage -> write down cartoons as placeholders
+(niet meer van toepassing) * * * * als je bij vraag 6 cartoon(#header) 2xtoggled, wordt hij bij het verschijnen van #header niet meer onder #header geplaatst
+ * * * * improve the user experience
+ * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
+ * * * * * https://www.helpscout.net/blog/website-customers-love/
+ * * * * * https://blog.hubspot.com/marketing/improve-your-websites-user-experience#sm.0001jd8l306mrdr511t77sgg0bh3f
  * * * * laat ook zien of de footer-buttons actief zijn met een .active
+ * * * * Debugging in Sublime -> https://www.sitepoint.com/debugging-xdebug-sublime-text-3/
+ * * * * Crop a div -> https://www.google.nl/search?q=crop+a+div&ie=utf-8&oe=utf-8&client=firefox-b-ab&gfe_rd=cr&ei=VTpEWNvpLY_H8AeDlbXYDA
  * * * Algemeen:
  * * * * de cartoons invoeren (mogelijk worden deze tijdelijk weergegeven als woordgrappen als placeholders voor de cartoons) (zie code in StartGeonaire functie show...(questions) achter $("#cartoonimage").html(.. voor de code voor de plaatjes)
  * * * * * verander het in de functies showQuestion(...) en toggleQuestions(...)
@@ -64,6 +76,9 @@
  * * * * link met de server
  * * * * improve color -> https://material.google.com/style/color.html#color-color-palette (indigo)
  * * * * verander de font-sizes naar % in plaats van em(?)
+ * * * * improve speed of website
+ * * * * * https://betterexplained.com/articles/speed-up-your-javascript-load-time/
+ * * * * * https://blog.hubspot.com/marketing/how-to-reduce-your-websites-page-speed#sm.0001jd8l306mrdr511t77sgg0bh3f
  * * * Introductie:
  * * * * hier komt een kleine introductie over de vragenlijst
  * * * Vraag 2:
@@ -97,9 +112,8 @@
  * * * Other default font?
  * * * * set other default when certain font is unavailable on some browsers/ computers
  * * * Add scrollbars to divs?
+ * * * align vertically -> https://www.w3.org/Style/Examples/007/center.en.html#block
  * * JavaScript
- * * * user as object
- * * * * antwoorden op de vragen als aparte properties (niet verder specificeren naar thema)
  * Back-end programming
  * * php
  * * * link met de server

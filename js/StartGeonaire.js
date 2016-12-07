@@ -14,7 +14,6 @@
  * startGeonaire()
  * drawMap()
  * toggleButtons()
- * toggleWindows()
  * toggleQuestions(questions, lastQuestion, user)
  */
 
@@ -33,7 +32,6 @@ function startGeonaire() {
 	
 	// Make some windows toggable with buttons or by clicking on them
 	toggleButtons();
-	toggleWindows();
 	toggleQuestions(questions, lastQuestion, user);
 	showIntroduction(questions, user);
 
@@ -83,104 +81,66 @@ function drawMap() {
 // Function for toggling menus with the footer buttons
 
 function toggleButtons() {
+	// Toggle the overview menu
 	$("#button-overview").click(function() {
 		$("*").scrollTop(0);
         $("#overview").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "100%");
+			$("#question-answer").css("left", "0%");
+			$("#question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "92.5%");
+			$("#question-answer").css("left", "0%");
+			$("#question-answer").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "82.5%");
+			$("#question-answer").css("left", "17.5%");
+			$("#question-answer").css("width", "82.5%");
 		} else {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "75%");
+			$("#question-answer").css("left", "17.5%");
+			$("#question-answer").css("width", "75%");
 		}
     });
-	
+
+	// Toggle the header
     $("#button-cartoon").click(function() {
 		$("*").scrollTop(0);
         $("#header").toggle();
-		if ($("#header").css("display").toLowerCase() == "fixed") {
-			$(".main").css("top", "17.25vh");
-			$(".main").css("height", "75.25vh");
+		if ($("#header").css("display").toLowerCase() != "none") {
+			$("#question-answer").css("top", "17.25vh");
+			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
+			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "block") {
-			$(".main").css("top", "17.25vh");
-			$(".main").css("height", "75.25vh");
+			$("#question-answer").css("top", "17.25vh");
+			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
+			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "none") {
-			$(".main").css("top", "0vh");
-			$(".main").css("height", "92.5vh");
+			$("#question-answer").css("top", "0vh");
+			$("#overview").css("top", "0vh");
 			$("#overview").css("height", "92.5vh");
+			$("#toolbar").css("top", "0vh");
 			$("#toolbar").css("height", "92.5vh");
 		}
     });
-   
+
+	// Toggle the toolbar
     $("#button-toolbar").click(function() {
 		$("*").scrollTop(0);
         $("#toolbar").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "100%");
+			$("#question-answer").css("left", "0%");
+			$("#question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "92.5%");
+			$("#question-answer").css("left", "0%");
+			$("#question-answer").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "82.5%");
+			$("#question-answer").css("left", "17.5%");
+			$("#question-answer").css("width", "82.5%");
 		} else {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "75%");
-		}
-    });
-}
-
-/////////////////////
-// toggleWindows() //
-/////////////////////
-
-// Function for toggling the windows themselves
-
-function toggleWindows() {
-	$("#tableofcontents-title").click(function() {
-		$("*").scrollTop(0);
-        $("#overview").css("display", "none");
-		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "100%");
-		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "92.5%");
-		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "82.5%");
-		} else {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "75%");
-		}
-    });
-   
-    $("#toolbar").click(function() {
-		$("*").scrollTop(0);
-        $("#toolbar").css("display", "none");
-		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "100%");
-		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$(".content").css("left", "0%");
-			$(".content").css("width", "92.5%");
-		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "82.5%");
-		} else {
-			$(".content").css("left", "17.5%");
-			$(".content").css("width", "75%");
+			$("#question-answer").css("left", "17.5%");
+			$("#question-answer").css("width", "75%");
 		}
     });
 }
