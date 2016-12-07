@@ -22,6 +22,11 @@
  * showQuestion5(questions, user)
  * showQuestion6(questions, user)
  * showQuestion7(questions, user)
+ * savaDataQuestion1(questions, user)
+ * savaDataQuestion2(questions, user)
+ * savaDataQuestion3(questions, user)
+ * savaDataQuestion4(questions, user)
+ * savaDataQuestion5(questions, user)
  * sendQuestionnaire(user)
  */
 
@@ -166,8 +171,7 @@ function showQuestion1(questions, user) {
 function showQuestion2(questions, user) {
 
 	// Save the data from question 1 and add it to the user object
-	var age = $("#data-question1").val();
-	user.age = age;
+	savaDataQuestion1(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -197,8 +201,7 @@ function showQuestion2(questions, user) {
 function showQuestion3(questions, user) {
 
 	// Save the data from question 2 and add it to the user object
-	var nationality = $("#data-question2").val();
-	user.nationality = nationality;
+	savaDataQuestion2(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -228,8 +231,7 @@ function showQuestion3(questions, user) {
 function showQuestion4(questions, user) {
 
 	// Save the data from question 3 and add it to the user object
-	var zipcode = $("#data-question3").val();
-	user.zipcode = zipcode;
+	savaDataQuestion3(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -257,6 +259,176 @@ function showQuestion4(questions, user) {
 // Function for showing question 5
 
 function showQuestion5(questions, user) {
+
+	// Save the data from question 4 and add it to the user object
+	savaDataQuestion4(questions, user);
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Show the new question
+	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
+	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+	$("#questiontitle").html(questions[5][2]);
+	$("#answer").css("color", "rgba(00, 00, 00, .46)");
+	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+	$("#answer").html(questions[5][3]);
+	$("#tableofcontents-question5").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question5").addClass("tableofcontents-item tableofcontents-active");
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////
+// showQuestion6(questions, user) //
+////////////////////////////////////
+
+// Function for showing question 6
+
+function showQuestion6(questions, user) {
+
+	// Save the data from question 5 and add it to the user object
+	savaDataQuestion5(questions, user);
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Show the new question
+	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
+//	$("#header-title-logo").css("background", "rgba(00, 00, 00, .36)");
+	$("#questiontitle").css("color", "white");
+	$("#questiontitle").css("text-shadow", "1px 1px #000000");
+	$("#questiontitle").html(questions[6][2]);
+	$("#answer").css("color", "white");
+	$("#answer").css("text-shadow", "1px 1px #000000");
+	$("#answer").html(questions[6][3]);
+	$("#tableofcontents-question6").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
+
+	// Draw the map
+	drawMap();
+
+	// Show #toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+
+	// Reset the width of #content
+	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$(".content").css("left", "0%");
+		$(".content").css("width", "100%");
+	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+		$(".content").css("left", "0%");
+		$(".content").css("width", "92.5%");
+	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$(".content").css("left", "17.5%");
+		$(".content").css("width", "82.5%");
+	} else {
+		$(".content").css("left", "17.5%");
+		$(".content").css("width", "75%");
+	}
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////
+// showQuestion7(questions, user) //
+////////////////////////////////////
+
+// Function for showing question 7
+
+function showQuestion7(questions, user) {
+
+/*
+	// Save the data from question 6 and add it to the user object
+	savaDataQuestion6(questions, user);
+ */
+
+/*
+	var living_environment = $("#data-question6").val();
+	user.livingenvironment = living_environment;
+	//alert(user.livingenvironment);
+ */
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Show the new question
+	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+	$("#questiontitle").css("color", "white");
+	$("#questiontitle").css("text-shadow", "1px 1px #000000");
+	$("#questiontitle").html(questions[7][2]);
+	$("#answer").css("color", "white");
+	$("#answer").css("text-shadow", "1px 1px #000000");
+	$("#answer").html(questions[7][3]);
+	$("#tableofcontents-question7").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question7").addClass("tableofcontents-item tableofcontents-active");
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion1(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 1 and add it to the user object
+
+function savaDataQuestion1(questions, user) {
+
+	// Save the data from question 1 and add it to the user object
+	var age = $("#data-question1").val();
+	user.age = age;
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion2(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 2 and add it to the user object
+
+function savaDataQuestion2(questions, user) {
+
+	// Save the data from question 2 and add it to the user object
+	var nationality = $("#data-question2").val();
+	user.nationality = nationality;
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion3(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 3 and add it to the user object
+
+function savaDataQuestion3(questions, user) {
+
+	// Save the data from question 3 and add it to the user object
+	var zipcode = $("#data-question3").val();
+	user.zipcode = zipcode;
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion4(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 4 and add it to the user object
+
+function savaDataQuestion4(questions, user) {
 
 	// Set the variables
 	var game_categories = [
@@ -369,32 +541,17 @@ function showQuestion5(questions, user) {
 	}
 	user.gamecomputers = game_computers;
 
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
-
-	// Show the new question
-	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#questiontitle").html(questions[5][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#answer").html(questions[5][3]);
-	$("#tableofcontents-question5").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question5").addClass("tableofcontents-item tableofcontents-active");
-
 	// Return the user object
 	return user;
 }
 
-////////////////////////////////////
-// showQuestion6(questions, user) //
-////////////////////////////////////
+////////////////////////////////////////
+// saveDataQuestion5(questions, user) //
+////////////////////////////////////////
 
-// Function for showing question 6
+// Function to save the data from question 5 and add it to the user object
 
-function showQuestion6(questions, user) {
+function savaDataQuestion5(questions, user) {
 
 	// Save the data from question 5 and add it to the user object
 	var gametime_hours = $("#data-question5-gametime-hours").val();
@@ -402,92 +559,22 @@ function showQuestion6(questions, user) {
 	var gametime_categories = $("#data-question5-gametime-categories").val();
 	user.gametimecategories = gametime_categories;
 
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
-
-	// Show the new question
-	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
-//	$("#header-title-logo").css("background", "rgba(00, 00, 00, .36)");
-	$("#questiontitle").css("color", "white");
-	$("#questiontitle").css("text-shadow", "1px 1px #000000");
-	$("#questiontitle").html(questions[6][2]);
-	$("#answer").css("color", "white");
-	$("#answer").css("text-shadow", "1px 1px #000000");
-	$("#answer").html(questions[6][3]);
-	$("#tableofcontents-question6").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
-
-	// Draw the map
-	drawMap();
-
-	// Show #toolbar
-	if ($("#toolbar").css("display").toLowerCase() == "none") {
-		$("#toolbar").css("display", "inline-block");
-	}
-
-	// Reset the width of #content
-	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$(".content").css("left", "0%");
-		$(".content").css("width", "100%");
-	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-		$(".content").css("left", "0%");
-		$(".content").css("width", "92.5%");
-	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$(".content").css("left", "17.5%");
-		$(".content").css("width", "82.5%");
-	} else {
-		$(".content").css("left", "17.5%");
-		$(".content").css("width", "75%");
-	}
-
 	// Return the user object
 	return user;
 }
 
-////////////////////////////////////
-// showQuestion7(questions, user) //
-////////////////////////////////////
-
-// Function for showing question 7
-
-function showQuestion7(questions, user) {
-
-	// Save the data from question 6 and add it to the user object
-/*
-	var living_environment = $("#data-question6").val();
-	user.livingenvironment = living_environment;
-	//alert(user.livingenvironment);
- */
-
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
-
-	// Show the new question
-	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
-	$("#questiontitle").css("color", "white");
-	$("#questiontitle").css("text-shadow", "1px 1px #000000");
-	$("#questiontitle").html(questions[7][2]);
-	$("#answer").css("color", "white");
-	$("#answer").css("text-shadow", "1px 1px #000000");
-	$("#answer").html(questions[7][3]);
-	$("#tableofcontents-question7").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question7").addClass("tableofcontents-item tableofcontents-active");
-
-	// Return the user object
-	return user;
-}
-
-/////////////////////////
+/////////////////////////////
 // sendQuestionnaire(user) //
-/////////////////////////
+/////////////////////////////
 
 // Function that handles sending the information of the user to the server/database
 
 function sendQuestionnaire(user) {
 
+/*
 	// Save the data from question 7 and add it to the user object
+	savaDataQuestion7(questions, user);
+ */
 /*
 	var friction = $("#data-question7").val();
 	user.friction = friction;

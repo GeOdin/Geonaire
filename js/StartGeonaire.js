@@ -194,6 +194,32 @@ function toggleWindows() {
 function toggleQuestions(questions, lastQuestion, user) {
 	$("#tableofcontents-introduction").click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -222,6 +248,30 @@ function toggleQuestions(questions, lastQuestion, user) {
 	for (i = 1; i < lastQuestion; i++) {
 		$("#tableofcontents-question"+i).click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+		}
+
 			// Reset the scrollbars to the top
 			$("*").scrollTop(0);
 
@@ -249,6 +299,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 	}
  */
 	$("#tableofcontents-question1").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -279,6 +355,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 	});
 	$("#tableofcontents-question2").click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -308,6 +410,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 	});
 	$("#tableofcontents-question3").click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -336,6 +464,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 		return user;
 	});
 	$("#tableofcontents-question4").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -413,6 +567,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 	});
 	$("#tableofcontents-question5").click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -444,6 +624,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 	});
 	$("#tableofcontents-question6").click(function() {
 
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -469,6 +675,32 @@ function toggleQuestions(questions, lastQuestion, user) {
 		return user;
 	});
 	$("#tableofcontents-question7").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			savaDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			savaDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			savaDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			savaDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			savaDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			savaDataQuestion6(questions, user);
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			savaDataQuestion7(questions, user);
+ */
+		}
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);

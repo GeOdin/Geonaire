@@ -46,6 +46,7 @@
  * * * * * GeonaireUser.js -> user Object
  * * * * * * sla antwoord van vragen op als user properties
 (M) * * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
+(M) * * * * * * data wordt alleen opgeslagen bij het klikken op de button "Volgende", niet bij het toggelen tussen de vragen
  * * * * * * * anders slaat hij de nieuwe lege velden op als informatie!!!
  * * * * * zorg dat #map binnen #content valt, dan kan je de interactiviteit gebruiken!
 (M) * * * * * * beter nog -> achtergrond als kaart, net als bij TopoPets
