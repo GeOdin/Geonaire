@@ -41,17 +41,29 @@
  * * * (v) site online -> geonaire.website.tk
  * * * * wel nog website linken aan nieuw e-mailadres speciaal voor deze website (geonaire2016@gmail.com)
  * * 28 november - 4 december: uitwerken, lay-out, programmeren, cartoons/comics tekenen (vector waar mogelijk -> Adobe Illustrator), website online zetten, link maken met database/server (vragen of er tekentablets zijn op de uni voor vector tekeningen? (Ron/Wim/Lars) en of er gebruik gemaakt kan worden van een server/database van de uni)
- * * * 7 december
+ * * * 8 december
  * * * * StartGeonaire.js -> drawMap()
 (v) * * * * * sla antwoord van vragen op als user properties
 (v) * * * * * onthoud de vragen en toon deze als de user de vraag toggled (teruggaat naar de vraag)
-(M) * * * * achtergrond als kaart, net als bij TopoPets
-(M) * * * * * #map binnen #main
-(M) * * * * * andere divs op zelfde z-index als #map, met position: relative;
-(M) * * * * * * z-index lijstje veranderen van bovenkant css-file (kan eventueel weg als de map werkt)
+(v) * * * * achtergrond als kaart, net als bij TopoPets
+(v) * * * * * #map binnen #main
+ * * * * * * #map binnen #question-answer(?)
+(M)!!! * * * * * height #question-answer aanpassen per vraag, bijvoorbeeeld helemaal voor introductie (anders misschien niet hele intro zichtbaar), maar zo klein mogelijk voor de vragen met de kaart
+(M) * * * * * kaart weghalen bij de vragen waar hij niet nodig is?
+(v) * * * * * andere divs op zelfde z-index als #map, met position: relative;
+(v) * * * * * * z-index lijstje veranderen van bovenkant css-file (kan eventueel weg als de map werkt)
 (M) * * * * * toolbar -> https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
+(M) * * * * * height en top van onder andere #header aanpassen voor vraag 6 en 7 (evt. per vraag), zodat de bovenste knoppen van Google Maps bruikbaar zijn! (zie verschil tussen #header en #header2 in de CSS-file)
+(M) * * * * * height en top van onder andere #footer aanpassen voor vraag 6 en 7 (evt. per vraag), zodat de bovenste knoppen van Google Maps bruikbaar zijn! (zie verschil tussen #footer en #footer2 in de CSS-file)
+(S) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
+* * * * * edit #footer zodat je de Google Maps buttons kan gebruiken
  * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
- * * * * * verander de width van #cartoonimage #questiontitle en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
+ * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/
+ * * * * * resize -> http://www.w3schools.com/cssref/css3_pr_resize.asp
+ * * * * * drag & drop -> http://www.jeasyui.com/tutorial/dd/dnd2.php
+ * * * * * * drag & drop -> http://www.w3schools.com/html/html5_draganddrop.asp
+ * * * * * * draggable -> http://www.w3schools.com/TagS/tryit.asp?filename=tryhtml5_global_draggable
+ * * * * * verander de width van #cartoonimage #question-title en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
  * * * * * use zipcode from questions and CSV-file
  * * * * * * http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
  * * * * * * https://tools.ietf.org/html/rfc4180
@@ -106,6 +118,11 @@
  * * use cases
  * Front-end programming
  * * HTML5
+ * * * event attributes -> http://www.w3schools.com/tags/ref_eventattributes.asp
+ * * * * events -> http://www.w3schools.com/jsref/tryit.asp?filename=try_dom_event_target
+ * * * <a> tag download -> http://www.w3schools.com/tags/att_a_download.asp
+ * * * data attribute -> http://www.w3schools.com/tags/att_global_data.asp
+ * * * * data attribute demo -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_global_data
  * * CSS3
  * * * Click through divs -> http://stackoverflow.com/questions/3680429/click-through-a-div-to-underlying-elements
  * * * resize: both; -> http://www.w3schools.com/cssref/tryit.asp?filename=trycss3_resize // does not work on Internet Explorer, though
@@ -114,6 +131,8 @@
  * * * Add scrollbars to divs?
  * * * align vertically -> https://www.w3.org/Style/Examples/007/center.en.html#block
  * * JavaScript
+ * * * jQuery -> http://learn.jquery.com/
+ * * * GeoLocation -> http://www.w3schools.com/html/html5_geolocation.asp
  * Back-end programming
  * * php
  * * * link met de server
@@ -130,6 +149,7 @@
  * * * <footer>
  * * * form tag -> 
  * * * * Use the reset() method to reset the form. http://www.w3schools.com/jsref/met_form_submit.asp
+ * * * base url -> http://www.w3schools.com/html/tryit.asp?filename=tryhtml_head_base
  * * css (resizable met screen, don't resize images, unless they're vectors!)
  * * * selectors -> http://www.w3schools.com/cssref/css_selectors.asp
  * * * input invalid -> http://www.w3schools.com/cssref/css_selectors.asp
@@ -298,6 +318,8 @@
  * * mogelijk vraagteken
  * * * uitleg vragenlijst
  * * * mogelijk woordenboek met uitleg over mogeljk moeilijke termen
+ * <head>-tag
+ * * goede volgorde van meta, link en script -> https://www.w3.org/wiki/The_HTML_head_element#Stop_right_there.21_Inline_CSS_and_JavaScript_is_not_too_clever.21
  */
 
 //////////////////
@@ -310,6 +332,7 @@
  * * Color harmonies (in general) -> http://www.tigercolor.com/color-lab/color-theory/color-harmonies.htm
  * * website of MGI student who helped me -> http://greatemerald.eu/uncodex-sources/
  * vertically styling elements -> https://www.w3.org/Style/Examples/007/center.en.html#block
+ * Wrapper class -> http://stackoverflow.com/questions/889160/what-is-a-wrapper-class
  */
 
 /////////////////
