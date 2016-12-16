@@ -89,6 +89,8 @@
 (M) * * * * * https://nl.speaklanguages.com/engels/woordenschat/landen-en-nationaliteiten
 (M) * * * * maak een dankjewel content voor #header #overview #question #answer #toolbar?
 (M) * * * * * Bedankt voor het invullen van de vragenlijst! (spelletje na afloop/ easter egg/ coockie clicker)
+(C) * * * * Responsive design
+(C) * * * * * http://www.w3schools.com/html/html_responsive.asp
  * * * * reset the variables upon refreshing the page -> geen probleem op online website
  * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
  * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/
@@ -271,6 +273,7 @@
  =============                                                                                                                                                                                                   
  =============
  * Nog een keer goed nadenken of de vragen goed gesteld zijn en niet op meerdere manieren interpretabel
+ * THEMA: INTRODUCTIE
  * THEMA: USER INFO
  * 1. Wat is uw leeftijd? (moet een geheel getal, hoger dan 0 zijn)
  * * Cartoon: (1) verjaardag van jongen die laat merken dat hij bang is voor katten (2) onschuldig meisje met pakje in haar handen (3) kat steekt hoofd uit het pakje met lieve kraaloogjes (4) jongen springt als kat in de gordijnen
@@ -284,7 +287,7 @@
  * * Wikipedia gebruikt als bron voor game categorien -> https://en.wikipedia.org/wiki/List_of_video_game_genres (IGN had geen overzichtelijke game categorien)
  * 5. Hoeveel tijd speelt u over het algemeen computerspellen? (vul een getal in en kies de toepasbare tijdsaanduiding) (x uren per dag/week/maand/jaar)
  * * Cartoon: grapje maken over player (zowel iemand die computergames speelt als iemand die vrouwen bespeeld)
- * THEMA: LOCATION
+ * THEMA: LEEFOMGEVING en FRICTIE
  * switchen naar #header van #header2 en van #footer vaan #footer2
  * 6. Als u het over uw omgeving hebt, tot hoever reikt deze? (optie geven om met tools een cirkel (en eventueel ook een vierkant/ polygon) te tekenen (evt opslaan als GeoJSON))
  * 7. Stel de gemeente zou een windmolen (of eventueel opsplitsen tot 2 vragen, 1 voor positief en 1 voor negatieve verandering) willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden? (eventueel een marker van een windmolen laten plaatsen, of weer een cirkel/vierkant/polygon laten maken (evt opslaan als GeoJSON))
@@ -293,20 +296,30 @@
  * * * wat voor frictie?
  * * * onderscheid maken in positieve (bijvoorbeeld aanleg bos) of negatief (bijvoorbeeld groot parkeergarage/ groot grijs gebouw dat uitzicht blokkeert) invloed
  * * * voorbeeldvraag: stel de gemeente wil een verandering aanbrengen bij u/jou in de buurt. Teken een gebied rondom uw woning waarin u dit liever niet zou willen ((evt bijvoorbeeld omdat het uw uitzicht verstoord,...))
- * 8. Place Identity
- * * In hoeverre is je identiteit afhankelijk van waar je woont?
- * Place dependency
- * * In hoeverre ben je afhankelijk van je woonplaats/omgeving wegens de mogelijkheden die deze biedt?
+ * 8. Wat verstaat u onder natuur?
+ * * scalebar -> input type="range" http://webtutsdepot.com/2010/04/24/html-5-slider-input-tutorial/
+ * * * styling of slide bar -> http://www.cssportal.com/style-input-range/
+ * THEMA: PLACE ATTACHMENT
+ * 9. Place Attachment (radio buttons)
  * Nature bonding
  * * Wat betekent natuur voor jou? (scalebar - plantje in de vensterbank -> vrije natuur zoals bijvoorbeeld een onbewoond eiland)
  * * In hoeverre/welke mate ben je gehecht aan de natuur bij jou in de buurt?
+ * Place Identity
+ * * In hoeverre is je identiteit afhankelijk van waar je woont?
+ * Place dependency
+ * * In hoeverre ben je afhankelijk van je woonplaats/omgeving wegens de mogelijkheden die deze biedt?
  * Familily bonding
  * * Ik woon hier, omdat mijn famlie hier ook woont./Woont u waar u woont, omdat uw familie daar ook woont?
  * Friend bonding
  * * Vriendschappen opgebouwd door activiteiten in mijn leefomgeving/buurt/wijk/? zijn belangrijk voor mij./Woont u waar u woont, omdat uw vrienden daar ook wonen?
+ * 10. Prioritiseer de aspecten van place attachment (drag & drop)/evt 1t/m5 neerzetten ervoor (maxlength = 1)
+ * THEMA: PARTICIPATIE
+ * 11. Heeft u weleens deelgenomen aan <u title="">burgerparticipatie...</u>
+ * * Ja -> Hoevaak en wat voor soort komt tevoorschijn
  * Verzenden van data van vragenlijst
  * * Bij het verzenden van de data van de vragenlijst ook de datum en tijd meezenden als extra property
  * * Eventueel kopie versturen naar extra emailadres als back-up gebruiken bij het gebruik van een gratis online server (omdat die minder betrouwbaar zijn)
+ * THEMA: EINDE
  ==========
  * Tokens *
  ==========
