@@ -707,6 +707,9 @@ function sendQuestionnaire(user) {
 	//alert(user.friction);
  */
 	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld?") == true) {
+		// Add current time to user object
+		// Send the data to the server/database
+		// Show a thank you to the user
 		window.open("Geonaire.html", "_self");
 	}
 }

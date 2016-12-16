@@ -70,10 +70,25 @@
 (S) * * * * * * (4) vraag over gamecategori"en -> verticale progress bar met eventueel tekst kwartslag gedraaid met titel naar aanleiding van ingevulde vragenlijst (van casual gamer tot die-hard gamer)
 (M)/(S) * * * * * #div over #map met wacht even tot Google Maps geladen is (voordat mensen denken dat hij het niet doet) (load screen);
 (M) * * * * * #map tekst als google maps het niet doet/ niet geladen wordt/ kan worden
+(S) * * * * * * #map -> betere resize -> google.maps.event.trigger(map, 'resize'); http://stackoverflow.com/questions/4700594/google-maps-displaynone-problem
 (M) * * * * * * als gebruikers wisselen tussen vragen voordat de Google Map (#map) geladen is, wordt hij niet meer getoond
 (S) * * * * * * #toolbar-createpolygon -> https://developers.google.com/maps/documentation/javascript/examples/polygon-arrays#try-it-yourself
 (S) * * * * * * alternative -> make #header, #overview, #toolbar no longer toggable
 (v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
+(S) * * * * * fancy lay-out op thema, kleuren van de regenboog -> color styles van google -> https://material.io/guidelines/style/color.html#color-color-palette
+(S) * * * * * * red -> Introductie
+(S) * * * * * * orange -> Algemene informatie (vraag 1 - 3)
+(S) * * * * * * yellow -> Games (vraag 4 - 5)
+(S) * * * * * * green -> Leefomgeving + frictie (vraag 6 - 7)
+(S) * * * * * * blue -> Place attachment (vraag 8)
+(S) * * * * * * indigo -> Participatie (vraag 9)
+(S) * * * * * * deep purple -> Einde
+(M) * * * * link met server -> http://stackoverflow.com/questions/8591488/google-maps-api-v3-how-to-set-zoom-level-and-map-center-to-user-submitted-locat
+(M) * * * * landenlijst
+(M) * * * * * https://ind.nl/Paginas/Landenlijst-behoud-nationaliteit.aspx
+(M) * * * * * https://nl.speaklanguages.com/engels/woordenschat/landen-en-nationaliteiten
+(M) * * * * maak een dankjewel content voor #header #overview #question #answer #toolbar?
+(M) * * * * * Bedankt voor het invullen van de vragenlijst! (spelletje na afloop/ easter egg/ coockie clicker)
  * * * * reset the variables upon refreshing the page -> geen probleem op online website
  * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
  * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/
@@ -86,10 +101,6 @@
  * * * * * * http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
  * * * * * * https://tools.ietf.org/html/rfc4180
  * * * * * * http://evanplaice.github.io/jquery-csv/examples/basic-usage.html
-(M) * * * * link met server -> http://stackoverflow.com/questions/8591488/google-maps-api-v3-how-to-set-zoom-level-and-map-center-to-user-submitted-locat
-(M) * * * * landenlijst
-* * * * * https://ind.nl/Paginas/Landenlijst-behoud-nationaliteit.aspx
-* * * * * https://nl.speaklanguages.com/engels/woordenschat/landen-en-nationaliteiten
 (v) * * * * #cartoonimage -> write down cartoons as placeholders
 (niet meer van toepassing) * * * * als je bij vraag 6 cartoon(#header) 2xtoggled, wordt hij bij het verschijnen van #header niet meer onder #header geplaatst
  * * * * improve the user experience
@@ -282,6 +293,17 @@
  * * * wat voor frictie?
  * * * onderscheid maken in positieve (bijvoorbeeld aanleg bos) of negatief (bijvoorbeeld groot parkeergarage/ groot grijs gebouw dat uitzicht blokkeert) invloed
  * * * voorbeeldvraag: stel de gemeente wil een verandering aanbrengen bij u/jou in de buurt. Teken een gebied rondom uw woning waarin u dit liever niet zou willen ((evt bijvoorbeeld omdat het uw uitzicht verstoord,...))
+ * 8. Place Identity
+ * * In hoeverre is je identiteit afhankelijk van waar je woont?
+ * Place dependency
+ * * In hoeverre ben je afhankelijk van je woonplaats/omgeving wegens de mogelijkheden die deze biedt?
+ * Nature bonding
+ * * Wat betekent natuur voor jou? (scalebar - plantje in de vensterbank -> vrije natuur zoals bijvoorbeeld een onbewoond eiland)
+ * * In hoeverre/welke mate ben je gehecht aan de natuur bij jou in de buurt?
+ * Familily bonding
+ * * Ik woon hier, omdat mijn famlie hier ook woont./Woont u waar u woont, omdat uw familie daar ook woont?
+ * Friend bonding
+ * * Vriendschappen opgebouwd door activiteiten in mijn leefomgeving/buurt/wijk/? zijn belangrijk voor mij./Woont u waar u woont, omdat uw vrienden daar ook wonen?
  * Verzenden van data van vragenlijst
  * * Bij het verzenden van de data van de vragenlijst ook de datum en tijd meezenden als extra property
  * * Eventueel kopie versturen naar extra emailadres als back-up gebruiken bij het gebruik van een gratis online server (omdat die minder betrouwbaar zijn)
