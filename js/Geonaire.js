@@ -270,7 +270,8 @@
  * Player *
  ==========
  * Titel - mogelijkheid dat de speler een titel krijg conform de dingen die hij gedaan heeft
- =============                                                                                                                                                                                                   
+ =============
+ * Questions *
  =============
  * Nog een keer goed nadenken of de vragen goed gesteld zijn en niet op meerdere manieren interpretabel
  * THEMA: INTRODUCTIE
