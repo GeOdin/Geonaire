@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-07
+ * Het laatst veranderd op 2016-12-16
  * door GeOdin
  *
  *===================================
@@ -48,18 +48,18 @@
 (v) * * * * achtergrond als kaart, net als bij TopoPets
 (v) * * * * * #map binnen #main
 (v) * * * * * * #map binnen #question-answer(?)
-(M)!!! * * * * * height #question-answer aanpassen per vraag, bijvoorbeeeld helemaal voor introductie (anders misschien niet hele intro zichtbaar), maar zo klein mogelijk voor de vragen met de kaart
+(v)!!! * * * * * height #question-answer aanpassen per vraag, bijvoorbeeeld helemaal voor introductie (anders misschien niet hele intro zichtbaar), maar zo klein mogelijk voor de vragen met de kaart
 (v) * * * * * kaart weghalen bij de vragen waar hij niet nodig is?
 (v) * * * * * andere divs op zelfde z-index als #map, met position: relative;
 (v) * * * * * * z-index lijstje veranderen van bovenkant css-file (kan eventueel weg als de map werkt)
-(S) * * * * * toolbar -> https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
+(v) * * * * * toolbar -> https://developers.google.com/maps/documentation/javascript/examples/drawing-tools
 (M) * * * * * #toolbar-createmarker -> display: none; voor vraag 6 (of weghalen als het voor geen enkele vraag gebruikt wordt)
-(M) * * * * * #toolbar -> remove an overlay -> https://developers.google.com/maps/documentation/javascript/examples/overlay-remove
-(M) * * * * * #toolbar -> show/hide an overlay -> https://developers.google.com/maps/documentation/javascript/examples/overlay-hideshow
+(v) * * * * * #toolbar -> remove an overlay -> https://developers.google.com/maps/documentation/javascript/examples/overlay-remove
+(v) * * * * * #toolbar -> show/hide an overlay -> https://developers.google.com/maps/documentation/javascript/examples/overlay-hideshow
 (S) * * * * * reset/resize the map after toggling #header, #overview and #toolbar -> http://stackoverflow.com/questions/743214/how-do-i-resize-a-google-map-with-javascript-after-it-has-loaded
 (M) * * * * * laat uitleg zien als je over bepaalde #divs hoovert (bijvoorbeeld Pokemon Go bij virtual reality games)
-(S) * * * * * #div title="uitleg" -> title attribute kan ook bij andere HTML-elementen -> http://www.w3schools.com/TAgs/att_global_title.asp
-(S) * * * * * evt in combinatie met underline
+(v) * * * * * #div title="uitleg" -> title attribute kan ook bij andere HTML-elementen -> http://www.w3schools.com/TAgs/att_global_title.asp
+(v) * * * * * * evt in combinatie met underline
 (W) * * * * * * niet <abbr>-tag om te laten zien waar extra uitleg bij is -> vb <abbr title="World Health Organization">WHO</abbr>; want kan de verkeerde informatie geven aan browsers, omdat het niet om afkortingen gaat
 (W) * * * * * * fancy tooltips -> http://www.designer-daily.com/jquery-prototype-mootool-tooltips-12632
 (v) * * * * * question 6 -> zorgen dat de user.livingenvironment op de goede plek getoond wordt
@@ -70,8 +70,9 @@
 (S) * * * * * * (4) vraag over gamecategori"en -> verticale progress bar met eventueel tekst kwartslag gedraaid met titel naar aanleiding van ingevulde vragenlijst (van casual gamer tot die-hard gamer)
 (M)/(S) * * * * * #div over #map met wacht even tot Google Maps geladen is (voordat mensen denken dat hij het niet doet) (load screen);
 (M) * * * * * #map tekst als google maps het niet doet/ niet geladen wordt/ kan worden
+(M) * * * * * * ales gebruikers wisselen tussen vragen voordat de Google Map (#map) geladen is, wordt hij niet meer getoond
 (S) * * * * * * alternative -> make #header, #overview, #toolbar no longer toggable
-(S) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
+(v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
  * * * * reset the variables upon refreshing the page -> geen probleem op online website
  * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
  * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/

@@ -64,7 +64,7 @@ var questions = [
 		"cartoon-question1",
 		"<p align='left' style='margin:1em;'>Steven viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Steven schrikt en schiet als een kat de gordijnen in.</p>",
 		"Wat is uw leeftijd?",
-		'<form onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext" placeholder="24"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question2",
@@ -76,7 +76,7 @@ var questions = [
 		"cartoon-question3",
 		"<p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoordt hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
 		"Wat is uw postcode?",
-		'<form onsubmit="showQuestion4(questions, user);"><input id="data-question3" type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion4(questions, user);"><input id="data-question3" type="text" name="zipcode" maxlength="6" class="white-space answer-input-shorttext" placeholder="1234AB"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question4",
@@ -88,7 +88,7 @@ var questions = [
 		"cartoon-question5",
 		"<p align='left' style='margin:1em;'>Dit weekend houdt Charlotte een LAN-party voor haar 3 vrienden. Ze zitten allemaal gekluisterd aan hun beeldscherm, zich wanend in een andere wereld. Opeens begint het getik op het toetsenbord van een van de vrienden wel erg enthousiast te worden. 'Romia, schone jonkvrouwe, zijt gij het een genoegen met mij en twee andere companen te genieten van een delicatesse, maagdelijk (wit) en vol liefde gekleurd (rood)?' Even later zegt Charlotte hardop: 'Als je wilt dat ik een pizza met mozarella en tomaat in de oven stop, mag je het ook gewoon zeggen. Je bent ook zo'n player!'</p>",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
-		'<form onsubmit="showQuestion6(questions, user);"><input id="data-question5-gametime-hours" type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select id="data-question5-gametime-categories" name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion6(questions, user);"><input id="data-question5-gametime-hours" type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext" placeholder="2"> uur per <select id="data-question5-gametime-categories" name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question6",
