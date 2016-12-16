@@ -109,7 +109,8 @@ function createCircle(user) {
 				map: user.map,
 				center: {lat: lat, lng: lon},
 				radius: rad,
-				editable: true
+				editable: true,
+				draggable: true
 			});
 
 			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
