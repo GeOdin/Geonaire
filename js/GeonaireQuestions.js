@@ -129,6 +129,8 @@ function showIntroduction(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[0][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-introduction").addClass("tableofcontents-item tableofcontents-active");
 
@@ -155,6 +157,8 @@ function showQuestion1(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[1][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question1").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question1").addClass("tableofcontents-item tableofcontents-active");
@@ -185,6 +189,8 @@ function showQuestion2(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[2][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question2").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question2").addClass("tableofcontents-item tableofcontents-active");
@@ -215,6 +221,8 @@ function showQuestion3(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[3][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question3").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question3").addClass("tableofcontents-item tableofcontents-active");
@@ -245,6 +253,8 @@ function showQuestion4(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[4][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question4").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question4").addClass("tableofcontents-item tableofcontents-active");
@@ -275,6 +285,8 @@ function showQuestion5(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[5][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question5").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question5").addClass("tableofcontents-item tableofcontents-active");
@@ -305,6 +317,8 @@ function showQuestion6(questions, user) {
 	$("#answer").css("color", "white");
 	$("#answer").css("text-shadow", "1px 1px #000000");
 	$("#answer").html(questions[6][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question6").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
@@ -324,10 +338,16 @@ function showQuestion6(questions, user) {
 			$("#toolbar-buttons #toolbar-createcircle").addClass("toolbar-item toolbar-active");
 			//return user;
 		} else if (user.livingenvironmentproperties[1][0] == "rectangle") {
-			// Show the rectanglecircle
+			// Show the rectangle
 			user.livingenvironment.setMap(user.map);
 			// Set #toolbar-createrectangle as the active .toolbar-item of #toolbar-buttons
 			$("#toolbar-buttons #toolbar-createrectangle").addClass("toolbar-item toolbar-active");
+			//return user;
+		} else if (user.livingenvironmentproperties[1][0] == "polygon") {
+			// Show the polygon
+			user.livingenvironment.setMap(user.map);
+			// Set #toolbar-createpolygon as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons #toolbar-createpolygon").addClass("toolbar-item toolbar-active");
 			//return user;
 		}
 	}
@@ -336,6 +356,8 @@ function showQuestion6(questions, user) {
 	if ($("#toolbar").css("display").toLowerCase() == "none") {
 		$("#toolbar").css("display", "inline-block");
 	}
+	// Don't show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "none");
 
 	// Reset the width of #content
 	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
@@ -381,6 +403,28 @@ function showQuestion7(questions, user) {
 	$("#tableofcontents-question7").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question7").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show #toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+
+	// Reset the width of #content
+	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$("#question-answer").css("left", "0%");
+		$("#question-answer").css("width", "100%");
+	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+		$("#question-answer").css("left", "0%");
+		$("#question-answer").css("width", "92.5%");
+	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+		$("#question-answer").css("left", "17.5%");
+		$("#question-answer").css("width", "82.5%");
+	} else {
+		$("#question-answer").css("left", "17.5%");
+		$("#question-answer").css("width", "75%");
+	}
 
 	// Return the user object
 	return user;
@@ -584,7 +628,7 @@ function savaDataQuestion5(questions, user) {
 function savaDataQuestion6(questions, user) {
 
 	// Save the data from question 6 and add it to the user object
-	if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+	if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
 
 		// Save the area if it's a circle
 		if (user.livingenvironmentproperties[1][0] == "circle") {
@@ -611,6 +655,16 @@ function savaDataQuestion6(questions, user) {
 			user.livingenvironmentproperties = [
 				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
 				["rectangle", "lat", "lon", "rad", north, south, east, west]
+			];
+
+		// Save the area if it's a polygon
+		} else if (user.livingenvironmentproperties[1][0] == "polygon") {
+			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
+			user.livingenvironmentamount = 1;
+			// Set the living environment properties for polygon
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["polygon", "lat", "lon", "rad", "south", "east", "west"]
 			];
 		}
 

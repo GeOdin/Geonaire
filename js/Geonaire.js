@@ -70,7 +70,8 @@
 (S) * * * * * * (4) vraag over gamecategori"en -> verticale progress bar met eventueel tekst kwartslag gedraaid met titel naar aanleiding van ingevulde vragenlijst (van casual gamer tot die-hard gamer)
 (M)/(S) * * * * * #div over #map met wacht even tot Google Maps geladen is (voordat mensen denken dat hij het niet doet) (load screen);
 (M) * * * * * #map tekst als google maps het niet doet/ niet geladen wordt/ kan worden
-(M) * * * * * * ales gebruikers wisselen tussen vragen voordat de Google Map (#map) geladen is, wordt hij niet meer getoond
+(M) * * * * * * als gebruikers wisselen tussen vragen voordat de Google Map (#map) geladen is, wordt hij niet meer getoond
+(S) * * * * * * #toolbar-createpolygon -> https://developers.google.com/maps/documentation/javascript/examples/polygon-arrays#try-it-yourself
 (S) * * * * * * alternative -> make #header, #overview, #toolbar no longer toggable
 (v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
  * * * * reset the variables upon refreshing the page -> geen probleem op online website
