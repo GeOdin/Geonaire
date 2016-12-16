@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-11
+ * Het laatst veranderd op 2016-12-16
  * door GeOdin
  */
 
@@ -318,16 +318,32 @@ ul {
 }
 
 ul #footer-buttons {
+	position: relative;
 }
 
 .footer-item {
-	display: inline-block;
-	width: 25%;
-	height: 100%;
+	position: absolute;
+	display: block;
+	top: 50%;
+	width: 20%;
+	transform: translate(0, -50%);
+	text-align: center;
 	font-size: 1em;
 	cursor: pointer;
 }
 
 .footer-item:hover {
 	background: rgba(00, 99, 00, .23);
+}
+
+#button-overview {
+	left: 20%;
+}
+
+#button-cartoon {
+	left: 40%;
+}
+
+#button-toolbar {
+	left: 60%;
 }
