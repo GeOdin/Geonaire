@@ -1,7 +1,7 @@
 /* GeonaireQuestions.js
  * JavaScript file om de vragen te regelen voor de Geonaire
  * Gemaakt op 2016-11-30
- * Het laatst veranderd op 2016-12-06
+ * Het laatst veranderd op 2016-12-16
  * door GeOdin
  *
  *==========================================
@@ -27,6 +27,7 @@
  * savaDataQuestion3(questions, user)
  * savaDataQuestion4(questions, user)
  * savaDataQuestion5(questions, user)
+ * saveDataQuestion6(questions, user)
  * sendQuestionnaire(user)
  */
 
@@ -57,7 +58,7 @@ var questions = [
 		"cartoon-introduction",
 		"<p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon, 'Steven' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>", // Pechvogel Piet
 		"Introductie",
-		'Introductie tekst <br/><br/> <form onsubmit="showQuestion1(questions, user);"><input type="submit" value="Begin"></form>'
+		'<p>Beste deelnemer,<br/><br/> Ik ben Madeleine van Winkel en ik doe onderzoek naar de relatie tussen het spelen van computerspellen en perceptie van de omgeving aan de <u title="(Wageningen University &amp; Research)">WUR</u>. <br/> Ik zou graag uw medewerking vragen voor het beantwoorden van een aantal vragen. De vragenlijst bevat 9 vragen en zal ongeveer 10 minuten in beslag nemen.<br/><br/> Uitleg over de vragenlijst:<br/> Onder de vragen staat steeds een knop waarmee u naar de volgende vraag kunt. <br/> Met de knoppen links kunt u wisselen tussen de verschillende vragen. <br/> Met de knoppen beneden kunt u het overzicht (links), de cartoon (boven) en de toolbar (rechts) laten verdwijnen en weer verschijnen.<br/> Sommige woorden zijn <u title="Een voorbeeld.">onderstreept</u>. Door met uw muis over deze woorden te bewegen, kunt u meer uitleg krijgen over de desbetreffende woorden. <br/><br/> Voor uw vermaak is er boven een cartoon toegevoegd in de vorm van een klein verhaaltje. Door de vragenlijst heen volgen we hier de avonturen van de familie "de Placeys". <br/> Hopelijk beleeft u net zoveel plezier met de Placeys als ik met ze heb beleefd. <br/> <form onsubmit="showQuestion1(questions, user);"><input type="submit" value="Begin"></form></p>'
 	],
 	[
 		"cartoon-question1",
@@ -73,7 +74,7 @@ var questions = [
 	],
 	[
 		"cartoon-question3",
-		"<p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoord hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
+		"<p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoordt hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
 		"Wat is uw postcode?",
 		'<form onsubmit="showQuestion4(questions, user);"><input id="data-question3" type="text" name="zipcode" maxlength="6" value="1234AB" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
@@ -85,21 +86,21 @@ var questions = [
 	],
 	[
 		"cartoon-question5",
-		"<p align='left' style='margin:1em;'>Dit weekend houdt Charlotte een LAN-party voor haar 3 vrienden. Ze zitten allemaal gekluisterd aan hun beeldscherm, zich wanend in een andere wereld. Opeens begint het getik op het toetsenbord van een van de vrienden wel erg enthousiast te worden. 'Romia, schone jonkvrouwe, zijt gij het een genoegen met mij en twee andere companen te genieten van een delicatesse, maagdelijk en vol liefde gekleurd?' Even later zegt Charlotte hardop: 'Als je wilt dat ik een pizza met mozarella en tomaat in de oven stop, mag je het ook gewoon zeggen. Je bent ook zo'n player!'</p>",
+		"<p align='left' style='margin:1em;'>Dit weekend houdt Charlotte een LAN-party voor haar 3 vrienden. Ze zitten allemaal gekluisterd aan hun beeldscherm, zich wanend in een andere wereld. Opeens begint het getik op het toetsenbord van een van de vrienden wel erg enthousiast te worden. 'Romia, schone jonkvrouwe, zijt gij het een genoegen met mij en twee andere companen te genieten van een delicatesse, maagdelijk (wit) en vol liefde gekleurd (rood)?' Even later zegt Charlotte hardop: 'Als je wilt dat ik een pizza met mozarella en tomaat in de oven stop, mag je het ook gewoon zeggen. Je bent ook zo'n player!'</p>",
 		"Hoeveel tijd speelt u over het algemeen computerspellen?",
 		'<form onsubmit="showQuestion6(questions, user);"><input id="data-question5-gametime-hours" type="text" name="gametime_hour" maxlength="4" class="white-space answer-input-shorttext"> uur per <select id="data-question5-gametime-categories" name="gametime_category" class="white-space"><option value="dag">dag</option><option value="week">week</option><option value="maand">maand</option><option value="jaar" class="white-space">jaar</option></select> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question6",
-		"<p align='left' style='margin:1em;background: rgba(00, 00, 00, .10);'>Opa Grumps is vandaag een beetje in een warrige bui. Hij loopt de buurtsuper 'De Vriendelijke Bloemkool' in. Na enigszins zoeken tussen verscheidene schappen, komt hij er niet uit en komt een van de werknemers hem helpen. Werknemer: 'Wat zoekt u, meneer?' Grumps: 'Ik been op zoek naar de gemeenschap.' De werknemer kijkt enigszins verbaasd. Vervolgens kijkt Grumps verder de schappen in en zegt: 'Waar kan ik anders de gemeenschapsgoederen vinden?'</p>",
+		"<p align='left' style='margin:1em;'>Opa Grumps is vandaag een beetje in een warrige bui. Hij loopt de buurtsuper 'De Vriendelijke Bloemkool' in. Na enigszins zoeken tussen verscheidene schappen, komt hij er niet uit en komt een van de werknemers hem helpen. Werknemer: 'Wat zoekt u, meneer?' Grumps: 'Ik been op zoek naar de <u title='Een gemeenschap is onder andere een groep mensen die bij elkaar hoort, iets met elkaar deelt.'>gemeenschap</u>.' De werknemer kijkt enigszins verbaasd. Vervolgens kijkt Grumps verder de schappen in en zegt: 'Waar kan ik anders de gemeenschapsgoederen vinden?'</p>",
 		"Als u het over uw leefomgeving hebt, tot hoever reikt deze?",
-		'<form onsubmit="showQuestion7(questions, user);"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion7(questions, user);"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question7",
-		"<p align='left' style='margin:1em;background: rgba(00, 00, 00, .10);'>Steven en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Steven reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
+		"<p align='left' style='margin:1em;'>Steven en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Steven reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
 		"Stel de gemeente zou een parkeergarage willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
-		'<form onsubmit="sendQuestionnaire(user)"><input type="text" name="" class="white-space"> <br/> <input type="submit" value="Verstuur"></form>'
+		'<form onsubmit="sendQuestionnaire(user)"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
 	[
 		"CartoonSrc",
@@ -298,9 +299,8 @@ function showQuestion6(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
-//	$("#header-title-logo").css("background", "rgba(00, 00, 00, .36)");
-	$("#questiontitle").css("color", "white");
-	$("#questiontitle").css("text-shadow", "1px 1px #000000");
+	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[6][2]);
 	$("#answer").css("color", "white");
 	$("#answer").css("text-shadow", "1px 1px #000000");
@@ -309,8 +309,28 @@ function showQuestion6(questions, user) {
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
 
-	// Draw the map
-	drawMap();
+	// Draw the map if user.livingenvironment = ""
+	if (user.livingenvironment == "") {
+		// Create the map
+		drawMap(user);
+	} else {
+		// Show the #map
+		$("#map").css("display", "block");
+		// Show the data of question 6
+		if (user.livingenvironmentproperties[1][0] == "circle") { // && currentQuestion != 6
+			// Show the circle
+			user.livingenvironment.setMap(user.map);
+			// Set #toolbar-createcircle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons #toolbar-createcircle").addClass("toolbar-item toolbar-active");
+			//return user;
+		} else if (user.livingenvironmentproperties[1][0] == "rectangle") {
+			// Show the rectanglecircle
+			user.livingenvironment.setMap(user.map);
+			// Set #toolbar-createrectangle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons #toolbar-createrectangle").addClass("toolbar-item toolbar-active");
+			//return user;
+		}
+	}
 
 	// Show #toolbar
 	if ($("#toolbar").css("display").toLowerCase() == "none") {
@@ -319,17 +339,17 @@ function showQuestion6(questions, user) {
 
 	// Reset the width of #content
 	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$(".content").css("left", "0%");
-		$(".content").css("width", "100%");
+		$("#question-answer").css("left", "0%");
+		$("#question-answer").css("width", "100%");
 	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-		$(".content").css("left", "0%");
-		$(".content").css("width", "92.5%");
+		$("#question-answer").css("left", "0%");
+		$("#question-answer").css("width", "92.5%");
 	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$(".content").css("left", "17.5%");
-		$(".content").css("width", "82.5%");
+		$("#question-answer").css("left", "17.5%");
+		$("#question-answer").css("width", "82.5%");
 	} else {
-		$(".content").css("left", "17.5%");
-		$(".content").css("width", "75%");
+		$("#question-answer").css("left", "17.5%");
+		$("#question-answer").css("width", "75%");
 	}
 
 	// Return the user object
@@ -344,24 +364,16 @@ function showQuestion6(questions, user) {
 
 function showQuestion7(questions, user) {
 
-/*
 	// Save the data from question 6 and add it to the user object
 	savaDataQuestion6(questions, user);
- */
-
-/*
-	var living_environment = $("#data-question6").val();
-	user.livingenvironment = living_environment;
-	//alert(user.livingenvironment);
- */
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
 
 	// Show the new question
 	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
-	$("#questiontitle").css("color", "white");
-	$("#questiontitle").css("text-shadow", "1px 1px #000000");
+	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[7][2]);
 	$("#answer").css("color", "white");
 	$("#answer").css("text-shadow", "1px 1px #000000");
@@ -558,6 +570,66 @@ function savaDataQuestion5(questions, user) {
 	user.gametimehours = gametime_hours;
 	var gametime_categories = $("#data-question5-gametime-categories").val();
 	user.gametimecategories = gametime_categories;
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion6(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 6 and add it to the user object
+
+function savaDataQuestion6(questions, user) {
+
+	// Save the data from question 6 and add it to the user object
+	if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+
+		// Save the area if it's a circle
+		if (user.livingenvironmentproperties[1][0] == "circle") {
+			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
+			user.livingenvironmentamount = 1;
+			// Set the living environment properties for circle
+			var lat = user.livingenvironment.getCenter().lat();
+			var lon = user.livingenvironment.getCenter().lng();
+			var rad = user.livingenvironment.getRadius();
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["circle", lat, lon, rad, "north", "south", "east", "west"]
+			];
+
+		// Save the area if it's a rectangle
+		} else if (user.livingenvironmentproperties[1][0] == "rectangle") {
+			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
+			user.livingenvironmentamount = 1;
+			// Set the living environment properties for rectangle
+			var north = user.livingenvironment.getBounds().getNorthEast().lat();
+			var south = user.livingenvironment.getBounds().getSouthWest().lat();
+			var east = user.livingenvironment.getBounds().getNorthEast().lng();
+			var west = user.livingenvironment.getBounds().getSouthWest().lng();
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["rectangle", "lat", "lon", "rad", north, south, east, west]
+			];
+		}
+
+		// Delete the user.livingenvironment from #map
+		user.livingenvironment.setMap(null);
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+
+	// Reset the user properties related to living environment to default if there is no circle/ rectangle
+	} else {
+		// Set the user.livingenvironmentamount to 0
+		user.livingenvironmentamount = 0;
+		// Set the living environment properties to default
+		user.livingenvironmentproperties = [
+			["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+			["type", "lat", "lon", "rad", "north", "south", "east", "west"]
+		];
+		user.livingenvironment = "";
+	}
 
 	// Return the user object
 	return user;

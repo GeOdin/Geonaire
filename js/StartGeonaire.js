@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-12-07
+ * Het laatst veranderd op 2016-12-11
  * door GeOdin
  *
  *==========================================
@@ -12,7 +12,10 @@
  * Functies binnen deze JavaScript file: *
  *========================================
  * startGeonaire()
- * drawMap()
+ * drawMap(user)
+ * createCircle(user)
+ * createRectangle(user)
+ * clearMap(user)
  * toggleButtons()
  * toggleQuestions(questions, lastQuestion, user)
  */
@@ -34,18 +37,21 @@ function startGeonaire() {
 	toggleButtons();
 	toggleQuestions(questions, lastQuestion, user);
 	showIntroduction(questions, user);
+	createCircle(user);
+	createRectangle(user);
+	clearMap(user);
 
 	// Return the user object
 	return user;
 }
 
-///////////////
-// drawMap() //
-///////////////
+///////////////////
+// drawMap(user) //
+///////////////////
 
 // Function to draw the map
 
-function drawMap() {
+function drawMap(user) {
 	// Set the variables
 	var zoomLevel = 14;
 	var lat = 51.974151;
@@ -57,6 +63,7 @@ function drawMap() {
 		center: new google.maps.LatLng(lat, lon),
 		mapTypeId: google.maps.MapTypeId.TERRAIN
 	});
+	user.map = map;
 
 	// Show the map
 	$("#map").css("display", "block");
@@ -72,6 +79,137 @@ function drawMap() {
 		$("#header").css("height", "11.75vh");
 	}
  */
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////
+// createCircle(user) //
+////////////////////////
+
+// Function to create a circle on the map
+
+function createCircle(user) {
+	$("#toolbar-createcircle").click(function() {
+		// Create a circle if the current question is 6 and if user.livingenvironmentamount < 1
+		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount < 1) {
+			// Create the circle
+			var lat = 51.974151;
+			var lon = 5.664084;
+			var rad = 200;
+			var circle = new google.maps.Circle({
+				strokeColor: 'indigo',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: 'indigo',
+				fillOpacity: 0.35,
+				map: user.map,
+				center: {lat: lat, lng: lon},
+				radius: rad,
+				editable: true
+			});
+
+			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
+			user.livingenvironmentamount = 1;
+			// Set the living environment properties to circle
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["circle", lat, lon, rad, "north", "south", "east", "west"]
+			];
+			// Save the circle to the user object
+			user.livingenvironment = circle;
+			// Set #toolbar-createcircle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+			$(this).removeClass("toolbar-item");
+			$(this).addClass("toolbar-item toolbar-active");
+		}
+		// Return the user object
+		return user;
+	});
+}
+
+///////////////////////////
+// createRectangle(user) //
+///////////////////////////
+
+// Function to create a rectangle on the map
+
+function createRectangle(user) {
+	$("#toolbar-createrectangle").click(function() {
+		// Create a rectangle if the current question is 6 and if user.livingenvironmentamount < 1
+		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount < 1) {
+			// Create the rectangle
+			var north = 51.977;
+			var south = 51.971;
+			var east = 5.671;
+			var west = 5.657;
+			var rectangle = new google.maps.Rectangle({
+				strokeColor: 'indigo',
+				strokeOpacity: 0.8,
+				strokeWeight: 2,
+				fillColor: 'indigo',
+				fillOpacity: 0.35,
+				map: user.map,
+				bounds: {
+					north: north,
+					south: south,
+					east: east,
+					west: west
+				},
+				editable: true, 
+				draggable: true
+			});
+
+			// Add 1 to user.livingenvironmentamount to make sure that the user can only create 1 living environment area
+			user.livingenvironmentamount = 1;
+
+			// Set the living environment properties to rectangle
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["rectangle", "lat", "lon", "rad", north, south, east, west]
+			];
+			// Save the rectangle to the user object
+			user.livingenvironment = rectangle;
+			// Set #toolbar-createrectangle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+			$(this).removeClass("toolbar-item");
+			$(this).addClass("toolbar-item toolbar-active");
+		}
+		// Return the user object
+		return user;
+	});
+}
+
+////////////////////
+// clearMap(user) //
+////////////////////
+
+// Function to clear the map of data
+
+function clearMap(user) {
+	$("#toolbar-clearmap").click(function() {
+		// Remove the circle/rectangle if it's question 6 and user.livingenvironmentamount > 0
+		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount > 0) {
+			// Clear all circle, square, markers // is dit te doen door de overlay te verwijderen?
+			user.livingenvironment.setMap(null);
+			// Reset user.livingenvironment
+			user.livingenvironment = "";
+			// Reset user.livingenvironmentamount to 0 (zero)
+			user.livingenvironmentamount = 0;
+			// Reset user.livingenvironmentproperties
+			user.livingenvironmentproperties = [
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+				["type", "lat", "lon", "rad", "north", "south", "east", "west"]
+			];
+			// Set #toolbar-clearmap as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+			$(this).removeClass("toolbar-item");
+			$(this).addClass("toolbar-item toolbar-active");
+		}
+		// Return the user object
+		return user;
+	});
 }
 
 /////////////////////
@@ -106,18 +244,24 @@ function toggleButtons() {
         $("#header").toggle();
 		if ($("#header").css("display").toLowerCase() != "none") {
 			$("#question-answer").css("top", "17.25vh");
+			$("#question-answer").css("height", "75.25vh");
+			$("#map").css("height", "50vh");
 			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
 			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "block") {
 			$("#question-answer").css("top", "17.25vh");
+			$("#question-answer").css("height", "75.25vh");
+			$("#map").css("height", "50vh");
 			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
 			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "none") {
 			$("#question-answer").css("top", "0vh");
+			$("#question-answer").css("height", "92.5vh");
+			$("#map").css("height", "67.25vh");
 			$("#overview").css("top", "0vh");
 			$("#overview").css("height", "92.5vh");
 			$("#toolbar").css("top", "0vh");
@@ -180,6 +324,15 @@ function toggleQuestions(questions, lastQuestion, user) {
  */
 		}
 
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -231,6 +384,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		} else if ($("#questiontitle").html() == questions[7][2]) {
 			savaDataQuestion7(questions, user);
 		}
+		
+			// Remove the #map from view
+			$("#map").css("display", "none");
 
 			// Reset the scrollbars to the top
 			$("*").scrollTop(0);
@@ -285,6 +441,15 @@ function toggleQuestions(questions, lastQuestion, user) {
 			savaDataQuestion7(questions, user);
  */
 		}
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -341,6 +506,15 @@ function toggleQuestions(questions, lastQuestion, user) {
  */
 		}
 
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -396,6 +570,15 @@ function toggleQuestions(questions, lastQuestion, user) {
  */
 		}
 
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -450,6 +633,15 @@ function toggleQuestions(questions, lastQuestion, user) {
 			savaDataQuestion7(questions, user);
  */
 		}
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -553,6 +745,15 @@ function toggleQuestions(questions, lastQuestion, user) {
  */
 		}
 
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		// Remove the #map from view
+		$("#map").css("display", "none");
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -609,6 +810,26 @@ function toggleQuestions(questions, lastQuestion, user) {
 			savaDataQuestion7(questions, user);
  */
 		}
+		
+		// Show the #map
+		$("#map").css("display", "block");
+		// Show the data of question 6
+		if (user.livingenvironmentproperties[1][0] == "circle") { // && currentQuestion != 6
+			// Show the circle
+			user.livingenvironment.setMap(user.map);
+			// Set #toolbar-createcircle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons #toolbar-createcircle").addClass("toolbar-item toolbar-active");
+			//return user;
+		} else if (user.livingenvironmentproperties[1][0] == "rectangle") {
+			// Show the rectanglecircle
+			user.livingenvironment.setMap(user.map);
+			// Set #toolbar-createrectangle as the active .toolbar-item of #toolbar-buttons
+			$("#toolbar-buttons #toolbar-createrectangle").addClass("toolbar-item toolbar-active");
+			//return user;
+		} else {
+			// Remove the .toolbar-active
+			$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+		}
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -617,8 +838,8 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "white");
-		$("#questiontitle").css("text-shadow", "1px 1px #000000");
+		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[6][2]);
 
 		// Show the answer
@@ -661,6 +882,16 @@ function toggleQuestions(questions, lastQuestion, user) {
 			savaDataQuestion7(questions, user);
  */
 		}
+		
+		// Show the #map
+		$("#map").css("display", "block");
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
@@ -669,8 +900,8 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "white");
-		$("#questiontitle").css("text-shadow", "1px 1px #000000");
+		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[7][2]);
 
 		// Show the answer

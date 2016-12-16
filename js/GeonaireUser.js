@@ -1,7 +1,7 @@
 /* GeonaireUser.js
  * JavaScript file om de user iput te verwerken voor de Geonaire
  * Gemaakt op 2016-12-04
- * Het laatst veranderd op 2016-12-07
+ * Het laatst veranderd op 2016-12-11
  * door GeOdin
  *
  *==========================================
@@ -55,6 +55,12 @@ function createUser() {
 	];
 	var gametime_hours = 0;
 	var gametime_categories = "hours";
+	var map = "map";
+	var living_environment_amount = 0;
+	var living_environment_properties = [
+		["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+		["type", "lat", "lon", "rad", "north", "south", "east", "west"]
+	];
 	var living_environment = "";
 	var friction = "";
 
@@ -78,7 +84,14 @@ function createUser() {
 	
 	// Add the game time category of the user
 	this.gametimecategories = gametime_categories;
-	
+
+	// Add the map
+	this.map = map;
+
+	// Add the amount of living environments (to make sure there is not more than 1)
+	this.livingenvironmentamount = living_environment_amount;
+	// Add the type of living environments
+	this.livingenvironmentproperties = living_environment_properties;
 	// Add the living environment of the user
 	this.livingenvironment = living_environment;
 	
