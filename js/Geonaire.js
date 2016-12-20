@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-16
+ * Het laatst veranderd op 2016-12-17
  * door GeOdin
  *
  *===================================
@@ -70,12 +70,14 @@
 (S) * * * * * * (4) vraag over gamecategori"en -> verticale progress bar met eventueel tekst kwartslag gedraaid met titel naar aanleiding van ingevulde vragenlijst (van casual gamer tot die-hard gamer)
 (M)/(S) * * * * * #div over #map met wacht even tot Google Maps geladen is (voordat mensen denken dat hij het niet doet) (load screen);
 (M) * * * * * #map tekst als google maps het niet doet/ niet geladen wordt/ kan worden
-(S) * * * * * * #map -> betere resize -> google.maps.event.trigger(map, 'resize'); http://stackoverflow.com/questions/4700594/google-maps-displaynone-problem
+(S) * * * * * #map -> betere resize -> google.maps.event.trigger(map, 'resize'); http://stackoverflow.com/questions/4700594/google-maps-displaynone-problem
+(S) * * * * * * betere reload -> http://stackoverflow.com/questions/17264989/how-to-manually-reload-google-map-with-javascript
 (M) * * * * * * als gebruikers wisselen tussen vragen voordat de Google Map (#map) geladen is, wordt hij niet meer getoond
 (S) * * * * * * #toolbar-createpolygon -> https://developers.google.com/maps/documentation/javascript/examples/polygon-arrays#try-it-yourself
 (S) * * * * * * alternative -> make #header, #overview, #toolbar no longer toggable
 (v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
 (S) * * * * * fancy lay-out op thema, kleuren van de regenboog -> color styles van google -> https://material.io/guidelines/style/color.html#color-color-palette
+(M) * * * * * * color styles for google -> https://material.io/guidelines/style/color.html#color-color-palette
 (S) * * * * * * red -> Introductie
 (S) * * * * * * orange -> Algemene informatie (vraag 1 - 3)
 (S) * * * * * * yellow -> Games (vraag 4 - 5)
@@ -91,20 +93,24 @@
 (M) * * * * * Bedankt voor het invullen van de vragenlijst! (spelletje na afloop/ easter egg/ coockie clicker)
 (C) * * * * Responsive design
 (C) * * * * * http://www.w3schools.com/html/html_responsive.asp
- * * * * reset the variables upon refreshing the page -> geen probleem op online website
- * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
- * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/
- * * * * * resize -> http://www.w3schools.com/cssref/css3_pr_resize.asp
- * * * * * drag & drop -> http://www.jeasyui.com/tutorial/dd/dnd2.php
- * * * * * * drag & drop -> http://www.w3schools.com/html/html5_draganddrop.asp
- * * * * * * draggable -> http://www.w3schools.com/TagS/tryit.asp?filename=tryhtml5_global_draggable
- * * * * * verander de width van #cartoonimage #question-title en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
- * * * * * use zipcode from questions and CSV-file
- * * * * * * http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
- * * * * * * https://tools.ietf.org/html/rfc4180
- * * * * * * http://evanplaice.github.io/jquery-csv/examples/basic-usage.html
+(v) * * * * reset the variables upon refreshing the page -> geen probleem op online website, want new createUser()
+(W) * * * * evt. divs editable maken, zodat gebruikers zelf de lengte en breedte aan kunnen passen, editable: true; draggable: true; resize
+(W) * * * * * editable -> http://html5doctor.com/the-contenteditable-attribute/
+(W) * * * * * resize -> http://www.w3schools.com/cssref/css3_pr_resize.asp
+(M) * * * * * drag & drop -> http://www.jeasyui.com/tutorial/dd/dnd2.php
+(M) * * * * * * drag & drop -> http://www.w3schools.com/html/html5_draganddrop.asp
+(W) * * * * * * draggable -> http://www.w3schools.com/TagS/tryit.asp?filename=tryhtml5_global_draggable
+(n.v.t.) * * * * * verander de width van #cartoonimage #question-title en #answer naar niet bestaand, dit zijn de enige divs van #content die een z-index hoger dan #map moeten hebben
+(M) * * * * * use zipcode from questions and CSV-file
+(M) * * * * * * http://stackoverflow.com/questions/7431268/how-to-read-data-from-csv-file-using-javascript
+(M) * * * * * * https://tools.ietf.org/html/rfc4180
+(M) * * * * * * http://evanplaice.github.io/jquery-csv/examples/basic-usage.html
 (v) * * * * #cartoonimage -> write down cartoons as placeholders
 (niet meer van toepassing) * * * * als je bij vraag 6 cartoon(#header) 2xtoggled, wordt hij bij het verschijnen van #header niet meer onder #header geplaatst
+(M) * * * * (vraag 8) circle text -> https://css-tricks.com/set-text-on-a-circle/
+(M) * * * * (vraag 9) slide bar -> http://www.cssportal.com/style-input-range/
+(C) * * * * randomly move item inside div -> http://stackoverflow.com/questions/24160035/move-randomly-item-inside-div
+(W) * * * * button role -> https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/
@@ -167,8 +173,14 @@
  * Back-end programming
  * * php
  * * * link met de server
+ * * * * save data from forms into MySQL-database -> http://www.howtoplaza.com/store-form-data-to-mysql https://developers.google.com/maps/documentation/javascript/mysql-to-maps
+ * * * * * http://www.w3schools.com/php/showphp.asp?filename=demo_include1
+ * * * * * http://www.w3schools.com/php/php_forms.asp
+ * * * * * http://www.w3schools.com/php/showphp.asp?filename=demo_form_post
  * * * * Ron vragen of ik gebruik kan maken van een server van de uniqueID
  * * * * optioneel: https://db4free.net/ voor gratis database
+ * * Mysql
+(M) * * * http://dev.mysql.com/doc/refman/5.7/en/char.html
  * * GeoJSON
  * * * store JSON in SQL-database
  * * eventueel voor elke questionnaire een back-up mail sturen naar alternatieve e-mail (geoJSON/ csv/ ?) (want sommige gratis databases hebben niet de garantie dat de data onbeperkt en onveranderd beschikbaar blijft)
@@ -247,6 +259,8 @@
  * *  $('div').mouseenter(function() {});
  * *  $('div').mouseleave(function() {});
  * *  $('div').mouseclick(function() {});
+ * * image near mouse -> http://stackoverflow.com/questions/7143806/make-an-image-follow-mouse-pointer http://jsfiddle.net/BfLAh/1/
+ * * dragscroll -> http://qnimate.com/javascript-scroll-by-dragging/
  * * mouseHoover
  * * * Tekstballonnetjes
  * * * * https://www.sitepoint.com/pure-css3-speech-bubbles/
@@ -297,11 +311,8 @@
  * * * wat voor frictie?
  * * * onderscheid maken in positieve (bijvoorbeeld aanleg bos) of negatief (bijvoorbeeld groot parkeergarage/ groot grijs gebouw dat uitzicht blokkeert) invloed
  * * * voorbeeldvraag: stel de gemeente wil een verandering aanbrengen bij u/jou in de buurt. Teken een gebied rondom uw woning waarin u dit liever niet zou willen ((evt bijvoorbeeld omdat het uw uitzicht verstoord,...))
- * 8. Wat verstaat u onder natuur?
- * * scalebar -> input type="range" http://webtutsdepot.com/2010/04/24/html-5-slider-input-tutorial/
- * * * styling of slide bar -> http://www.cssportal.com/style-input-range/
  * THEMA: PLACE ATTACHMENT
- * 9. Place Attachment (radio buttons)
+ * 8b. Place Attachment (radio buttons) -> https://css-tricks.com/set-text-on-a-circle/ monospace fonts -> http://www.w3schools.com/cssref/css_websafe_fonts.asp
  * Nature bonding
  * * Wat betekent natuur voor jou? (scalebar - plantje in de vensterbank -> vrije natuur zoals bijvoorbeeld een onbewoond eiland)
  * * In hoeverre/welke mate ben je gehecht aan de natuur bij jou in de buurt?
@@ -313,10 +324,13 @@
  * * Ik woon hier, omdat mijn famlie hier ook woont./Woont u waar u woont, omdat uw familie daar ook woont?
  * Friend bonding
  * * Vriendschappen opgebouwd door activiteiten in mijn leefomgeving/buurt/wijk/? zijn belangrijk voor mij./Woont u waar u woont, omdat uw vrienden daar ook wonen?
- * 10. Prioritiseer de aspecten van place attachment (drag & drop)/evt 1t/m5 neerzetten ervoor (maxlength = 1)
+ * 8a. Prioritiseer de aspecten van place attachment (drag & drop)/evt 1t/m5 neerzetten ervoor (maxlength = 1)
+ * 9. Wat verstaat u onder natuur?
+ * * scalebar -> input type="range" http://webtutsdepot.com/2010/04/24/html-5-slider-input-tutorial/
+ * * * styling of slide bar -> http://www.cssportal.com/style-input-range/
  * THEMA: PARTICIPATIE
- * 11. Heeft u weleens deelgenomen aan <u title="">burgerparticipatie...</u>
- * * Ja -> Hoevaak en wat voor soort komt tevoorschijn
+ * 10. Heeft u weleens deelgenomen aan <u title="">burgerparticipatie...</u>
+ * * Ja -> Hoevaak en wat voor soort komt tevoorschijn -> append(...) / .html(...)
  * Verzenden van data van vragenlijst
  * * Bij het verzenden van de data van de vragenlijst ook de datum en tijd meezenden als extra property
  * * Eventueel kopie versturen naar extra emailadres als back-up gebruiken bij het gebruik van een gratis online server (omdat die minder betrouwbaar zijn)
@@ -384,7 +398,7 @@
  * Coloring
  * * for with Google(Maps) -> https://material.google.com/style/color.html#color-color-palette
  * * Color harmonies (in general) -> http://www.tigercolor.com/color-lab/color-theory/color-harmonies.htm
- * * website of MGI student who helped me -> http://greatemerald.eu/uncodex-sources/
+ * * website of MGI student (Darius) who helped me -> http://greatemerald.eu/uncodex-sources/
  * vertically styling elements -> https://www.w3.org/Style/Examples/007/center.en.html#block
  * Wrapper class -> http://stackoverflow.com/questions/889160/what-is-a-wrapper-class
  */

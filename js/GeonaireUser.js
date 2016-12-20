@@ -1,7 +1,7 @@
 /* GeonaireUser.js
- * JavaScript file om de user iput te verwerken voor de Geonaire
+ * JavaScript file om de user input te verwerken voor de Geonaire
  * Gemaakt op 2016-12-04
- * Het laatst veranderd op 2016-12-11
+ * Het laatst veranderd op 2016-12-17
  * door GeOdin
  *
  *==========================================

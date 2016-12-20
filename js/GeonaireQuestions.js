@@ -100,7 +100,7 @@ var questions = [
 		"cartoon-question7",
 		"<p align='left' style='margin:1em;'>Steven en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Steven reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
 		"Stel de gemeente zou een parkeergarage willen plaatsen, tot hoe dichtbij uw huis zou u dit goed vinden?",
-		'<form onsubmit="sendQuestionnaire(user)"> <br/> <input type="submit" value="Verstuur"></form>'
+		'<form onsubmit="sendQuestionnaire(user);"> <br/> <input type="submit" value="Verstuur"></form>'
 	],
 	[
 		"CartoonSrc",

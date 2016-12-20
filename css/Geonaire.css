@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-16
+ * Het laatst veranderd op 2016-12-20
  * door GeOdin
  */
 
@@ -123,7 +123,7 @@ ul {
 	height: 75.25vh;
 	z-index: 2;
 	background-color: transparent;
-	background: rgba(00, 00, 00, .23);
+	background: #C0C0C0;
 	font-size: 1.2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
@@ -147,16 +147,23 @@ ul {
 	display: block;
 	padding: 5%;
 	font-size: 1em;
+	background: #C0C0C0;
+	color: #565656; /* #757575 for buttons that can't be used */
+	text-shadow: 1px 1px #cccccc; /* #DEDEDE #D0D0D0 for buttons that can't be used */
 	text-align: left;
 	cursor: pointer;
 }
 
 .tableofcontents-item:hover {
 	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
 }
 
 .tableofcontents-active {
 	background: rgba(00, 00, 00, .23);
+	color: white;
+	text-shadow: 1px 1px #000000;
 }
 
 #tableofcontents-question1{
@@ -247,7 +254,7 @@ ul {
 	height: 75.25vh;
 	z-index: 2;
 	background-color: transparent;
-	background: rgba(00, 00, 00, .23);
+	background: #C0C0C0;
 	font-size: 1.2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
@@ -262,23 +269,29 @@ ul {
 	padding-top: 5%;
 	padding-bottom: 5%;
 	font-size: 1.2em;
-	background: rgba(00, 00, 00, .23);
+	background: #9D9D9D;
 }
 
 .toolbar-item{
 	display: block;
 	padding: 5%;
-	font-size: 1em;
 	text-align: left;
+	background: #C0C0C0;
+	color: #565656; /* #757575 for buttons that can't be used */
+	text-shadow: 1px 1px #cccccc; /* #DEDEDE #D0D0D0 for buttons that can't be used */
 	cursor: pointer;
 }
 
 .toolbar-item:hover {
-	background: rgba(00, 00, 00, .23);
+	background: #9D9D9D;
+	text-shadow: 1px 1px #000000;
+	color: white;
 }
 
 .toolbar-active {
-	background: rgba(00, 00, 00, .23);
+	background: #9D9D9D;
+	text-shadow: 1px 1px #000000;
+	color: white;
 }
 
 #toolbar-createmarker{
