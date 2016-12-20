@@ -4735,7 +4735,6 @@ function addZipcodeProperties(user) {
 
 	// Check which zipcodeOriginal is the same as the user.zipcode
 	for (i = 0; i < zipcodeOriginal.length; i++) {
-		//alert(zipcodeTemp.length);
 		if (zipcodeOriginal[i].toString() == zipcodeTemp) {
 			// Get the city of the zipcode
 			var cityNum = i+1;

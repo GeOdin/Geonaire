@@ -472,7 +472,6 @@ function savaDataQuestion3(questions, user) {
 
 	// Save the data from question 3 and add it to the user object
 	if (user.zipcode != zipcode) {
-		alert(6);
 		var zipcode = $("#data-question3").val();
 		user.zipcode = zipcode;
 		addZipcodeProperties(user);
