@@ -78,6 +78,7 @@
 (v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
 (S) * * * * * fancy lay-out op thema, kleuren van de regenboog -> color styles van google -> https://material.io/guidelines/style/color.html#color-color-palette
 (M) * * * * * * color styles for google -> https://material.io/guidelines/style/color.html#color-color-palette
+(M) * * * * * * switch/case for coloring #header (, possibly #question-answer) and #footer
 (S) * * * * * * red -> Introductie
 (S) * * * * * * orange -> Algemene informatie (vraag 1 - 3)
 (S) * * * * * * yellow -> Games (vraag 4 - 5)
@@ -111,6 +112,7 @@
 (M) * * * * (vraag 9) slide bar -> http://www.cssportal.com/style-input-range/
 (C) * * * * randomly move item inside div -> http://stackoverflow.com/questions/24160035/move-randomly-item-inside-div
 (W) * * * * button role -> https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
+(M) * * * * vraag ingevuld -> button tekst met <u> en title als positief (bijv bij vraag 3 -> "Wat een leuke buurt!")
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/

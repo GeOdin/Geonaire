@@ -56,32 +56,16 @@ ul {
 #header {
 	position: absolute;
 	display: block;
-	top: 0vh;
+	top: 0vh; /* 5.5vh for when #map has height: 100vh; */
 	left: 0%;
 	width: 100%;
-	height: 17.25vh;
+	height: 17.25vh; /* 11.75vh for when #map has height: 100vh; */
 	z-index: 2;
 	background-color: transparent;
 	background: rgba(00, 99, 00, .23);
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
-}
-
-#header2 {
-	position: absolute;
-	display: none;
-	top: 5.5vh;
-	left: 0%;
-	width: 100%;
-	height: 11.75vh;
-	z-index: 2;
-	background-color: transparent;
-	background: rgba(00, 99, 00, .23);
-	font-size: 2em;
-	color: white;
-	text-shadow: 1px 1px #000000;
-	overflow-y: auto;
 }
 
 #header-title {
@@ -303,23 +287,7 @@ ul {
 	display: block;
 	top: 92.5vh;
 	left: 0%;
-	width: 100%;
-	height: 7.5vh;
-	z-index: 2;
-	background-color: transparent;
-	background: rgba(00, 99, 00, .23);
-	font-size: 1.2em;
-	color: white;
-	text-shadow: 1px 1px #000000;
-	overflow-y: auto;
-}
-
-#footer2 {
-	position: absolute;
-	display: none;
-	top: 92.5vh;
-	left: 0%;
-	width: 95.75%;
+	width: 100%; /* 95.75% for when #map has width: 100%; */
 	height: 7.5vh;
 	z-index: 2;
 	background-color: transparent;
