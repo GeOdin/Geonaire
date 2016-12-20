@@ -55,32 +55,27 @@ function startGeonaire() {
 
 function drawMap(user) {
 	// Set the variables
-	var zoomLevel = 14;
-	var lat = 51.974151;
-	var lon = 5.664084;
+	var zoomLevel = 15;
+	var lat = user.zipcodelat;
+	var lon = user.zipcodelon;
 
-	// Create and draw the map
-	var map = new google.maps.Map(document.getElementById("map"), {
-		zoom: zoomLevel,
-		center: new google.maps.LatLng(lat, lon),
-		mapTypeId: google.maps.MapTypeId.TERRAIN
-	});
-	user.map = map;
+	// Create the map if there is no map yet
+	if (user.map == "map") {
+		// Create and draw the map
+		var map = new google.maps.Map(document.getElementById("map"), {
+			zoom: zoomLevel,
+			center: new google.maps.LatLng(lat, lon),
+			mapTypeId: google.maps.MapTypeId.TERRAIN
+		});
+		user.map = map;
+	// Redraw the map if another zipcode is entered
+	} else {
+		// Create and draw the map
+		user.map.setCenter(new google.maps.LatLng(lat, lon));
+	}
 
 	// Show the map
 	$("#map").css("display", "block");
-
-	// Adjust #header to go down a little bit for the GoogleMaps buttons in the top-left corner
-/*
-	$("#header").css("top", "8.5vh");
-	$("#header").css("height", "8.75vh");
- */
-/*
-	if ($("#header").css("top") == "0vh" && $("#header").css("height") == "17.25vh") {
-		$("#header").css("top", "5.5vh");
-		$("#header").css("height", "11.75vh");
-	}
- */
 
 	// Return the user object
 	return user;
@@ -97,8 +92,8 @@ function createCircle(user) {
 		// Create a circle if the current question is 6 and if user.livingenvironmentamount < 1
 		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount < 1) {
 			// Create the circle
-			var lat = 51.974151;
-			var lon = 5.664084;
+			var lat = user.zipcodelat;
+			var lon = user.zipcodelon;
 			var rad = 200;
 			var circle = new google.maps.Circle({
 				strokeColor: 'indigo',
@@ -143,10 +138,10 @@ function createRectangle(user) {
 		// Create a rectangle if the current question is 6 and if user.livingenvironmentamount < 1
 		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount < 1) {
 			// Create the rectangle
-			var north = 51.977;
-			var south = 51.971;
-			var east = 5.671;
-			var west = 5.657;
+			var north = user.zipcodelat + 0.003;
+			var south = user.zipcodelat - 0.003;
+			var east = user.zipcodelon + 0.007;
+			var west = user.zipcodelon - 0.007;
 			var rectangle = new google.maps.Rectangle({
 				strokeColor: 'indigo',
 				strokeOpacity: 0.8,
@@ -196,10 +191,14 @@ function createPolygon(user) {
 		// Create a polygon if the current question is 6 and if user.livingenvironmentamount < 1
 		if ($("#questiontitle").html() == questions[6][2] && user.livingenvironmentamount < 1) {
 			// Create the polygon
+			var lat1 = user.zipcodelat + 0.003;
+			var lat2 = user.zipcodelat - 0.003;
+			var lon1 = user.zipcodelon + 0.007;
+			var lon2 = user.zipcodelon - 0.007;
 			var triangleCoords = [
-				{lat: 51.977, lng: 5.657},
-				{lat: 51.971, lng: 5.657},
-				{lat: 51.977, lng: 5.671}
+				{lat: lat1, lng: lon2},
+				{lat: lat2, lng: lon2},
+				{lat: lat1, lng: lon1}
 			];
 			var polygon = new google.maps.Polygon({
 				paths: triangleCoords,
@@ -886,21 +885,26 @@ function toggleQuestions(questions, lastQuestion, user) {
 		}
 		
 		// Show the #map
-		$("#map").css("display", "block");
 		// Show the data of question 6
 		if (user.livingenvironmentproperties[1][0] == "circle") { // && currentQuestion != 6
+			// Show the #map
+			$("#map").css("display", "block");
 			// Show the circle
 			user.livingenvironment.setMap(user.map);
 			// Set #toolbar-createcircle as the active .toolbar-item of #toolbar-buttons
 			$("#toolbar-buttons #toolbar-createcircle").addClass("toolbar-item toolbar-active");
 			//return user;
 		} else if (user.livingenvironmentproperties[1][0] == "rectangle") {
+			// Show the #map
+			$("#map").css("display", "block");
 			// Show the rectangle
 			user.livingenvironment.setMap(user.map);
 			// Set #toolbar-createrectangle as the active .toolbar-item of #toolbar-buttons
 			$("#toolbar-buttons #toolbar-createrectangle").addClass("toolbar-item toolbar-active");
 			//return user;
 		} else if (user.livingenvironmentproperties[1][0] == "polygon") {
+			// Show the #map
+			$("#map").css("display", "block");
 			// Show the polygon
 			user.livingenvironment.setMap(user.map);
 			// Set #toolbar-createpolygon as the active .toolbar-item of #toolbar-buttons
@@ -909,6 +913,7 @@ function toggleQuestions(questions, lastQuestion, user) {
 		} else {
 			// Remove the .toolbar-active
 			$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+			drawMap(user);
 		}
 
 		// Reset the scrollbars to the top

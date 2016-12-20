@@ -31,6 +31,9 @@ function createUser() {
 	var age = 0;
 	var nationality; "Nederland";
 	var zipcode = "1234AB";
+	var zipcode_city = "";
+	var zipcode_lat = "";
+	var zipcode_lon = "";
 	var user_game_categories = [
 		["gamecategory", "yes_or_no"],
 		["action", "no"],
@@ -72,6 +75,9 @@ function createUser() {
 	
 	// Add the zipcode of the user
 	this.zipcode = zipcode;
+	this.zipcodecity = zipcode_city;
+	this.zipcodelat = zipcode_lat;
+	this.zipcodelon = zipcode_lon;
 	
 	// Add the game categories of the user
 	this.gamecategories = user_game_categories;

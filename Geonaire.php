@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<!-- 
-	Geonaire.html
-	Hoofd pagina voor de Geonaire
-	Gemaakt op 2016-11-24
-	Het laatst veranderd op 2016-12-16
-	door GeOdin
--->
-
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="css/Geonaire.css"/>
@@ -14,10 +5,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> <!-- Reference to the jQuery library -->
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfbd7SbhQEtzxsnaMTMhE3lgSqdBLSE7w&libraries=drawing"></script> <!-- Google Maps API key for this project -->
 		<script type="text/javascript" src="js/Geonaire.js"></script>
-		<script type="text/javascript" src="js/StartGeonaire.js"></script>
-		<script type="text/javascript" src="js/GeonaireMap.js"></script>
+		<script type="text/javascript" src="js/StartGeonaire.js"></script> 
 		<script type="text/javascript" src="js/GeonaireQuestions.js"></script>
 		<script type="text/javascript" src="js/GeonaireUser.js"></script>
+		<script type="text/php" src="php/action_page.php"></script>
 		<title>
 			Geonaire
 		</title>

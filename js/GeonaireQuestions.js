@@ -64,7 +64,7 @@ var questions = [
 		"cartoon-question1",
 		"<p align='left' style='margin:1em;'>Steven viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Steven schrikt en schiet als een kat de gordijnen in.</p>",
 		"Wat is uw leeftijd?",
-		'<form onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext" placeholder="24"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form method="post" action="saveData.php" onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext" placeholder="24"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question2",
@@ -324,7 +324,7 @@ function showQuestion6(questions, user) {
 	$("#tableofcontents-question6").addClass("tableofcontents-item tableofcontents-active");
 
 	// Draw the map if user.livingenvironment = ""
-	if (user.livingenvironment == "") {
+	if (user.livingenvironment == "" || user.livingenvironmentamount == 0) {
 		// Create the map
 		drawMap(user);
 	} else {
@@ -471,8 +471,22 @@ function savaDataQuestion2(questions, user) {
 function savaDataQuestion3(questions, user) {
 
 	// Save the data from question 3 and add it to the user object
-	var zipcode = $("#data-question3").val();
-	user.zipcode = zipcode;
+	if (user.zipcode != zipcode) {
+		alert(6);
+		var zipcode = $("#data-question3").val();
+		user.zipcode = zipcode;
+		addZipcodeProperties(user);
+
+		// Reset question 6
+		// Set the user.livingenvironmentamount to 0
+		user.livingenvironmentamount = 0;
+		// Set the living environment properties to default
+		user.livingenvironmentproperties = [
+			["type", "lat", "lon", "rad", "north", "south", "east", "west"],
+			["type", "lat", "lon", "rad", "north", "south", "east", "west"]
+		];
+		user.livingenvironment = "";
+	}
 
 	// Return the user object
 	return user;
