@@ -20,8 +20,11 @@ a {
 }
 
 h3 {
-	margin: 20%;
-	background: rgba(00, 00, 00, .10);
+	padding-top: 2%;
+	padding-bottom: 3%;
+	background: #CCDFCC; /* steps of 3 from http://www.color-hex.com/color/006300 */
+	color: #7fb17f;
+	text-shadow: 1px 1px #328232;
 }
 
 p {
@@ -62,7 +65,7 @@ ul {
 	height: 17.25vh; /* 11.75vh for when #map has height: 100vh; */
 	z-index: 2;
 	background-color: transparent;
-	background: rgba(00, 99, 00, .23);
+	background: #7fb17f;
 	font-size: 2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
@@ -84,7 +87,7 @@ ul {
 	left: 0%;
 	transform: translate(0, -50%);
 	width: 17.5%;
-	font-size: 2.5vh;
+	font-size: 0.8em;
 	overflow-y: auto;
 }
 
@@ -95,7 +98,9 @@ ul {
 	height: 17.25vh;
 	transform: translate(0, -50%);
 	width: 82.5%;
-	font-size: 3.5vh;
+	color: white;
+	text-shadow: 1px 1px #99c099;
+	font-size: 0.8em;
 	overflow-y: auto;
 }
 
@@ -294,7 +299,7 @@ ul {
 	height: 7.5vh;
 	z-index: 2;
 	background-color: transparent;
-	background: rgba(00, 99, 00, .23);
+	background: #7fb17f;
 	font-size: 1.2em;
 	color: white;
 	text-shadow: 1px 1px #000000;
@@ -311,14 +316,19 @@ ul #footer-buttons {
 	top: 50%;
 	width: 20%;
 	transform: translate(0, -50%);
+	border-radius: 1vh;
 	text-align: center;
 	font-size: 1.2em;
 	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px #4c914c;
 	cursor: pointer;
 }
 
 .footer-item:hover {
-	background: rgba(00, 99, 00, .23);
+	background: #4C914C;
+	color: white;
+	text-shadow: 1px 1px #000000;
 }
 
 #button-overview {
