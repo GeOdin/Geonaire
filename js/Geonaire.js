@@ -78,7 +78,7 @@
 (v) * * * * * placeholder="" bij <form> <input type="text" ...> voor lichte placeholder -> http://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_placeholder
 (S) * * * * * fancy lay-out op thema, kleuren van de regenboog -> color styles van google -> https://material.io/guidelines/style/color.html#color-color-palette
 (M) * * * * * * color styles for google -> https://material.io/guidelines/style/color.html#color-color-palette
-(M) * * * * * * switch/case for coloring #header (, possibly #question-answer) and #footer
+(M) * * * * * * switch/case for coloring #header (, possibly #question-answer) and #footer -> https://www.codecademy.com/courses/web-beginner-en-jZv2E/0/4?curriculum_id=5124ef4c78d510dd89003eb8
 (S) * * * * * * red -> Introductie
 (S) * * * * * * orange -> Algemene informatie (vraag 1 - 3)
 (S) * * * * * * yellow -> Games (vraag 4 - 5)
