@@ -113,6 +113,9 @@
 (C) * * * * randomly move item inside div -> http://stackoverflow.com/questions/24160035/move-randomly-item-inside-div
 (W) * * * * button role -> https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role
 (M) * * * * vraag ingevuld -> button tekst met <u> en title als positief (bijv bij vraag 3 -> "Wat een leuke buurt!")
+(M)!!! * ** * map no longer knows user.livingenvironment upon toggling between 3 & 6
+(M)!!! * lay-out ook laten testen door mensen om je heen!
+(M) * * * * vragen goed laten testen door mensen om je heen!
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/
