@@ -1,7 +1,7 @@
 /* GeonaireQuestions.js
  * JavaScript file om de vragen te regelen voor de Geonaire
  * Gemaakt op 2016-11-30
- * Het laatst veranderd op 2016-12-21
+ * Het laatst veranderd op 2016-12-22
  * door GeOdin
  *
  *==========================================
@@ -58,13 +58,13 @@ var questions = [
 		"cartoon-introduction",
 		"<p style='text-align:center;'>Met onder andere 'Greet' de oma, 'Grumps' de opa, 'Doerak' de hond,<br/>'Piet' de hardwerkende zoon,<br/>'Steven' de sportieve kleinzoon en 'Charlotte' de computerliefhebster</p>", // Pechvogel Piet
 		"Introductie",
-		'<p>Beste deelnemer,<br/><br/> Ik ben Madeleine van Winkel en ik doe onderzoek naar de relatie tussen het spelen van computerspellen en perceptie van de omgeving aan de <u title="(Wageningen University &amp; Research)">WUR</u>. <br/> Ik zou graag uw medewerking vragen voor het beantwoorden van een aantal vragen. De vragenlijst bevat 10 vragen en zal ongeveer 10 minuten in beslag nemen.<br/><br/> Uitleg over de vragenlijst:<br/> Onder de vragen staat steeds een knop waarmee u naar de volgende vraag kunt. <br/> Met de knoppen links kunt u wisselen tussen de verschillende vragen. <br/> Met de knoppen beneden kunt u de vragen (links), de cartoon (boven) en de tekenbalk (rechts) laten verdwijnen en weer verschijnen.<br/> Sommige woorden zijn <u title="Een voorbeeld.">onderstreept</u>. Door met uw muis over deze woorden te bewegen, kunt u meer uitleg krijgen over de desbetreffende woorden. <br/><br/> Voor uw vermaak is er boven een cartoon toegevoegd in de vorm van een klein verhaaltje. Door de vragenlijst heen volgen we hier de avonturen van de familie "de Placeys". <br/> Hopelijk beleeft u net zoveel plezier met de Placeys als ik met ze heb beleefd. <br/> <form onsubmit="showQuestion1(questions, user);"><input type="submit" value="Begin"></form></p>'
+		'<p>Beste deelnemer,<br/><br/> Ik ben Madeleine van Winkel en ik doe onderzoek naar de relatie tussen het spelen van computerspellen en perceptie van de omgeving aan de <u title="(Wageningen University &amp; Research)">WUR</u>. <br/> Ik zou graag uw medewerking vragen voor het beantwoorden van een aantal vragen. De vragenlijst bevat 10 vragen en zal ongeveer 10 minuten in beslag nemen.<br/><br/> Uitleg over de vragenlijst:<br/> Onder de vragen staat steeds een knop waarmee u naar de volgende vraag kunt. <br/> Met de knoppen links kunt u wisselen tussen de verschillende vragen. <br/> Met de knoppen beneden kunt u de vragen (links), de cartoon (boven) en de tekenbalk (rechts) laten verdwijnen en weer verschijnen.<br/> Sommige woorden zijn <u title="Een voorbeeld.">onderstreept</u>. Door met uw muis over deze woorden te bewegen, kunt u meer uitleg krijgen over de desbetreffende woorden. <br/><br/> Voor uw vermaak is er boven een cartoon toegevoegd in de vorm van een klein verhaaltje. Door de vragenlijst heen volgen we hier de avonturen van de familie "de Placeys". <br/> Hopelijk beleeft u net zoveel plezier met de Placeys als ik met ze heb beleefd. <br/> <div id="button-form-introduction-div"><button id="form-button-introduction" onclick="showQuestion1(questions, user);">Begin</button></div></p>'
 	],
 	[
 		"cartoon-question1",
 		"<p align='left' style='margin:1em;'>Steven viert vandaag zijn verjaardag. Bij een potje 'vertel de waarheid of doe een opdracht' geeft hij toe dat hij bang is voor katten. Even later gaat de deurbel en komt zijn buurmeisje met een pakje voor hem binnen. Niet snel daarna beweegt het deksel van het pakje vanzelf naar boven. Ineens steken er schattige kraaloogjes uit het pakje op. Steven schrikt en schiet als een kat de gordijnen in.</p>",
 		"Wat is uw leeftijd?",
-		'<form method="post" action="saveData.php" onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext" placeholder="24"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion2(questions, user);"><input id="data-question1" type="text" name="age" maxlength="3" class="white-space answer-input-shorttext" style="width:2em;" placeholder="24"> jaar <br/> <input id="form-button-question1" type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question2",
@@ -146,22 +146,29 @@ function showIntroduction(questions, user) {
 
 function showQuestion1(questions, user) {
 
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
+	if (document.getElementById("form-button-introduction").innerHTML == "Begin") {
+		// Show positive feedback on the button
+		document.getElementById("form-button-introduction").innerHTML = "Wat leuk dat u meedoet!";
+	} else if (document.getElementById("form-button-introduction").innerHTML == "Wat leuk dat u meedoet!") {
+		// Reset the scrollbars to the top
+		$("*").scrollTop(0);
+		// Reset the button
+		document.getElementById("form-button-introduction").innerHTML = "Begin";
 
-	// Show the new question
-	$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#questiontitle").html(questions[1][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#answer").html(questions[1][3]);
-	// Show #toolbar-createmarker
-	$("#toolbar-createmarker").css("display", "block");
-	$("#tableofcontents-question1").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question1").addClass("tableofcontents-item tableofcontents-active");
+		// Show the new question
+		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
+		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+		$("#questiontitle").html(questions[1][2]);
+		$("#answer").css("color", "rgba(00, 00, 00, .46)");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+		$("#answer").html(questions[1][3]);
+		// Show #toolbar-createmarker
+		$("#toolbar-createmarker").css("display", "block");
+		$("#tableofcontents-question1").css("display", "block");
+		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+		$("#tableofcontents-question1").addClass("tableofcontents-item tableofcontents-active");
+	}
 
 	// Return the user object
 	return user;
@@ -175,25 +182,25 @@ function showQuestion1(questions, user) {
 
 function showQuestion2(questions, user) {
 
-	// Save the data from question 1 and add it to the user object
-	savaDataQuestion1(questions, user);
+		// Save the data from question 1 and add it to the user object
+		savaDataQuestion1(questions, user);
 
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
+		// Reset the scrollbars to the top
+		$("*").scrollTop(0);
 
-	// Show the new question
-	$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#questiontitle").html(questions[2][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-	$("#answer").html(questions[2][3]);
-	// Show #toolbar-createmarker
-	$("#toolbar-createmarker").css("display", "block");
-	$("#tableofcontents-question2").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question2").addClass("tableofcontents-item tableofcontents-active");
+		// Show the new question
+		$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
+		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+		$("#questiontitle").html(questions[2][2]);
+		$("#answer").css("color", "rgba(00, 00, 00, .46)");
+		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+		$("#answer").html(questions[2][3]);
+		// Show #toolbar-createmarker
+		$("#toolbar-createmarker").css("display", "block");
+		$("#tableofcontents-question2").css("display", "block");
+		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+		$("#tableofcontents-question2").addClass("tableofcontents-item tableofcontents-active");
 
 	// Return the user object
 	return user;

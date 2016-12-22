@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-17
+ * Het laatst veranderd op 2016-12-22
  * door GeOdin
  *
  *===================================
@@ -116,6 +116,12 @@
 (M)!!! * ** * map no longer knows user.livingenvironment upon toggling between 3 & 6
 (M)!!! * lay-out ook laten testen door mensen om je heen!
 (M) * * * * vragen goed laten testen door mensen om je heen!
+(M) * * * * positieve feedback na het beantwoorden van elke vraag, evt. random/ naar aanleiding van antwoord
+(M) * * * * * button.innerhtml() laat onderstaande tekst zien na erop drukken, paar seconde later/ na erop klikken verschijnt de volgende vraag
+(M) * * * * * (1) Wat een mooie leeftijd!/ Wat een wijsheid!
+(M) * * * * * (2) Wat een mooi land!
+(M) * * * * * (3) Wat een mooie buurt!
+(M) * * * * * (4) 
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/
@@ -406,6 +412,8 @@
  * * website of MGI student (Darius) who helped me -> http://greatemerald.eu/uncodex-sources/
  * vertically styling elements -> https://www.w3.org/Style/Examples/007/center.en.html#block
  * Wrapper class -> http://stackoverflow.com/questions/889160/what-is-a-wrapper-class
+ * Buttons
+ * * http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_animate3
  */
 
 /////////////////
