@@ -479,6 +479,8 @@ function savaDataQuestion2(questions, user) {
 function savaDataQuestion3(questions, user) {
 	// Set the variables
 	var zipcode = document.getElementById("data-question3").value;
+	user.zipcode = zipcode;
+	addZipcodeProperties(user);
 
 	// Save the data from question 3 and add it to the user object
 	if (user.zipcode != zipcode) {
