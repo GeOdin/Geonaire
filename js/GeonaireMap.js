@@ -1,7 +1,7 @@
 /* GeonaireMap.js
  * JavaScript file to handle map related functions and global variables
  * Made on 2016-12-20
- * Last edited on 2016-12-20
+ * Last edited on 2016-12-23
  * by GeOdin
  *
  *=========================================
