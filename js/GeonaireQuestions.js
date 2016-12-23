@@ -1,7 +1,7 @@
 /* GeonaireQuestions.js
  * JavaScript file om de vragen te regelen voor de Geonaire
  * Gemaakt op 2016-11-30
- * Het laatst veranderd op 2016-12-22
+ * Het laatst veranderd op 2016-12-23
  * door GeOdin
  *
  *==========================================
@@ -228,6 +228,7 @@ function showQuestion3(questions, user) {
 	$("#answer").css("color", "rgba(00, 00, 00, .46)");
 	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[3][3]);
+	document.getElementById("data-question3").value = user.zipcode;
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-question3").css("display", "block");
@@ -476,14 +477,12 @@ function savaDataQuestion2(questions, user) {
 // Function to save the data from question 3 and add it to the user object
 
 function savaDataQuestion3(questions, user) {
+	// Set the variables
+	var zipcode = document.getElementById("data-question3").value;
 
 	// Save the data from question 3 and add it to the user object
-	var zipcode = $("#data-question3").val();
-	user.zipcode = zipcode;
-	addZipcodeProperties(user);
-/*
 	if (user.zipcode != zipcode) {
-		var zipcode = $("#data-question3").val();
+		zipcode = document.getElementById("data-question3").value;
 		user.zipcode = zipcode;
 		addZipcodeProperties(user);
 
@@ -497,7 +496,6 @@ function savaDataQuestion3(questions, user) {
 		];
 		user.livingenvironment = "";
 	}
- */
 
 	// Return the user object
 	return user;
