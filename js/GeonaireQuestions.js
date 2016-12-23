@@ -76,7 +76,7 @@ var questions = [
 		"cartoon-question3",
 		"<p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoordt hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
 		"Wat is uw postcode?",
-		'<form onsubmit="showQuestion4(questions, user);"><input id="data-question3" type="text" name="zipcode" maxlength="6" class="white-space answer-input-shorttext" placeholder="1234AB"> <br/> <input type="submit" value="Volgende"></form>'
+		'<form onsubmit="showQuestion4(questions, user);"><input id="data-question3" type="text" name="zipcode" maxlength="6" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>'
 	],
 	[
 		"cartoon-question4",
@@ -478,6 +478,10 @@ function savaDataQuestion2(questions, user) {
 function savaDataQuestion3(questions, user) {
 
 	// Save the data from question 3 and add it to the user object
+	var zipcode = $("#data-question3").val();
+	user.zipcode = zipcode;
+	addZipcodeProperties(user);
+/*
 	if (user.zipcode != zipcode) {
 		var zipcode = $("#data-question3").val();
 		user.zipcode = zipcode;
@@ -493,6 +497,7 @@ function savaDataQuestion3(questions, user) {
 		];
 		user.livingenvironment = "";
 	}
+ */
 
 	// Return the user object
 	return user;
