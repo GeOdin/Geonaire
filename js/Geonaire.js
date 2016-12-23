@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file voor de Geonaire
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-22
+ * Het laatst veranderd op 2016-12-23
  * door GeOdin
  *
  *===================================
@@ -122,6 +122,7 @@
 (M) * * * * * (2) Wat een mooi land!
 (M) * * * * * (3) Wat een mooie buurt!
 (M) * * * * * (4) 
+(M)!!! * * * * Vraag 6 -> uitleg over leefomgeving!
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/
