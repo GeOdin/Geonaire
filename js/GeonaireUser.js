@@ -1,7 +1,7 @@
 /* GeonaireUser.js
  * JavaScript file om de user input te verwerken voor de Geonaire
  * Gemaakt op 2016-12-04
- * Het laatst veranderd op 2016-12-23
+ * Het laatst veranderd op 2016-12-24
  * door GeOdin
  *
  *==========================================
@@ -30,7 +30,7 @@ function createUser() {
 	// Set the variables
 	var age = 0;
 	var nationality; "Nederland";
-	var zipcode = "1000AA";
+	var zipcode = "6708PB";
 	var zipcode_city = "";
 	var zipcode_lat = "";
 	var zipcode_lon = "";
