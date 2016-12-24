@@ -28,6 +28,7 @@ var user;
 
 function createUser() {
 	// Set the variables
+	var current_question = 0;
 	var age = 0;
 	var nationality; "Nederland";
 	var zipcode = "6708PB";
@@ -66,6 +67,9 @@ function createUser() {
 	];
 	var living_environment = "";
 	var friction = "";
+
+	// Add the current question to the user object
+	this.currentQuestion = current_question;
 
 	// Add the age of the user
 	this.age = age;

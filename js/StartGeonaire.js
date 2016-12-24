@@ -12,7 +12,8 @@
  * Functies binnen deze JavaScript file: *
  *========================================
  * startGeonaire()
- * toggleButtons()
+ * showFooterButtons(user);
+ * toggleButtons(user)
  */
 
 /////////////////////
@@ -29,7 +30,7 @@ function startGeonaire() {
  */
 	
 	// Make some windows toggable with buttons or by clicking on them
-	toggleButtons();
+	toggleButtons(user);
 	toggleQuestions(questions, lastQuestion, user);
 	showIntroduction(questions, user);
 	createCircle(user);
@@ -41,13 +42,63 @@ function startGeonaire() {
 	return user;
 }
 
-/////////////////////
-// toggleButtons() //
-/////////////////////
+/////////////////////////////
+// showFooterButtons(user) //
+/////////////////////////////
+
+// Function to show the proper footer buttons
+
+function showFooterButtons(user) {
+	switch(user.currentQuestion) {
+		case 6:
+			$("#button-overview").css("left", "20%");
+			$("#button-cartoon").css("left", "40%");
+			$("#button-toolbar").css("display", "block");
+			$("#button-toolbar").css("left", "60%");
+			$("#toolbar").css("display", "block");
+			if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+				$("#question-answer").css("left", "0%");
+				$("#question-answer").css("width", "100%");
+			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+				$("#question-answer").css("left", "0%");
+				$("#question-answer").css("width", "92.5%");
+			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+				$("#question-answer").css("left", "17.5%");
+				$("#question-answer").css("width", "82.5%");
+			} else {
+				$("#question-answer").css("left", "17.5%");
+				$("#question-answer").css("width", "75%");
+			}
+			break;
+		default:
+			$("#button-overview").css("left", "30%");
+			$("#button-cartoon").css("left", "50%");
+			$("#button-toolbar").css("display", "none");
+			$("#toolbar").css("display", "none");
+			if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+				$("#question-answer").css("left", "0%");
+				$("#question-answer").css("width", "100%");
+			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
+				$("#question-answer").css("left", "0%");
+				$("#question-answer").css("width", "92.5%");
+			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
+				$("#question-answer").css("left", "17.5%");
+				$("#question-answer").css("width", "82.5%");
+			} else {
+				$("#question-answer").css("left", "17.5%");
+				$("#question-answer").css("width", "75%");
+			}
+	}
+	return user;
+}
+
+/////////////////////////
+// toggleButtons(user) //
+/////////////////////////
 
 // Function for toggling menus with the footer buttons
 
-function toggleButtons() {
+function toggleButtons(user) {
 	// Toggle the overview menu
 	$("#button-overview").click(function() {
 		$("*").scrollTop(0);

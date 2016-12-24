@@ -10,6 +10,7 @@
  * checkboxesGamecategories
  * dropdownNationalities
  * lastQuestion
+ * currentQuestion
  * questions
  *========================================
  * Functies binnen deze JavaScript file: *
@@ -49,6 +50,12 @@ var dropdownNationalities = '<form onsubmit="showQuestion3(questions, user);"><s
 //////////////////////
 
 var lastQuestion = 7;
+
+////////////////////////
+// var curentQuestion //
+////////////////////////
+
+var currentQuestion = 0;
 
 ///////////////////
 // var questions //
@@ -155,6 +162,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Remove the #map from view
 		$("#map").css("display", "none");
 
+		// Set the introduction as the current question
+		currentQuestion = 0;
+		user.currentQuestion = 0;
+
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
@@ -178,6 +189,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -282,6 +296,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 1 as the current question
+		currentQuestion = 1;
+		user.currentQuestion = 1;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 
@@ -305,6 +323,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -349,6 +370,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 2 as the current question
+		currentQuestion = 2;
+		user.currentQuestion = 2;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 
@@ -372,6 +397,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -416,6 +444,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 3 as the current question
+		currentQuestion = 3;
+		user.currentQuestion = 3;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 
@@ -439,6 +471,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -482,6 +517,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
+
+		// Set question 4 as the current question
+		currentQuestion = 4;
+		user.currentQuestion = 4;
 
 		// Show the cartoon
 		$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
@@ -554,6 +593,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
+
 		// Return the user object
 		return user;
 	});
@@ -597,6 +639,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 5 as the current question
+		currentQuestion = 5;
+		user.currentQuestion = 5;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 
@@ -622,6 +668,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -689,6 +738,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 6 as the current question
+		currentQuestion = 6;
+		user.currentQuestion = 6;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 
@@ -709,6 +762,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$(this).removeClass("tableofcontents-item");
 		$(this).addClass("tableofcontents-item tableofcontents-active");
+
+		// Show the overview, the cartoon and the toolbar footer buttons
+		showFooterButtons(user);
 
 		// Return the user object
 		return user;
@@ -754,6 +810,10 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
 
+		// Set question 7 as the current question
+		currentQuestion = 7;
+		user.currentQuestion = 7;
+
 		// Show the cartoon
 		$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 
@@ -776,6 +836,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$(this).addClass("tableofcontents-item tableofcontents-active");
 		// $("tableofcontents-nextquestion").display("visible");
 
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
+
 		// Return the user object
 		return user;
 	});
@@ -792,6 +855,10 @@ function showIntroduction(questions, user) {
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
 
+	// Set the introduction as the current question
+	currentQuestion = 0;
+	user.currentQuestion = 0;
+
 	// Show the new question
 	$("#header-title-text").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
@@ -804,6 +871,8 @@ function showIntroduction(questions, user) {
 	$("#toolbar-createmarker").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-introduction").addClass("tableofcontents-item tableofcontents-active");
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -820,9 +889,14 @@ function showQuestion1(questions, user) {
 	if (document.getElementById("form-button-introduction").innerHTML == "Begin") {
 		// Show positive feedback on the button
 		document.getElementById("form-button-introduction").innerHTML = "Wat leuk dat u meedoet!";
+		// Set question 1 as the current question
+		user.currentQuestion = 1;
 	} else if (document.getElementById("form-button-introduction").innerHTML == "Wat leuk dat u meedoet!") {
 		// Reset the scrollbars to the top
 		$("*").scrollTop(0);
+		// Set question 1 as the current question
+		currentQuestion = 1;
+		user.currentQuestion = 1;
 		// Reset the button
 		document.getElementById("form-button-introduction").innerHTML = "Begin";
 
@@ -841,6 +915,11 @@ function showQuestion1(questions, user) {
 		$("#tableofcontents-question1").addClass("tableofcontents-item tableofcontents-active");
 	}
 
+	// Set question 1 as the current question
+	user.currentQuestion = 1;
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
+
 	// Return the user object
 	return user;
 }
@@ -853,25 +932,31 @@ function showQuestion1(questions, user) {
 
 function showQuestion2(questions, user) {
 
-		// Save the data from question 1 and add it to the user object
-		savaDataQuestion1(questions, user);
+	// Save the data from question 1 and add it to the user object
+	savaDataQuestion1(questions, user);
 
-		// Reset the scrollbars to the top
-		$("*").scrollTop(0);
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
 
-		// Show the new question
-		$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-		$("#questiontitle").html(questions[2][2]);
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
-		$("#answer").html(questions[2][3]);
-		// Show #toolbar-createmarker
-		$("#toolbar-createmarker").css("display", "block");
-		$("#tableofcontents-question2").css("display", "block");
-		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-		$("#tableofcontents-question2").addClass("tableofcontents-item tableofcontents-active");
+	// Set question 2 as the current question
+	currentQuestion = 2;
+	user.currentQuestion = 2;
+
+	// Show the new question
+	$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
+	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
+	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+	$("#questiontitle").html(questions[2][2]);
+	$("#answer").css("color", "rgba(00, 00, 00, .46)");
+	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
+	$("#answer").html(questions[2][3]);
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	$("#tableofcontents-question2").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question2").addClass("tableofcontents-item tableofcontents-active");
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -891,6 +976,10 @@ function showQuestion3(questions, user) {
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
 
+	// Set question 3 as the current question
+	currentQuestion = 3;
+	user.currentQuestion = 3;
+
 	// Show the new question
 	$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
@@ -905,6 +994,8 @@ function showQuestion3(questions, user) {
 	$("#tableofcontents-question3").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question3").addClass("tableofcontents-item tableofcontents-active");
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -924,6 +1015,10 @@ function showQuestion4(questions, user) {
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
 
+	// Set question 4 as the current question
+	currentQuestion = 4;
+	user.currentQuestion = 4;
+
 	// Show the new question
 	$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
@@ -937,6 +1032,8 @@ function showQuestion4(questions, user) {
 	$("#tableofcontents-question4").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question4").addClass("tableofcontents-item tableofcontents-active");
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -956,6 +1053,10 @@ function showQuestion5(questions, user) {
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
 
+	// Set question 5 as the current question
+	currentQuestion = 5;
+	user.currentQuestion = 5;
+
 	// Show the new question
 	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
@@ -969,6 +1070,8 @@ function showQuestion5(questions, user) {
 	$("#tableofcontents-question5").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question5").addClass("tableofcontents-item tableofcontents-active");
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -987,6 +1090,10 @@ function showQuestion6(questions, user) {
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
+
+	// Set question 6 as the current question
+	currentQuestion = 6;
+	user.currentQuestion = 6;
 
 	// Show the new question
 	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
@@ -1052,6 +1159,8 @@ function showQuestion6(questions, user) {
 		$("#question-answer").css("left", "17.5%");
 		$("#question-answer").css("width", "75%");
 	}
+	// Show the overview, the cartoon and the toolbar footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -1070,6 +1179,10 @@ function showQuestion7(questions, user) {
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
+
+	// Set question 7 as the current question
+	currentQuestion = 7;
+	user.currentQuestion = 7;
 
 	// Show the new question
 	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
@@ -1104,6 +1217,9 @@ function showQuestion7(questions, user) {
 		$("#question-answer").css("left", "17.5%");
 		$("#question-answer").css("width", "75%");
 	}
+
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
 
 	// Return the user object
 	return user;
@@ -1407,6 +1523,7 @@ function sendQuestionnaire(user) {
 		// Add current time to user object
 		// Send the data to the server/database
 		// Show a thank you to the user
+		currentQuestion = 8;
 		window.open("Geonaire.html", "_self");
 	}
 }
