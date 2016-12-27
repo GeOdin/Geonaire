@@ -1,7 +1,7 @@
 /* GeonaireMap.js
  * JavaScript file to handle map related functions and global variables
  * Made on 2016-12-20
- * Last edited on 2016-12-23
+ * Last edited on 2016-12-27
  * by GeOdin
  *
  *=========================================
@@ -4775,7 +4775,8 @@ function drawMap(user) {
 		var map = new google.maps.Map(document.getElementById("map"), {
 			zoom: zoomLevel,
 			center: new google.maps.LatLng(lat, lon),
-			mapTypeId: google.maps.MapTypeId.TERRAIN
+			mapTypeId: google.maps.MapTypeId.TERRAIN,
+			scaleControl: true
 		});
 		user.map = map;
 	// Redraw the map if another zipcode is entered
