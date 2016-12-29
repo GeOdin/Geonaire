@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<style>
+		body {
+			text-align: center;
+		}
+		table {
+			border: 1px solid black;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		td {
+			height: 50px;
+			width: 50px;
+			border: 1px solid black;
+		}
+		img {
+			height: 90%;
+			width: 90%;
+		}
+		#friction-positive-large {
+			height: 50px;
+			width: 50px;
+			background: #006200;
+		}
+		#friction-positive-medium {
+			height: 40px;
+			width: 40px;
+			background: #009d00;
+		}
+		#friction-positive-small {
+			height: 30px;
+			width: 30px;
+			background: #00d800;
+		}
+		#friction-negative-small {
+			height: 25px;
+			width: 25px;
+			background: #ff6666;
+		}
+		#friction-negative-medium {
+			height: 35px;
+			width: 35px;
+			background: #ff1919;
+		}
+		#friction-negative-large {
+			height: 45px;
+			width: 45px;
+			background: #cc0000;
+		}
+		#toolbar {
+			position: absolute;
+			top: 0vh;
+			right: 0%;
+			height: 98%;
+			width: 10%;
+			border: 1px solid black;
+		}
+		.toolbar-drag {
+			display: block;
+			height: 150px;
+			width: 100%;
+			border: 1px solid black;
+		}
+		/*
+		#div1, #div2 {
+			float: left;
+			width: 100px;
+			height: 35px;
+			margin: 10px;
+			padding: 10px;
+			border: 1px solid black;
+		}
+		  */
+		</style>
+		<script>
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+		</script>
+	</head>
+	<body>
+
+		<h2>Drag and Drop</h2>
+		<p>Drag the image back and forth between the two div elements.</p>
+
+		<table background="img/question7-house.png" align="center">
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+				<td ondrop="drop(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+		</table>
+		<div id="toolbar">
+			<div id="toolbar-title">Toolbar</div>
+			<div id="toolbar-title-positive">Positive</div>
+			<div id="toolbar-positive-drag" class="toolbar-drag" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div id="toolbar-friction-positive-large">
+					<div id="friction-positive-large" draggable="true" ondragstart="drag(event)">
+				</div>
+				<div id="toolbar-friction-positive-medium">
+					<div id="friction-positive-medium" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+				<div id="toolbar-friction-positive-small">
+					<div id="friction-positive-small" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+			</div>
+			<div id="toolbar-title-negative">Negative</div>
+			<div id="toolbar-negative-drag" class="toolbar-drag" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<div id="toolbar-friction-negative-small">
+					<div id="friction-negative-small" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+				<div id="toolbar-friction-negative-medium">
+					<div id="friction-negative-medium" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+				<div id="toolbar-friction-negative-large">
+					<div id="friction-negative-large" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
