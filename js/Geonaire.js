@@ -123,6 +123,8 @@
 (M) * * * * * (3) Wat een mooie buurt!
 (M) * * * * * (4) 
 (M)!!! * * * * Vraag 6 -> uitleg over leefomgeving!
+(M)!!! * * * * voeg een disclaimer toe!!!
+ * * * * XML-standaarden -> https://nl.wikipedia.org/wiki/XML_Schema
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx
  * * * * * https://www.helpscout.net/blog/website-customers-love/

@@ -4787,6 +4787,10 @@ function drawMap(user) {
 
 	// Show the map
 	$("#map").css("display", "block");
+	var legend = document.getElementById("legend");
+	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
+	// Show the legend
+	$("#legend").css("display", "block");
 
 	// Return the user object
 	return user;
