@@ -213,7 +213,7 @@ ul {
 	display: none;
 }
 
-#question-answer {
+.question-answer {
 	position: absolute;
 	top: 17.25vh;
 	left: 17.5%;

@@ -1147,17 +1147,17 @@ function showQuestion6(questions, user) {
 
 	// Reset the width of #content
 	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#question-answer").css("left", "0%");
-		$("#question-answer").css("width", "100%");
+		$(".question-answer").css("left", "0%");
+		$(".question-answer").css("width", "100%");
 	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-		$("#question-answer").css("left", "0%");
-		$("#question-answer").css("width", "92.5%");
+		$(".question-answer").css("left", "0%");
+		$(".question-answer").css("width", "92.5%");
 	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#question-answer").css("left", "17.5%");
-		$("#question-answer").css("width", "82.5%");
+		$(".question-answer").css("left", "17.5%");
+		$(".question-answer").css("width", "82.5%");
 	} else {
-		$("#question-answer").css("left", "17.5%");
-		$("#question-answer").css("width", "75%");
+		$(".question-answer").css("left", "17.5%");
+		$(".question-answer").css("width", "75%");
 	}
 	// Show the overview, the cartoon and the toolbar footer buttons
 	showFooterButtons(user);
@@ -1205,17 +1205,17 @@ function showQuestion7(questions, user) {
 
 	// Reset the width of #content
 	if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#question-answer").css("left", "0%");
-		$("#question-answer").css("width", "100%");
+		$(".question-answer").css("left", "0%");
+		$(".question-answer").css("width", "100%");
 	} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-		$("#question-answer").css("left", "0%");
-		$("#question-answer").css("width", "92.5%");
+		$(".question-answer").css("left", "0%");
+		$(".question-answer").css("width", "92.5%");
 	} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-		$("#question-answer").css("left", "17.5%");
-		$("#question-answer").css("width", "82.5%");
+		$(".question-answer").css("left", "17.5%");
+		$(".question-answer").css("width", "82.5%");
 	} else {
-		$("#question-answer").css("left", "17.5%");
-		$("#question-answer").css("width", "75%");
+		$(".question-answer").css("left", "17.5%");
+		$(".question-answer").css("width", "75%");
 	}
 
 	// Show the overview and cartoon footer buttons

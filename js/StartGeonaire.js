@@ -57,17 +57,17 @@ function showFooterButtons(user) {
 			$("#button-toolbar").css("left", "60%");
 			$("#toolbar").css("display", "block");
 			if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$("#question-answer").css("left", "0%");
-				$("#question-answer").css("width", "100%");
+				$(".question-answer").css("left", "0%");
+				$(".question-answer").css("width", "100%");
 			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-				$("#question-answer").css("left", "0%");
-				$("#question-answer").css("width", "92.5%");
+				$(".question-answer").css("left", "0%");
+				$(".question-answer").css("width", "92.5%");
 			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$("#question-answer").css("left", "17.5%");
-				$("#question-answer").css("width", "82.5%");
+				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("width", "82.5%");
 			} else {
-				$("#question-answer").css("left", "17.5%");
-				$("#question-answer").css("width", "75%");
+				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("width", "75%");
 			}
 			break;
 		default:
@@ -76,17 +76,17 @@ function showFooterButtons(user) {
 			$("#button-toolbar").css("display", "none");
 			$("#toolbar").css("display", "none");
 			if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$("#question-answer").css("left", "0%");
-				$("#question-answer").css("width", "100%");
+				$(".question-answer").css("left", "0%");
+				$(".question-answer").css("width", "100%");
 			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-				$("#question-answer").css("left", "0%");
-				$("#question-answer").css("width", "92.5%");
+				$(".question-answer").css("left", "0%");
+				$(".question-answer").css("width", "92.5%");
 			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$("#question-answer").css("left", "17.5%");
-				$("#question-answer").css("width", "82.5%");
+				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("width", "82.5%");
 			} else {
-				$("#question-answer").css("left", "17.5%");
-				$("#question-answer").css("width", "75%");
+				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("width", "75%");
 			}
 	}
 	return user;
@@ -104,17 +104,17 @@ function toggleButtons(user) {
 		$("*").scrollTop(0);
         $("#overview").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#question-answer").css("left", "0%");
-			$("#question-answer").css("width", "100%");
+			$(".question-answer").css("left", "0%");
+			$(".question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#question-answer").css("left", "0%");
-			$("#question-answer").css("width", "92.5%");
+			$(".question-answer").css("left", "0%");
+			$(".question-answer").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#question-answer").css("left", "17.5%");
-			$("#question-answer").css("width", "82.5%");
+			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("width", "82.5%");
 		} else {
-			$("#question-answer").css("left", "17.5%");
-			$("#question-answer").css("width", "75%");
+			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("width", "75%");
 		}
     });
 
@@ -123,24 +123,24 @@ function toggleButtons(user) {
 		$("*").scrollTop(0);
         $("#header").toggle();
 		if ($("#header").css("display").toLowerCase() != "none") {
-			$("#question-answer").css("top", "17.25vh");
-			$("#question-answer").css("height", "75.25vh");
+			$(".question-answer").css("top", "17.25vh");
+			$(".question-answer").css("height", "75.25vh");
 			$("#map").css("height", "50vh");
 			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
 			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "block") {
-			$("#question-answer").css("top", "17.25vh");
-			$("#question-answer").css("height", "75.25vh");
+			$(".question-answer").css("top", "17.25vh");
+			$(".question-answer").css("height", "75.25vh");
 			$("#map").css("height", "50vh");
 			$("#overview").css("top", "17.25vh");
 			$("#overview").css("height", "75.25vh");
 			$("#toolbar").css("top", "17.25vh");
 			$("#toolbar").css("height", "75.25vh");
 		} else if ($("#header").css("display").toLowerCase() == "none") {
-			$("#question-answer").css("top", "0vh");
-			$("#question-answer").css("height", "92.5vh");
+			$(".question-answer").css("top", "0vh");
+			$(".question-answer").css("height", "92.5vh");
 			$("#map").css("height", "67.25vh");
 			$("#overview").css("top", "0vh");
 			$("#overview").css("height", "92.5vh");
@@ -154,17 +154,17 @@ function toggleButtons(user) {
 		$("*").scrollTop(0);
         $("#toolbar").toggle();
 		if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#question-answer").css("left", "0%");
-			$("#question-answer").css("width", "100%");
+			$(".question-answer").css("left", "0%");
+			$(".question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
-			$("#question-answer").css("left", "0%");
-			$("#question-answer").css("width", "92.5%");
+			$(".question-answer").css("left", "0%");
+			$(".question-answer").css("width", "92.5%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$("#question-answer").css("left", "17.5%");
-			$("#question-answer").css("width", "82.5%");
+			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("width", "82.5%");
 		} else {
-			$("#question-answer").css("left", "17.5%");
-			$("#question-answer").css("width", "75%");
+			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("width", "75%");
 		}
     });
 }
