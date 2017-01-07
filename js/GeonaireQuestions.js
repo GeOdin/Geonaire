@@ -173,13 +173,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[0][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[0][3]);
 
 		// Show #toolbar-createmarker
@@ -304,13 +300,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[1][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[1][3]);
 
 		// Show the user age as value of #data-question1
@@ -378,13 +370,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[2][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[2][3]);
 
 		// Show the user nationality as value of #data-question2
@@ -452,13 +440,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[3][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[3][3]);
 
 		// Show the user zipcode as value of #data-question3
@@ -526,13 +510,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[4][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[4][3]);
 
 		// Show the checked user.gamecategories and user.gamecomputers
@@ -647,13 +627,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[5][2]);
 
 		// Show the answer
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[5][3]);
 
 		// Show the user.gametimehours as value of #data-question5-gametime-hours
@@ -746,13 +722,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[6][2]);
 
 		// Show the answer
-		$("#answer").css("color", "white");
-		$("#answer").css("text-shadow", "1px 1px #000000");
 		$("#answer").html(questions[6][3]);
 
 		// Don't show #toolbar-createmarker
@@ -818,13 +790,9 @@ function toggleQuestions(questions, lastQuestion, user) {
 		$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
 
 		// Show the question
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[7][2]);
 
 		// Show the answer
-		$("#answer").css("color", "white");
-		$("#answer").css("text-shadow", "1px 1px #000000");
 		$("#answer").html(questions[7][3]);
 
 		// Show #toolbar-createmarker
@@ -861,11 +829,7 @@ function showIntroduction(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[0][1]); // '<img src="img/'+questions[0][0]+'.png" alt="'+questions[0][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[0][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[0][3]);
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
@@ -902,11 +866,7 @@ function showQuestion1(questions, user) {
 
 		// Show the new question
 		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
-		$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-		$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#questiontitle").html(questions[1][2]);
-		$("#answer").css("color", "rgba(00, 00, 00, .46)");
-		$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 		$("#answer").html(questions[1][3]);
 		// Show #toolbar-createmarker
 		$("#toolbar-createmarker").css("display", "block");
@@ -944,11 +904,7 @@ function showQuestion2(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[2][1]); // '<img src="img/'+questions[2][0]+'.png" alt="'+questions[2][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[2][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[2][3]);
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
@@ -982,11 +938,7 @@ function showQuestion3(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[3][1]); // '<img src="img/'+questions[3][0]+'.png" alt="'+questions[3][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[3][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[3][3]);
 	document.getElementById("data-question3").value = user.zipcode;
 	// Show #toolbar-createmarker
@@ -1021,11 +973,7 @@ function showQuestion4(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[4][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[4][3]);
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
@@ -1059,11 +1007,7 @@ function showQuestion5(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[5][2]);
-	$("#answer").css("color", "rgba(00, 00, 00, .46)");
-	$("#answer").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#answer").html(questions[5][3]);
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
@@ -1097,11 +1041,7 @@ function showQuestion6(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[6][1]); // '<img src="img/'+questions[6][0]+'.png" alt="'+questions[6][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[6][2]);
-	$("#answer").css("color", "white");
-	$("#answer").css("text-shadow", "1px 1px #000000");
 	$("#answer").html(questions[6][3]);
 	// Show #toolbar-createmarker
 	$("#toolbar-createmarker").css("display", "block");
@@ -1186,11 +1126,7 @@ function showQuestion7(questions, user) {
 
 	// Show the new question
 	$("#header-title-text").html(questions[7][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
-	$("#questiontitle").css("color", "rgba(00, 00, 00, .46)");
-	$("#questiontitle").css("text-shadow", "1px 1px rgba(00, 00, 00, .05)");
 	$("#questiontitle").html(questions[7][2]);
-	$("#answer").css("color", "white");
-	$("#answer").css("text-shadow", "1px 1px #000000");
 	$("#answer").html(questions[7][3]);
 	$("#tableofcontents-question7").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
