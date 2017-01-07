@@ -124,7 +124,7 @@
 (M) * * * * * (4) 
 (M)!!! * * * * Vraag 6 -> uitleg over leefomgeving!
 (M)!!! * * * * voeg een disclaimer toe!!!
-(M)!!! * * * * probleem dat de noordpijl steeds naar links verschuift bij het laten zien van vraag 6, mogelijk te maken met toggelen van #toolbar
+(M)!!! * * * * probleem dat de noordpijl steeds naar links verschuift bij het togglen van vraag 6, mogelijk te maken met toggelen van #toolbar
  * * * * XML-standaarden -> https://nl.wikipedia.org/wiki/XML_Schema
  * * * * improve the user experience
  * * * * * http://www.websitemagazine.com/content/blogs/posts/archive/2014/02/06/3-tips-to-make-your-website-more-user-friendly.aspx

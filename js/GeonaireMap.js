@@ -1,7 +1,7 @@
 /* GeonaireMap.js
  * JavaScript file to handle map related functions and global variables
  * Made on 2016-12-20
- * Last edited on 2016-12-27
+ * Last edited on 2016-12-30
  * by GeOdin
  *
  *=========================================
@@ -4787,10 +4787,10 @@ function drawMap(user) {
 
 	// Show the map
 	$("#map").css("display", "block");
-	var legend = document.getElementById("legend");
-	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
 	// Show the legend
 	$("#legend").css("display", "block");
+	var legend = document.getElementById("legend");
+	user.map.controls[google.maps.ControlPosition.TOP_RIGHT].push(legend);
 
 	// Return the user object
 	return user;
