@@ -24,13 +24,22 @@
  * showQuestion5(questions, user)
  * showQuestion6(questions, user)
  * showQuestion7(questions, user)
- * savaDataQuestion1(questions, user)
- * savaDataQuestion2(questions, user)
- * savaDataQuestion3(questions, user)
- * savaDataQuestion4(questions, user)
- * savaDataQuestion5(questions, user)
+ * showQuestion8(questions, user)
+ * showQuestion9(questions, user)
+ * showQuestion10(questions, user)
+ * saveDataQuestion1(questions, user)
+ * saveDataQuestion2(questions, user)
+ * saveDataQuestion3(questions, user)
+ * saveDataQuestion4(questions, user)
+ * saveDataQuestion5(questions, user)
  * saveDataQuestion6(questions, user)
+ * saveDataQuestion7(questions, user)
+ * saveDataQuestion8(questions, user)
+ * saveDataQuestion9(questions, user)
+ * saveDataQuestion10(questions, user)
  * sendQuestionnaire(user)
+ * sliderValue(value)
+ * resetSlider()
  */
 
 //////////////////////////////////
@@ -106,9 +115,27 @@ var questions = [
 	],
 	[
 		"cartoon-question7",
-		"<p align='left' style='margin:1em;'>Steven en Grumps maken samen een wandelingetje door de buurt. Grumps vertelt verhalen over vroeger en merkt ineens op dat het park kleiner is dan hij zich herinnerde. Ze lopen naar de andere kant van het park om te zien wat er aan de hand is. Blijkbaar is er zonder enige aankondiging een nieuwe parkeergarage opgeleverd, volgens het te grote uithangbord genoemd 'De Nieuwe Plek'. Grumps: 'Nou, dat is toch jammer.' Steven reageert op het zien van het uithangbord met 'ik parkeer niet graag, ik loop liever.' Grumps, in een melancholische bui geraakt, antwoordt daarop met 'ik voel me geparkeerd'.</p>",
-		"Stel de gemeente zou een parkeergarage willen plaatsen, ...?",
-		'<form onsubmit="sendQuestionnaire(user);"> <br/> <input type="submit" value="Verstuur"></form>'
+		"<p align='left' style='margin:1em;'>Cartoon vraag 7</p>",
+		"Stel de gemeente wil wat ingrepen uitvoeren in uw stad...",
+		'<form onsubmit="showQuestion8(questions, user);"> <br/> <input type="submit" value="Volgende"></form>'
+	],
+	[
+		"cartoon-question8",
+		"<p align='left' style='margin:1em;'>Cartoon vraag 8</p>",
+		"Waarom woont u in uw stad?",
+		'<form onsubmit="showQuestion9(questions, user);"> <br/> <input type="submit" value="Volgende"></form>'
+	],
+	[
+		"cartoon-question9",
+		"<p align='left' style='margin:1em;'>Cartoon vraag 9</p>",
+		"Wat is het minimale wat u onder natuur verstaat?",
+		'<div id="slider-wrapper"> <div id="slider-legend"> </div> <form onsubmit="showQuestion10(questions, user);"> <input id="slider" type="range" min=1 max=7 value="resetSlider()" oninput="sliderValue(this.value)"> <br/> <br/> <input type="submit" value="Volgende"></form></div>'
+	],
+	[
+		"cartoon-question10",
+		"<p align='left' style='margin:1em;'>Cartoon vraag 10</p>",
+		"Hoe betrokken bent u bij uw leefomgeving?",
+		'<form onsubmit="sendQuestionnaire(user);"> Kent u het bestemmingsplan van uw leefomgeving? <br/> <input id="involvement_bestemmingsplan_yes" type="radio" name="involvement_bestemmingsplan" value="yes"> Ja <br/> <input id="involvement_bestemmingsplan_no" type="radio" name="involvement_bestemmingsplan" value="no"> Nee <br/> <br/> Heeft u weleens deelgenomen aan <u title="Hierbij kunt u denken aan deelname aan openbare gesprekken over uw leefomgeving.">publieke participatie</u> in uw leefomgeving? <br/> <input id="involvement_participation_yes" type="radio" name="involvement_participation" value="yes"> Ja <br/> <input id="involvement_participation_no" type="radio" name="involvement_participation" value="no"> Nee <br/> <br/> <input type="submit" value="Verstuur"></form>'
 	],
 	[
 		"CartoonSrc",
@@ -130,27 +157,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -199,25 +234,25 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user);
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
+			saveDataQuestion7(questions, user);
 		}
 		
 			// Remove the #map from view
@@ -257,27 +292,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -327,27 +370,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -397,27 +448,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -467,27 +526,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -584,27 +651,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -656,27 +731,35 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 		
 		// Show the #map
@@ -746,31 +829,39 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Save the data from the previous question and add it to the user object
 		// Question 1
 		if ($("#questiontitle").html() == questions[1][2]) {
-			savaDataQuestion1(questions, user);
+			saveDataQuestion1(questions, user);
 		// Question 2
 		} else if ($("#questiontitle").html() == questions[2][2]) {
-			savaDataQuestion2(questions, user);
+			saveDataQuestion2(questions, user);
 		// Question 3
 		} else if ($("#questiontitle").html() == questions[3][2]) {
-			savaDataQuestion3(questions, user);
+			saveDataQuestion3(questions, user);
 		// Question 4
 		} else if ($("#questiontitle").html() == questions[4][2]) {
-			savaDataQuestion4(questions, user);
+			saveDataQuestion4(questions, user);
 		// Question 5
 		} else if ($("#questiontitle").html() == questions[5][2]) {
-			savaDataQuestion5(questions, user);
+			saveDataQuestion5(questions, user);
 /*
 		// Question 6
 		} else if ($("#questiontitle").html() == questions[6][2]) {
-			savaDataQuestion6(questions, user);
+			saveDataQuestion6(questions, user); */
 		// Question 7
 		} else if ($("#questiontitle").html() == questions[7][2]) {
-			savaDataQuestion7(questions, user);
- */
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
 		}
 		
-		// Show the #map
-		$("#map").css("display", "block");
+		// Don't show the #map
+		$("#map").css("display", "none");
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
 		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
@@ -794,6 +885,266 @@ function toggleQuestions(questions, lastQuestion, user) {
 
 		// Show the answer
 		$("#answer").html(questions[7][3]);
+
+		// Show #toolbar-createmarker
+		$("#toolbar-createmarker").css("display", "block");
+
+		// Change this button to the active table of contents button
+		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+		$(this).removeClass("tableofcontents-item");
+		$(this).addClass("tableofcontents-item tableofcontents-active");
+		// $("tableofcontents-nextquestion").display("visible");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
+
+		// Return the user object
+		return user;
+	});
+	$("#tableofcontents-question8").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			saveDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			saveDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			saveDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			saveDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			saveDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			saveDataQuestion6(questions, user); */
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
+		}
+		
+		// Don't show the #map
+		$("#map").css("display", "none");
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+
+		// Reset the scrollbars to the top
+		$("*").scrollTop(0);
+
+		// Set question 8 as the current question
+		currentQuestion = 8;
+		user.currentQuestion = 8;
+
+		// Show the cartoon
+		$("#header-title-text").html(questions[8][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+
+		// Show the question
+		$("#questiontitle").html(questions[8][2]);
+
+		// Show the answer
+		$("#answer").html(questions[8][3]);
+
+		// Show #toolbar-createmarker
+		$("#toolbar-createmarker").css("display", "block");
+
+		// Change this button to the active table of contents button
+		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+		$(this).removeClass("tableofcontents-item");
+		$(this).addClass("tableofcontents-item tableofcontents-active");
+		// $("tableofcontents-nextquestion").display("visible");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
+
+		// Return the user object
+		return user;
+	});
+	$("#tableofcontents-question9").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			saveDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			saveDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			saveDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			saveDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			saveDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			saveDataQuestion6(questions, user); */
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
+		}
+		
+		// Don't show the #map
+		$("#map").css("display", "none");
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+
+		// Reset the scrollbars to the top
+		$("*").scrollTop(0);
+
+		// Set question 9 as the current question
+		currentQuestion = 9;
+		user.currentQuestion = 9;
+
+		// Show the cartoon
+		$("#header-title-text").html(questions[9][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+
+		// Show the question
+		$("#questiontitle").html(questions[9][2]);
+
+		// Show the answer
+		$("#answer").html(questions[9][3]);
+		resetSlider();
+		if (user.minimum_nature != "") {
+			if (user.minimum_nature == "Een plant in de vensterbank") {
+				document.getElementById("slider").value = 1;
+			} else if (user.minimum_nature == "De bomen in de straat") {
+				document.getElementById("slider").value = 2;
+			} else if (user.minimum_nature == "Een moestuin") {
+				document.getElementById("slider").value = 3;
+			} else if (user.minimum_nature == "De kinderboerderij of het stadspark") {
+				document.getElementById("slider").value = 4;
+			} else if (user.minimum_nature == "Een natuurgebied in Nederland") {
+				document.getElementById("slider").value = 5;
+			} else if (user.minimum_nature == "Een groot natuurgebied in het buitenland") {
+				document.getElementById("slider").value = 6;
+			} else if (user.minimum_nature == "Een onbewoond eiland") {
+				document.getElementById("slider").value = 7;
+			}
+			document.getElementById("slider-legend").innerHTML = user.minimum_nature;
+		}
+
+		// Show #toolbar-createmarker
+		$("#toolbar-createmarker").css("display", "block");
+
+		// Change this button to the active table of contents button
+		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+		$(this).removeClass("tableofcontents-item");
+		$(this).addClass("tableofcontents-item tableofcontents-active");
+		// $("tableofcontents-nextquestion").display("visible");
+
+		// Show the overview and cartoon footer buttons
+		showFooterButtons(user);
+
+		// Return the user object
+		return user;
+	});
+	$("#tableofcontents-question10").click(function() {
+
+		// Save the data from the previous question and add it to the user object
+		// Question 1
+		if ($("#questiontitle").html() == questions[1][2]) {
+			saveDataQuestion1(questions, user);
+		// Question 2
+		} else if ($("#questiontitle").html() == questions[2][2]) {
+			saveDataQuestion2(questions, user);
+		// Question 3
+		} else if ($("#questiontitle").html() == questions[3][2]) {
+			saveDataQuestion3(questions, user);
+		// Question 4
+		} else if ($("#questiontitle").html() == questions[4][2]) {
+			saveDataQuestion4(questions, user);
+		// Question 5
+		} else if ($("#questiontitle").html() == questions[5][2]) {
+			saveDataQuestion5(questions, user);
+/*
+		// Question 6
+		} else if ($("#questiontitle").html() == questions[6][2]) {
+			saveDataQuestion6(questions, user); */
+		// Question 7
+		} else if ($("#questiontitle").html() == questions[7][2]) {
+			saveDataQuestion7(questions, user);
+		// Question 8
+		} else if ($("#questiontitle").html() == questions[8][2]) {
+			saveDataQuestion8(questions, user);
+		// Question 9
+		} else if ($("#questiontitle").html() == questions[9][2]) {
+			saveDataQuestion9(questions, user);
+		// Question 10
+		} else if ($("#questiontitle").html() == questions[10][2]) {
+			saveDataQuestion10(questions, user);
+		}
+		
+		// Don't show the #map
+		$("#map").css("display", "none");
+
+		// Reset the data from the map by clearing the circle and or rectangle if there is any
+		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
+			user.livingenvironment.setMap(null);
+		}
+		// Remove the .toolbar-active
+		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
+
+		// Reset the scrollbars to the top
+		$("*").scrollTop(0);
+
+		// Set question 10 as the current question
+		currentQuestion = 10;
+		user.currentQuestion = 10;
+
+		// Show the cartoon
+		$("#header-title-text").html(questions[10][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+
+		// Show the question
+		$("#questiontitle").html(questions[10][2]);
+
+		// Show the answer
+		$("#answer").html(questions[10][3]);
+		if (user.involvement_bestemmingsplan == "yes") {
+			document.getElementById("involvement_bestemmingsplan_yes").checked = true;
+		} else if (user.involvement_bestemmingsplan == "no") {
+			document.getElementById("involvement_bestemmingsplan_no").checked = true;
+		}
+		if (user.involvement_participation == "yes") {
+			document.getElementById("involvement_participation_yes").checked = true;
+		} else if (user.involvement_participation == "no") {
+			document.getElementById("involvement_participation_no").checked = true;
+		}
 
 		// Show #toolbar-createmarker
 		$("#toolbar-createmarker").css("display", "block");
@@ -893,7 +1244,7 @@ function showQuestion1(questions, user) {
 function showQuestion2(questions, user) {
 
 	// Save the data from question 1 and add it to the user object
-	savaDataQuestion1(questions, user);
+	saveDataQuestion1(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -927,7 +1278,7 @@ function showQuestion2(questions, user) {
 function showQuestion3(questions, user) {
 
 	// Save the data from question 2 and add it to the user object
-	savaDataQuestion2(questions, user);
+	saveDataQuestion2(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -962,7 +1313,7 @@ function showQuestion3(questions, user) {
 function showQuestion4(questions, user) {
 
 	// Save the data from question 3 and add it to the user object
-	savaDataQuestion3(questions, user);
+	saveDataQuestion3(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -996,7 +1347,7 @@ function showQuestion4(questions, user) {
 function showQuestion5(questions, user) {
 
 	// Save the data from question 4 and add it to the user object
-	savaDataQuestion4(questions, user);
+	saveDataQuestion4(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -1030,7 +1381,7 @@ function showQuestion5(questions, user) {
 function showQuestion6(questions, user) {
 
 	// Save the data from question 5 and add it to the user object
-	savaDataQuestion5(questions, user);
+	saveDataQuestion5(questions, user);
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -1115,7 +1466,10 @@ function showQuestion6(questions, user) {
 function showQuestion7(questions, user) {
 
 	// Save the data from question 6 and add it to the user object
-	savaDataQuestion6(questions, user);
+	saveDataQuestion6(questions, user);
+
+	// Remove the #map from view
+	$("#map").css("display", "none");
 
 	// Reset the scrollbars to the top
 	$("*").scrollTop(0);
@@ -1161,13 +1515,186 @@ function showQuestion7(questions, user) {
 	return user;
 }
 
+////////////////////////////////////
+// showQuestion8(questions, user) //
+////////////////////////////////////
+
+// Function for showing question 8
+
+function showQuestion8(questions, user) {
+
+	// Save the data from question 7 and add it to the user object
+	//saveDataQuestion7(questions, user);
+
+	// Remove the #map from view
+	$("#map").css("display", "none");
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Set question 8 as the current question
+	currentQuestion = 8;
+	user.currentQuestion = 8;
+
+	// Show the new question
+	$("#header-title-text").html(questions[8][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+	$("#questiontitle").html(questions[8][2]);
+	$("#answer").html(questions[8][3]);
+	$("#tableofcontents-question8").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question8").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show #toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	$("#tableofcontents-question8").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question8").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
+
+	// Return the user object
+	return user;
+}
+
+////////////////////////////////////
+// showQuestion9(questions, user) //
+////////////////////////////////////
+
+// Function for showing question 9
+
+function showQuestion9(questions, user) {
+
+	// Save the data from question 8 and add it to the user object
+	//saveDataQuestion8(questions, user);
+
+	// Remove the #map from view
+	$("#map").css("display", "none");
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Set question 9 as the current question
+	currentQuestion = 9;
+	user.currentQuestion = 9;
+
+	// Show the new question
+	$("#header-title-text").html(questions[9][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+	$("#questiontitle").html(questions[9][2]);
+	$("#answer").html(questions[9][3]);
+	resetSlider();
+	if (user.minimum_nature != "") {
+		if (user.minimum_nature == "Een plant in de vensterbank") {
+			document.getElementById("slider").value = 1;
+		} else if (user.minimum_nature == "De bomen in de straat") {
+			document.getElementById("slider").value = 2;
+		} else if (user.minimum_nature == "Een moestuin") {
+			document.getElementById("slider").value = 3;
+		} else if (user.minimum_nature == "De kinderboerderij of het stadspark") {
+			document.getElementById("slider").value = 4;
+		} else if (user.minimum_nature == "Een natuurgebied in Nederland") {
+			document.getElementById("slider").value = 5;
+		} else if (user.minimum_nature == "Een groot natuurgebied in het buitenland") {
+			document.getElementById("slider").value = 6;
+		} else if (user.minimum_nature == "Een onbewoond eiland") {
+			document.getElementById("slider").value = 7;
+		}
+		document.getElementById("slider-legend").innerHTML = user.minimum_nature;
+	}
+	$("#tableofcontents-question9").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question9").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show #toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	$("#tableofcontents-question9").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question9").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
+
+	// Return the user object
+	return user;
+}
+
+/////////////////////////////////////
+// showQuestion10(questions, user) //
+/////////////////////////////////////
+
+// Function for showing question 10
+
+function showQuestion10(questions, user) {
+
+	// Save the data from question 9 and add it to the user object
+	//saveDataQuestion9(questions, user);
+
+	// Remove the #map from view
+	$("#map").css("display", "none");
+
+	// Reset the scrollbars to the top
+	$("*").scrollTop(0);
+
+	// Set question 10 as the current question
+	currentQuestion = 10;
+	user.currentQuestion = 10;
+
+	// Show the new question
+	$("#header-title-text").html(questions[10][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
+	$("#questiontitle").html(questions[10][2]);
+	$("#answer").html(questions[10][3]);
+	if (user.involvement_bestemmingsplan == "yes") {
+		document.getElementById("involvement_bestemmingsplan_yes").checked = true;
+	} else if (user.involvement_bestemmingsplan == "no") {
+		document.getElementById("involvement_bestemmingsplan_no").checked = true;
+	}
+	if (user.involvement_participation == "yes") {
+		document.getElementById("involvement_participation_yes").checked = true;
+	} else if (user.involvement_participation == "no") {
+		document.getElementById("involvement_participation_no").checked = true;
+	}
+	$("#tableofcontents-question10").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question10").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show #toolbar
+	if ($("#toolbar").css("display").toLowerCase() == "none") {
+		$("#toolbar").css("display", "inline-block");
+	}
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	// Show #toolbar-createmarker
+	$("#toolbar-createmarker").css("display", "block");
+	$("#tableofcontents-question10").css("display", "block");
+	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
+	$("#tableofcontents-question10").addClass("tableofcontents-item tableofcontents-active");
+
+	// Show the overview and cartoon footer buttons
+	showFooterButtons(user);
+
+	// Return the user object
+	return user;
+}
+
 ////////////////////////////////////////
 // saveDataQuestion1(questions, user) //
 ////////////////////////////////////////
 
 // Function to save the data from question 1 and add it to the user object
 
-function savaDataQuestion1(questions, user) {
+function saveDataQuestion1(questions, user) {
 
 	// Save the data from question 1 and add it to the user object
 	var age = $("#data-question1").val();
@@ -1183,7 +1710,7 @@ function savaDataQuestion1(questions, user) {
 
 // Function to save the data from question 2 and add it to the user object
 
-function savaDataQuestion2(questions, user) {
+function saveDataQuestion2(questions, user) {
 
 	// Save the data from question 2 and add it to the user object
 	var nationality = $("#data-question2").val();
@@ -1199,7 +1726,7 @@ function savaDataQuestion2(questions, user) {
 
 // Function to save the data from question 3 and add it to the user object
 
-function savaDataQuestion3(questions, user) {
+function saveDataQuestion3(questions, user) {
 	// Set the variables
 	var zipcode = document.getElementById("data-question3").value;
 
@@ -1233,7 +1760,7 @@ function savaDataQuestion3(questions, user) {
 
 // Function to save the data from question 4 and add it to the user object
 
-function savaDataQuestion4(questions, user) {
+function saveDataQuestion4(questions, user) {
 
 	// Set the variables
 	var game_categories = [
@@ -1356,7 +1883,7 @@ function savaDataQuestion4(questions, user) {
 
 // Function to save the data from question 5 and add it to the user object
 
-function savaDataQuestion5(questions, user) {
+function saveDataQuestion5(questions, user) {
 
 	// Save the data from question 5 and add it to the user object
 	var gametime_hours = $("#data-question5-gametime-hours").val();
@@ -1374,7 +1901,7 @@ function savaDataQuestion5(questions, user) {
 
 // Function to save the data from question 6 and add it to the user object
 
-function savaDataQuestion6(questions, user) {
+function saveDataQuestion6(questions, user) {
 
 	// Save the data from question 6 and add it to the user object
 	if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
@@ -1438,6 +1965,85 @@ function savaDataQuestion6(questions, user) {
 	return user;
 }
 
+////////////////////////////////////////
+// saveDataQuestion7(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 7 and add it to the user object
+
+function saveDataQuestion7(questions, user) {
+	//
+
+/*
+	var friction = $("#data-question7").val();
+	user.friction = friction;
+	//alert(user.friction);
+ */
+}
+
+////////////////////////////////////////
+// saveDataQuestion8(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 8 and add it to the user object
+
+function saveDataQuestion8(questions, user) {
+	//
+}
+
+////////////////////////////////////////
+// saveDataQuestion9(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 9 and add it to the user object
+
+function saveDataQuestion9(questions, user) {
+	if (document.getElementById("slider").value == 1) {
+		user.minimum_nature = "Een plant in de vensterbank";
+	} else if (document.getElementById("slider").value == 2) {
+		user.minimum_nature = "De bomen in de straat";
+	} else if (document.getElementById("slider").value == 3) {
+		user.minimum_nature = "Een moestuin";
+	} else if (document.getElementById("slider").value == 4) {
+		user.minimum_nature = "De kinderboerderij of het stadspark";
+	} else if (document.getElementById("slider").value == 5) {
+		user.minimum_nature = "Een natuurgebied in Nederland";
+	} else if (document.getElementById("slider").value == 6) {
+		user.minimum_nature = "Een groot natuurgebied in het buitenland";
+	} else if (document.getElementById("slider").value == 7) {
+		user.minimum_nature = "Een onbewoond eiland";
+	}
+
+	// Return user
+	return user;
+}
+
+////////////////////////////////////////
+// saveDataQuestion10(questions, user) //
+////////////////////////////////////////
+
+// Function to save the data from question 10 and add it to the user object
+
+function saveDataQuestion10(questions, user) {
+
+	// Save the data about the user's involvement with the 'Bestemmingsplan' in his living environment
+	if (document.getElementById("involvement_bestemmingsplan_yes").checked) {
+		user.involvement_bestemmingsplan = "yes";
+	} else if (document.getElementById("involvement_bestemmingsplan_no").checked) {
+		user.involvement_bestemmingsplan = "no";
+	}
+
+	// Save the data about the user's involvement with public participation in his living environment
+	if (document.getElementById("involvement_participation_yes").checked) {
+		user.involvement_participation = "yes";
+	} else if (document.getElementById("involvement_participation_no").checked) {
+		user.involvement_participation = "no";
+	}
+
+	// Return the user object
+	return user;
+}
+
 /////////////////////////////
 // sendQuestionnaire(user) //
 /////////////////////////////
@@ -1446,20 +2052,49 @@ function savaDataQuestion6(questions, user) {
 
 function sendQuestionnaire(user) {
 
-/*
-	// Save the data from question 7 and add it to the user object
-	savaDataQuestion7(questions, user);
- */
-/*
-	var friction = $("#data-question7").val();
-	user.friction = friction;
-	//alert(user.friction);
- */
-	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld?") == true) {
+	// Save the data from question 10 and add it to the user object
+	saveDataQuestion10(questions, user);
+
+	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld? ") == true) {
 		// Add current time to user object
 		// Send the data to the server/database
 		// Show a thank you to the user
-		currentQuestion = 8;
+		// currentQuestion = 8;
 		window.open("Geonaire.html", "_self");
 	}
+}
+
+////////////////////////
+// sliderValue(value) //
+////////////////////////
+
+// Function that handles what the slider-legend should show
+
+function sliderValue(value) {
+	if (value == 1) {
+		document.getElementById("slider-legend").innerHTML = "Een plant in de vensterbank";
+	} else if (value == 2) {
+		document.getElementById("slider-legend").innerHTML = "De bomen in de straat";
+	} else if (value == 3) {
+		document.getElementById("slider-legend").innerHTML = "Een moestuin";
+	} else if (value == 4) {
+		document.getElementById("slider-legend").innerHTML = "De kinderboerderij of het stadspark";
+	} else if (value == 5) {
+		document.getElementById("slider-legend").innerHTML = "Een natuurgebied in Nederland";
+	} else if (value == 6) {
+		document.getElementById("slider-legend").innerHTML = "Een groot natuurgebied in het buitenland";
+	} else if (value == 7) {
+		document.getElementById("slider-legend").innerHTML = "Een onbewoond eiland";
+	}
+}
+
+///////////////////
+// resetSlider() //
+///////////////////
+
+// Function that resets the slider to it's minimum value
+
+function resetSlider() {
+	document.getElementById("slider").value = 1;
+	document.getElementById("slider-legend").innerHTML = "Een plant in de vensterbank";
 }

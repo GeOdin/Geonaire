@@ -209,6 +209,18 @@ ul {
 	display: none;
 }
 
+#tableofcontents-question8{
+	display: none;
+}
+
+#tableofcontents-question9{
+	display: none;
+}
+
+#tableofcontents-question10{
+	display: none;
+}
+
 #tableofcontents-nextquestion{
 	display: none;
 }
@@ -373,4 +385,104 @@ ul #footer-buttons {
 
 #button-toolbar {
 	left: 60%;
+}
+
+/* Styling for slider of question 9*/
+#slider-wrapper {
+	width: 500px;
+	margin: auto;
+}
+#slider-legend {
+	padding: 1em;
+}
+#slider {
+	width: 50%;
+	margin: auto;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2196F3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 2px 2px 2px #2196F3;
+  border: 1px solid #2196F3;
+  height: 18px;
+  width: 18px;
+  border-radius: 47px;
+  background: #64b5f6;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #2196F3;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #2196F3;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 2px 2px 2px #2196F3;
+  border: 1px solid #2196F3;
+  height: 18px;
+  width: 18px;
+  border-radius: 47px;
+  background: #64b5f6;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2196F3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+  background: #2196F3;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 2px 2px 2px #2196F3;
+  border: 1px solid #2196F3;
+  height: 18px;
+  width: 18px;
+  border-radius: 47px;
+  background: #64b5f6;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #2196F3;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #2196F3;
 }

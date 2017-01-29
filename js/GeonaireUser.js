@@ -67,6 +67,9 @@ function createUser() {
 	];
 	var living_environment = "";
 	var friction = "";
+	var minimum_nature = "";
+	var involvement_bestemmingsplan = "";
+	var involvement_participation = "";
 
 	// Add the current question to the user object
 	this.currentQuestion = current_question;
@@ -107,4 +110,11 @@ function createUser() {
 	
 	// Add the friction of the user
 	this.friction = friction;
+
+	// Add the user's minimum value of nature
+	this.minimum_nature = minimum_nature;
+
+	// Add the involvement of the user
+	this.involvement_bestemmingsplan = involvement_bestemmingsplan;
+	this.involvement_participation = involvement_participation;
 }
