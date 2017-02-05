@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<style>
+		body {
+			text-align: center;
+		}
+		#slider-wrapper {
+			width: 500px;
+			margin: auto;
+		}
+		#slider-legend {
+			padding: 1em;
+		}
+		#slider {
+			width: 50%;
+			margin: auto;
+		}
+		input[type=range] {
+		  -webkit-appearance: none;
+		  margin: 10px 0;
+		  width: 100%;
+		}
+		input[type=range]:focus {
+		  outline: none;
+		}
+		input[type=range]::-webkit-slider-runnable-track {
+		  width: 100%;
+		  height: 5px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  box-shadow: 0px 0px 0px #000000;
+		  background: #2196F3;
+		  border-radius: 1px;
+		  border: 0px solid #000000;
+		}
+		input[type=range]::-webkit-slider-thumb {
+		  box-shadow: 2px 2px 2px #2196F3;
+		  border: 1px solid #2196F3;
+		  height: 18px;
+		  width: 18px;
+		  border-radius: 47px;
+		  background: #64b5f6;
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		  margin-top: -7px;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: #2196F3;
+		}
+		input[type=range]::-moz-range-track {
+		  width: 100%;
+		  height: 5px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  box-shadow: 0px 0px 0px #000000;
+		  background: #2196F3;
+		  border-radius: 1px;
+		  border: 0px solid #000000;
+		}
+		input[type=range]::-moz-range-thumb {
+		  box-shadow: 2px 2px 2px #2196F3;
+		  border: 1px solid #2196F3;
+		  height: 18px;
+		  width: 18px;
+		  border-radius: 47px;
+		  background: #64b5f6;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-track {
+		  width: 100%;
+		  height: 5px;
+		  cursor: pointer;
+		  animate: 0.2s;
+		  background: transparent;
+		  border-color: transparent;
+		  color: transparent;
+		}
+		input[type=range]::-ms-fill-lower {
+		  background: #2196F3;
+		  border: 0px solid #000000;
+		  border-radius: 2px;
+		  box-shadow: 0px 0px 0px #000000;
+		}
+		input[type=range]::-ms-fill-upper {
+		  background: #2196F3;
+		  border: 0px solid #000000;
+		  border-radius: 2px;
+		  box-shadow: 0px 0px 0px #000000;
+		}
+		input[type=range]::-ms-thumb {
+		  box-shadow: 2px 2px 2px #2196F3;
+		  border: 1px solid #2196F3;
+		  height: 18px;
+		  width: 18px;
+		  border-radius: 47px;
+		  background: #64b5f6;
+		  cursor: pointer;
+		}
+		input[type=range]:focus::-ms-fill-lower {
+		  background: #2196F3;
+		}
+		input[type=range]:focus::-ms-fill-upper {
+		  background: #2196F3;
+		}
+		</style>
+		<script>
+			function sliderValue(value) {
+				if (value == 1) {
+					document.getElementById("slider-legend").innerHTML = "Een plant in de vensterbank";
+				} else if (value == 2) {
+					document.getElementById("slider-legend").innerHTML = "De bomen in de straat";
+				} else if (value == 3) {
+					document.getElementById("slider-legend").innerHTML = "Een moestuin";
+				} else if (value == 4) {
+					document.getElementById("slider-legend").innerHTML = "De kinderboerderij of het stadspark";
+				} else if (value == 5) {
+					document.getElementById("slider-legend").innerHTML = "Een natuurgebied in Nederland";
+				} else if (value == 6) {
+					document.getElementById("slider-legend").innerHTML = "Een groot natuurgebied in het buitenland";
+				} else if (value == 7) {
+					document.getElementById("slider-legend").innerHTML = "Een onbewoond eiland";
+				}
+			}
+			function resetSlider() {
+				document.getElementById("slider").value = 1;
+				document.getElementById("slider-legend").innerHTML = "Een plant in de vensterbank";
+			}
+		</script>
+	</head>
+	<body onload="resetSlider()">
+		<h2>Wat is het minimale wat u onder natuur verstaat?</h2>
+		<div id="slider-wrapper">
+			<div id="slider-legend">
+			</div>
+			<form>
+				<input id="slider" type="range" min=1 max=7 value="resetSlider()" oninput="sliderValue(this.value)"> <br/>
+				<a href="test_question10.html"><button type="button"">Next page</button></a>
+			</form>
+		</div>
+	</body>
+</html>

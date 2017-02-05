@@ -1,7 +1,7 @@
 /* Geonaire.js
  * JavaScript file om de pagina en de kaart te initialiseren voor de Geonaire
  * Gemaakt op 2016-11-27
- * Het laatst veranderd op 2016-12-24
+ * Het laatst veranderd op 2017-02-05
  * door GeOdin
  *
  *==========================================
@@ -51,6 +51,7 @@ function startGeonaire() {
 function showFooterButtons(user) {
 	switch(user.currentQuestion) {
 		case 6:
+		case 7:
 			$("#button-overview").css("left", "20%");
 			$("#button-cartoon").css("left", "40%");
 			$("#button-toolbar").css("display", "block");
@@ -61,14 +62,15 @@ function showFooterButtons(user) {
 				$(".question-answer").css("width", "100%");
 			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
 				$(".question-answer").css("left", "0%");
-				$(".question-answer").css("width", "92.5%");
+				$(".question-answer").css("width", "85%");
 			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$(".question-answer").css("left", "17.5%");
-				$(".question-answer").css("width", "82.5%");
+				$(".question-answer").css("left", "10%");
+				$(".question-answer").css("width", "90%");
 			} else {
-				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("left", "10%");
 				$(".question-answer").css("width", "75%");
 			}
+			document.getElementById("toolbar").innerHTML = questions[user.currentQuestion][4];
 			break;
 		default:
 			$("#button-overview").css("left", "30%");
@@ -80,12 +82,12 @@ function showFooterButtons(user) {
 				$(".question-answer").css("width", "100%");
 			} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
 				$(".question-answer").css("left", "0%");
-				$(".question-answer").css("width", "92.5%");
+				$(".question-answer").css("width", "85%");
 			} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-				$(".question-answer").css("left", "17.5%");
-				$(".question-answer").css("width", "82.5%");
+				$(".question-answer").css("left", "10%");
+				$(".question-answer").css("width", "90%");
 			} else {
-				$(".question-answer").css("left", "17.5%");
+				$(".question-answer").css("left", "10%");
 				$(".question-answer").css("width", "75%");
 			}
 	}
@@ -108,12 +110,12 @@ function toggleButtons(user) {
 			$(".question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
 			$(".question-answer").css("left", "0%");
-			$(".question-answer").css("width", "92.5%");
+			$(".question-answer").css("width", "85%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".question-answer").css("left", "17.5%");
-			$(".question-answer").css("width", "82.5%");
+			$(".question-answer").css("left", "10%");
+			$(".question-answer").css("width", "90%");
 		} else {
-			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("left", "10%");
 			$(".question-answer").css("width", "75%");
 		}
     });
@@ -158,12 +160,12 @@ function toggleButtons(user) {
 			$(".question-answer").css("width", "100%");
 		} else if ($("#overview").css("display").toLowerCase() == "none" && $("#toolbar").css("display").toLowerCase() != "none") {
 			$(".question-answer").css("left", "0%");
-			$(".question-answer").css("width", "92.5%");
+			$(".question-answer").css("width", "85%");
 		} else if ($("#overview").css("display").toLowerCase() != "none" && $("#toolbar").css("display").toLowerCase() == "none") {
-			$(".question-answer").css("left", "17.5%");
-			$(".question-answer").css("width", "82.5%");
+			$(".question-answer").css("left", "10%");
+			$(".question-answer").css("width", "90%");
 		} else {
-			$(".question-answer").css("left", "17.5%");
+			$(".question-answer").css("left", "10%");
 			$(".question-answer").css("width", "75%");
 		}
     });

@@ -7,14 +7,13 @@
 			text-align: center;
 		}
 		table {
-			border: 1px solid black;
 			background-repeat: no-repeat;
 			background-position: center;
 		}
-		td {
+		.td-friction {
 			height: 50px;
 			width: 50px;
-			border: 1px solid black;
+			border: 1px solid grey;
 		}
 		img {
 			height: 90%;
@@ -24,33 +23,39 @@
 			height: 50px;
 			width: 50px;
 			background: #006200;
+			margin: auto;
 		}
 		#friction-positive-medium {
 			height: 40px;
 			width: 40px;
 			background: #009d00;
+			margin: auto;
 		}
 		#friction-positive-small {
 			height: 30px;
 			width: 30px;
 			background: #00d800;
+			margin: auto;
 		}
 		#friction-negative-small {
 			height: 25px;
 			width: 25px;
 			background: #ff6666;
+			margin: auto;
 		}
 		#friction-negative-medium {
 			height: 35px;
 			width: 35px;
 			background: #ff1919;
+			margin: auto;
 		}
 		#friction-negative-large {
 			height: 45px;
 			width: 45px;
 			background: #cc0000;
+			margin: auto;
 		}
-		#toolbar {
+		#toolbar-friction {
 			position: absolute;
 			top: 0vh;
 			right: 0%;
@@ -63,10 +68,14 @@
 			width: 100%;
 			border: 1px solid black;
 		}
+		.toolbar-friction div {
+			cursor: pointer;
+		}
 		.toolbar-friction {
 			display: block;
+			width: 100%;
 			height: 75px;
-			border: 2px solid red;
+			border: 1px solid black;
 		}
 		/*
 		#div1, #div2 {
@@ -78,6 +87,11 @@
 			border: 1px solid black;
 		}
 		  */
+	  	#reset-button-friction {
+	  		background-color: red;
+	  		width: 5em;
+	  		margin: auto;
+	  	}
 		</style>
 		<script>
 			function allowDrop(ev) {
@@ -88,12 +102,116 @@
 				ev.dataTransfer.setData("text", ev.target.id);
 			}
 
-			function drop(ev) {
+			function dropFriction(ev) {
 				ev.preventDefault();
 				var data = ev.dataTransfer.getData("text");
-				if (ev.target.id == "td") {
-					ev.target.appendChild(document.getElementById(data));
+				switch(ev.target.id) {
+					case("td1"):
+					case("td2"):
+					case("td3"):
+					case("td4"):
+					case("td5"):
+					case("td6"):
+					case("td7"):
+					case("td8"):
+					case("td9"):
+					case("td10"):
+					case("td11"):
+					case("td12"):
+					case("td13"):
+					case("td14"):
+					case("td15"):
+					case("td16"):
+					case("td17"):
+					case("td18"):
+					case("td19"):
+					case("td20"):
+					case("td21"):
+					case("td22"):
+					case("td23"):
+					case("td24"):
+					case("td25"):
+					case("td26"):
+					case("td27"):
+					case("td28"):
+					case("td29"):
+					case("td30"):
+					case("td31"):
+					case("td32"):
+					case("td33"):
+					case("td34"):
+					case("td35"):
+					case("td36"):
+					case("td37"):
+					case("td38"):
+					case("td39"):
+					case("td40"):
+					case("td41"):
+					case("td42"):
+					case("td43"):
+					case("td44"):
+					case("td45"):
+					case("td46"):
+					case("td47"):
+					case("td48"):
+					case("td49"):
+					case("td50"):
+					case("td51"):
+					case("td52"):
+					case("td53"):
+					case("td54"):
+					case("td55"):
+					case("td56"):
+					case("td57"):
+					case("td58"):
+					case("td59"):
+					case("td60"):
+					case("td61"):
+					case("td62"):
+					case("td63"):
+					case("td64"):
+					case("td65"):
+					case("td66"):
+					case("td67"):
+					case("td68"):
+					case("td69"):
+					case("td70"):
+					case("td71"):
+					case("td72"):
+					case("td73"):
+					case("td74"):
+					case("td75"):
+					case("td76"):
+					case("td77"):
+					case("td78"):
+					case("td79"):
+					case("td80"):
+					case("td81"):
+					case("td82"):
+					case("td83"):
+					case("td84"):
+					case("td85"):
+					case("td86"):
+					case("td87"):
+					case("td88"):
+					case("td89"):
+					case("td90"):
+					case("td91"):
+					case("td92"):
+					case("td93"):
+					case("td94"):
+					case("td95"):
+					case("td96"):
+					case("td97"):
+					case("td98"):
+					case("td99"):
+					case("td100"):
+						ev.target.appendChild(document.getElementById(data));
+						break;
 				}
+				// if (ev.target.id == "td") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// }
 			}
 
 			function dropPositiveLarge(ev) {
@@ -138,265 +256,285 @@
 					ev.target.appendChild(document.getElementById(data));
 				}
 			}
+			function resetFriction() {
+				document.getElementById("toolbar-friction-positive-large").append(document.getElementById("friction-positive-large"));
+				document.getElementById("toolbar-friction-positive-medium").append(document.getElementById("friction-positive-medium"));
+				document.getElementById("toolbar-friction-positive-small").append(document.getElementById("friction-positive-small"));
+				document.getElementById("toolbar-friction-negative-small").append(document.getElementById("friction-negative-small"));
+				document.getElementById("toolbar-friction-negative-medium").append(document.getElementById("friction-negative-medium"));
+				document.getElementById("toolbar-friction-negative-large").append(document.getElementById("friction-negative-large"));
+			}
 		</script>
 	</head>
 	<body>
 
-		<h2>Drag and Drop</h2>
-		<p>Drag the image back and forth between the two div elements.</p>
+		<h2>Stel de gemeente wil wat ingrepen uitvoeren in uw stad.</h2>
+		<p>Waar zou u deze ingrepen goedkeuren? <br/>
+		Sleep de gekleurde blokjes (rechts) naar een plek in de tekening (links) die overeenkomt met uw mening. <br/>
+		Deze ingrepen zijn onderverdeeld in positief (groen) en negatief (rood), en grootte (klein, middel en groot).
+		Onderaan staat een knop waarmee u de blokjes weer kunt resetten.</p>
 
 		<table background="img/question7-house-north-arrow.png" align="center">
+			<!-- Look up NIMBY-distance for adding proper scale bar -->
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td1" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td2" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td3" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td4" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td5" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td6" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td7" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td8" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td9" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td10" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td11" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td12" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td13" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td14" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td15" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td16" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td17" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td18" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td19" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-			</tr>
-			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td20" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td21" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td22" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td23" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td24" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td25" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td26" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td27" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td28" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td29" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-			</tr>
-			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td30" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td31" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td32" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td33" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td34" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td35" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td36" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td37" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td38" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td39" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-			</tr>
-			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td40" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td41" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td42" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td43" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td44" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td45" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td46" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td47" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td48" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td49" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-			</tr>
-			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
-				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td50" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 			<tr>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td51" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td52" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td53" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td54" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td55" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td56" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td57" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td58" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td59" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
-				<td id="td" ondrop="drop(event)" ondragover="allowDrop(event)">
+				<td id="td60" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td id="td61" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td62" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td63" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td64" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td65" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td66" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td67" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td68" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td69" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td70" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td id="td71" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td72" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td73" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td74" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td75" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td76" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td77" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td78" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td79" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td80" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td id="td81" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td82" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td83" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td84" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td85" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td86" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td87" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td88" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td89" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td90" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+			</tr>
+			<tr>
+				<td id="td91" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td92" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td93" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td94" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td95" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td96" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td97" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td98" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td99" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
+				</td>
+				<td id="td100" class="td-friction" ondrop="dropFriction(event)" ondragover="allowDrop(event)">
 				</td>
 			</tr>
 		</table>
-		<div id="toolbar">
-			<div id="toolbar-title">Toolbar</div>
-			<div id="toolbar-title-positive">Positive</div>
+		<a href="test_question8.html"><button type="button"">Next page</button></a>
+		<div id="toolbar-friction">
+			<div id="toolbar-friction-title">Tekenen</div>
+			<div id="toolbar-title-positive">Positief</div>
 			<div id="toolbar-positive-drag" class="toolbar-drag">
 				<div id="toolbar-friction-positive-large" class="toolbar-friction" ondrop="dropPositiveLarge(event)" ondragover="allowDrop(event)">
-					Positive large
+					Een nieuw natuurgebied
 					<div id="friction-positive-large" draggable="true" ondragstart="drag(event)"></div>
 				</div>
 				<div id="toolbar-friction-positive-medium" class="toolbar-friction" ondrop="dropPositiveMedium(event)" ondragover="allowDrop(event)">
-					Positive medium
+					Een nieuw stadspark
 					<div id="friction-positive-medium" draggable="true" ondragstart="drag(event)"></div>
 				</div>
 				<div id="toolbar-friction-positive-small" class="toolbar-friction" ondrop="dropPositiveSmall(event)" ondragover="allowDrop(event)">
-					Positive small
+					Een nieuwe boom/ struik<br/>
+					langs de weg <!-- bijvoorbeeld voor het opvangen van fijnstof http://edepot.wur.nl/120270 -->
 					<div id="friction-positive-small" draggable="true" ondragstart="drag(event)"></div>
 				</div>
 			</div>
-			<div id="toolbar-title-negative">Negative</div>
+			<div id="toolbar-title-negative">Negatief</div>
 			<div id="toolbar-negative-drag" class="toolbar-drag">
 				<div id="toolbar-friction-negative-small" class="toolbar-friction" ondrop="dropNegativeSmall(event)" ondragover="allowDrop(event)">
-					Negative small
+					Het weghalen van een boom/ struik langs de weg
 					<div id="friction-negative-small" draggable="true" ondragstart="drag(event)"></div>
 				</div>
 				<div id="toolbar-friction-negative-medium" class="toolbar-friction" ondrop="dropNegativeMedium(event)" ondragover="allowDrop(event)">
-					Negative medium
+					Een nieuwe parkeerplaats
 					<div id="friction-negative-medium" draggable="true" ondragstart="drag(event)"></div>
 				</div>
 				<div id="toolbar-friction-negative-large" class="toolbar-friction" ondrop="dropNegativeLarge(event)" ondragover="allowDrop(event)">
-					Negative large
+					Een nieuwe luchthaven
 					<div id="friction-negative-large" draggable="true" ondragstart="drag(event)"></div>
+				</div>
+			</div>
+			<div id="toolbar-title-reset">Reset de tekening</div>
+			<div id="toolbar-reset" class="toolbar-friction">
+				<div id="reset-button-friction" onclick="resetFriction()">
+					Reset
 				</div>
 			</div>
 		</div>

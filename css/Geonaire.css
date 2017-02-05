@@ -2,7 +2,7 @@
  * Geonaire.css
  * CSS voor de Geonaire start pagina
  * Gemaakt op 2016-11-24
- * Het laatst veranderd op 2016-12-30
+ * Het laatst veranderd op 2017-02-05
  * door GeOdin
  */
 
@@ -27,6 +27,11 @@ h3 {
 	text-shadow: 1px 1px #328232;
 }
 
+img {
+	height: 90%;
+	width: 90%;
+}
+
 input[type=submit]{
 	background-color: #d0d0d0;
 	border: 1px solid black;
@@ -35,6 +40,7 @@ input[type=submit]{
 	text-shadow: 1px 1px #c0c0c0;
 	font-weight: bold;
 	box-shadow: 0 1px #666;
+	cursor: pointer;
 }
 
 input[type=submit]:hover{
@@ -50,6 +56,9 @@ input[type=submit]:active{
 	transform: translateY(2px);
 	box-shadow: none;
 }
+button {
+	cursor: pointer;
+}
 
 p {
 	text-align: left;
@@ -58,6 +67,18 @@ p {
 table {
 	color: rgba(00, 00, 00, .46);
 	text-shadow: 1px 1px rgba(00, 00, 00, .05);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+td {
+	border: 1px solid grey;
+}
+
+.td-friction {
+	height: 50px;
+	width: 50px;
+	border: 1px solid grey;
 }
 
 ul {
@@ -137,7 +158,7 @@ ul {
 	position: absolute;
 	top: 17.25vh;
 	left: 0%;
-	width: 17.5%;
+	width: 10%;
 	height: 75.25vh;
 	z-index: 2;
 	background-color: transparent;
@@ -165,7 +186,6 @@ ul {
 	background: #D0D0D0;
 	color: #565656; /* #757575 for buttons that can't be used */
 	text-shadow: 1px 1px #cccccc; /* #DEDEDE #D0D0D0 for buttons that can't be used */
-	text-align: left;
 	cursor: pointer;
 }
 
@@ -255,6 +275,7 @@ ul {
 	width: 100%;
 	height: 45.25vh;
  */
+ 	font-size: 1.2em;
 	margin: 1.5vh;
 	z-index: 3;
 	background-color: transparent;
@@ -286,7 +307,7 @@ ul {
 	display: none;
 	top: 17.25vh;
 	right: 0%;
-	width: 7.5%;
+	width: 15%;
 	height: 75.25vh;
 	z-index: 2;
 	background-color: transparent;
@@ -308,17 +329,26 @@ ul {
 	background: #9D9D9D;
 }
 
-.toolbar-item{
+.toolbar-item, .toolbar-friction{
 	display: block;
 	padding: 5%;
+	width: 100%;
 	text-align: left;
 	background: #d0d0d0;
 	color: #565656; /* #757575 for buttons that can't be used */
 	text-shadow: 1px 1px #cccccc; /* #DEDEDE #D0D0D0 for buttons that can't be used */
 	cursor: pointer;
 }
+.toolbar-friction {
+	padding-left: 0%;
+	padding-right: 0%;
+	cursor: default;
+}
+#toolbar-title-positive, #toolbar-title-negative, #toolbar-reset {
+	text-align: center;
+}
 
-.toolbar-item:hover {
+.toolbar-item:hover, #toolbar-title-positive, #toolbar-title-negative, #toolbar-title-reset {
 	background: #9D9D9D;
 	text-shadow: 1px 1px #000000;
 	color: white;
@@ -385,6 +415,157 @@ ul #footer-buttons {
 
 #button-toolbar {
 	left: 60%;
+}
+
+/*Styling of question 7*/
+#friction-positive-large {
+	height: 50px;
+	width: 50px;
+	background: #006200;
+	margin: auto;
+}
+#friction-positive-medium {
+	height: 40px;
+	width: 40px;
+	background: #009d00;
+	margin: auto;
+}
+#friction-positive-small {
+	height: 30px;
+	width: 30px;
+	background: #00d800;
+	margin: auto;
+}
+#friction-negative-small {
+	height: 25px;
+	width: 25px;
+	background: #ff6666;
+	margin: auto;
+}
+#friction-negative-medium {
+	height: 35px;
+	width: 35px;
+	background: #ff1919;
+	margin: auto;
+}
+#friction-negative-large {
+	height: 45px;
+	width: 45px;
+	background: #cc0000;
+	margin: auto;
+}
+#toolbar-friction {
+	position: absolute;
+	top: 0vh;
+	right: 0%;
+	height: 98%;
+	width: 15%;
+	border-top: 1px solid #9D9D9D;
+	border-bottom: 1px solid #9D9D9D;
+}
+.toolbar-drag {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #9D9D9D;
+	border-bottom: 1px solid #9D9D9D;
+}
+.toolbar-friction div {
+	cursor: pointer;
+}
+.toolbar-friction {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #9D9D9D;
+	border-bottom: 1px solid #9D9D9D;
+}
+#reset-button-friction {
+	background-color: #7F0000;
+	width: 5em;
+	margin: auto;
+	color: white;
+	text-shadow: 1px 1px #000000;
+}
+
+/* Styling of question 8*/
+#place-attachment {
+	display: block;
+	position: absolute;
+	top: 20%;
+	width: 100%;
+}
+#place-attachment-drop {
+	display: block;
+	position: absolute;
+	width: 50%;
+	top: 0%;
+	left: 10%;
+	color: white;
+	text-shadow: 1px 1px black;
+	font-size: 1.2em;
+}
+#place-attachment-drop div {
+	border-radius: 50%;
+	margin: auto;
+}
+#place-attachment-you {
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	z-index: 6;
+}
+#place-attachment-drop1 {
+	height: 150px;
+	width: 150px;
+	background-color: yellow;
+	color: black;
+	text-shadow: 1px 1px black;
+	z-index: 5;
+}
+#place-attachment-drop2 {
+	height: 200px;
+	width: 200px;
+	background-color: green;
+	z-index: 4;
+}
+#place-attachment-drop3 {
+	height: 250px;
+	width: 250px;
+	background-color: blue; /* moet deep blue worden */
+	z-index: 3;
+}
+#place-attachment-drop4 {
+	height: 300px;
+	width: 300px;
+	background-color: indigo;
+	z-index: 2
+}
+#place-attachment-drop5 {
+	height: 350px;
+	width: 350px;
+	background-color: purple;
+	z-index: 1;
+}
+#place-attachment-drag {
+	display: block;
+	position: absolute;
+	top: 5vh;
+	left: 55%;
+	border: 1px solid grey;
+}
+#place-attachment-drag-item-wrapper {
+		background-color: white;
+}
+.place-attachment-drag-item {
+	height: 100%;
+	width: 100%;
+	cursor: pointer;
+}
+#place-attachment-drag-title {
+	background-color: rgba(128,0,128,0.4);
+}
+#place-attachment-drag-reset {
+	background-color: rgba(255,0,0,0.4);
+	cursor: pointer;
 }
 
 /* Styling for slider of question 9*/

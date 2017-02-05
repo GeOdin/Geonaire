@@ -66,7 +66,17 @@ function createUser() {
 		["type", "lat", "lon", "rad", "north", "south", "east", "west"]
 	];
 	var living_environment = "";
-	var friction = "";
+	var friction_positive_large = "";
+	var friction_positive_medium = "";
+	var friction_positive_small = "";
+	var friction_negative_small = "";
+	var friction_negative_medium = "";
+	var friction_negative_large = "";
+	var priority_1 = "";
+	var priority_2 = "";
+	var priority_3 = "";
+	var priority_4 = "";
+	var priority_5 = "";
 	var minimum_nature = "";
 	var involvement_bestemmingsplan = "";
 	var involvement_participation = "";
@@ -109,7 +119,19 @@ function createUser() {
 	this.livingenvironment = living_environment;
 	
 	// Add the friction of the user
-	this.friction = friction;
+	this.frictionpositivelarge = friction_positive_large;
+	this.frictionpositivemedium = friction_positive_medium;
+	this.frictionpositivesmall = friction_positive_small;
+	this.frictionnegativesmall = friction_negative_small;
+	this.frictionnegativemedium = friction_positive_medium;
+	this.frictionnegativelarge = friction_negative_large;
+
+	// Add the priorities of the user
+	this.priority1 = priority_1;
+	this.priority2 = priority_2;
+	this.priority3 = priority_3;
+	this.priority4 = priority_4;
+	this.priority5 = priority_5;
 
 	// Add the user's minimum value of nature
 	this.minimum_nature = minimum_nature;

@@ -1,0 +1,299 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link rel="shortcut icon" type="image/png" href="favicon.png" />
+		<style>
+		body {
+			text-align: center;
+		}
+		#header {
+			display: block;
+			position: absolute;
+			top: 0%;
+			left:0%;
+			width: 100%;
+		}
+		#place-attachment {
+			display: block;
+			position: absolute;
+			top: 20%;
+			width: 100%;
+		}
+		#place-attachment-drop {
+			display: block;
+			position: absolute;
+			width: 50%;
+			top: 0%;
+			left: 10%;
+		}
+		#place-attachment-drop div {
+			border-radius: 50%; /* or 100% if needed */
+			margin: auto;
+		}
+		#place-attachment-you {
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			z-index: 6;
+		}
+		#place-attachment-drop1 {
+			height: 150px;
+			width: 150px;
+			background-color: yellow;
+			z-index: 5;
+		}
+		#place-attachment-drop2 {
+			height: 200px;
+			width: 200px;
+			background-color: green;
+			z-index: 4;
+		}
+		#place-attachment-drop3 {
+			height: 250px;
+			width: 250px;
+			background-color: blue; /* moet deep blue worden */
+			z-index: 3;
+		}
+		#place-attachment-drop4 {
+			height: 300px;
+			width: 300px;
+			background-color: indigo;
+			z-index: 2
+		}
+		#place-attachment-drop5 {
+			height: 350px;
+			width: 350px;
+			background-color: purple;
+			z-index: 1;
+		}
+/*		#place-attachment-dragdrop {
+			display: block;
+			position: absolute;
+			top: 0%;
+			left: 30%;
+			width: 30%;
+			border: 1px solid black;
+		}
+		#place-attachment-priority-wrapper {
+			display: block;
+			height: 80%;
+		}
+		.place-attachment-priority-general {
+			display: block;
+		}
+		.place-attachment-priority-number {
+			display: block;
+			position: relative;
+			left: 0%;
+			width: 10%;
+			border: 1px solid blue;
+		}
+		.place-attachment-priority-text {
+			display: block;
+			position: relative;
+			left: 10%;
+			width: 90%;
+			height: 1em;
+			border: 1px solid black;
+		}
+		#place-attachment-number1, #place-attachment-text1 {
+			background-color: rgba(255,255,0,0.4);
+		}
+		#place-attachment-number2, #place-attachment-text2 {
+			background-color: rgba(0,128,0,0.4);
+		}
+		#place-attachment-number3, #place-attachment-text3 {
+			background-color: rgba(0,0,255,0.4);
+		}
+		#place-attachment-number4, #place-attachment-text4 {
+			background-color: rgba(75,0,130,0.4);
+		}
+		#place-attachment-number5, #place-attachment-text5 {
+			background-color: rgba(128,0,128,0.4);
+		}*/
+		#place-attachment-drag {
+			display: block;
+			position: absolute;
+			top: 5vh;
+			left: 55%;
+			border: 1px solid grey;
+		}
+		#place-attachment-drag-item-wrapper {
+				background-color: white;
+		}
+		.place-attachment-drag-item {
+			height: 100%;
+			width: 100%;
+			cursor: pointer;
+		}
+		#place-attachment-drag-title {
+			background-color: rgba(128,0,128,0.4);
+		}
+		#place-attachment-drag-reset {
+			background-color: rgba(255,0,0,0.4);
+			cursor: pointer;
+		}
+		</style>
+		<script>
+			function allowDrop(ev) {
+				ev.preventDefault();
+			}
+
+			function drag(ev) {
+				ev.dataTransfer.setData("text", ev.target.id);
+			}
+
+			function dropPlaceAttachment(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				if (ev.target.id == "place-attachment-drop1") {
+					ev.target.appendChild(document.getElementById(data));
+					// alert(typeof data);  // string
+					// if (data == "place-attachment-drag-place-identity") {
+					// 	// if (document.getElementById("place-attachment-drop1").innerHTML == "Identiteit<div id='place-attachment-you'>U</div>") {
+					// 	// 	//
+					// 	// } else if (document.getElementById("place-attachment-drop1").innerHTML == "<u title='De mogelijkheden die de stad biedt.'>Mogelijkheden</u><div id='place-attachment-you'>U</div>") {
+					// 	// 	//
+					// 	// } else if (document.getElementById("place-attachment-drop1").innerHTML == "Natuur<div id='place-attachment-you'>U</div>") {
+					// 	// 	//
+					// 	// } else if (document.getElementById("place-attachment-drop1").innerHTML == "Familie<div id='place-attachment-you'>U</div>") {
+					// 	// 	//
+					// 	// } else if (document.getElementById("place-attachment-drop1").innerHTML == "Vrienden<div id='place-attachment-you'>U</div>") {
+					// 	// 	//
+					// 	// } else {
+					// 		ev.target.appendChild(document.getElementById(data));
+					// 	// }
+					// }
+				} else if (ev.target.id == "place-attachment-drop2") {
+					ev.target.appendChild(document.getElementById(data));
+				} else if (ev.target.id == "place-attachment-drop3") {
+					ev.target.appendChild(document.getElementById(data));
+				} else if (ev.target.id == "place-attachment-drop4") {
+					ev.target.appendChild(document.getElementById(data));
+				} else if (ev.target.id == "place-attachment-drop5") {
+					ev.target.appendChild(document.getElementById(data));
+				}
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "Identiteit<div id='place-attachment-you'>U</div>";
+				// 	} else if (data == "place-attachment-drag-place-dependency") {
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "<u title='De mogelijkheden die de stad biedt.'>Mogelijkheden</u><div id='place-attachment-you'>U</div>";
+				// 	} else if (data == "place-attachment-drag-nature-bonding") {
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "Natuur<div id='place-attachment-you'>U</div>";
+				// 	} else if (data == "place-attachment-drag-family-bonding") {
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "Familie<div id='place-attachment-you'>U</div>";
+				// 	} else if (data == "place-attachment-drag-friend-bonding") {
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "Vrienden<div id='place-attachment-you'>U</div>";
+				// 	}
+				// } else if (ev.target.id == "place-attachment-drop2") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// } else if (ev.target.id == "place-attachment-drop3") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// } else if (ev.target.id == "place-attachment-drop4") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// } else if (ev.target.id == "place-attachment-drop5") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// }
+				// if (ev.target.id == "place-attachment-drop2") {
+				// 	ev.target.appendChild(document.getElementById(data));
+				// 	if (data == "place-attachment-drag-place-identity") {
+				// 		document.getElementById("place-attachment-drop1").innerHTML = "Identiteit"+ "<div id='place-attachment-you'>U</div>";
+				// 	}
+				// }
+			}
+
+/*			function drop5(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("text");
+				if (ev.target.id == "place-attachment-drop5") { 
+					alert("drag object: " + data + "\n drop object: " + ev.target.id + "\n drag text: "); // <-- !!!
+					// document.getElementById("place-attachment-drop5").innerHTML = "DropNew";
+					// $("place-attachment-drop5").css("z-index", "1");
+					// $("place-attachment-drag-place-identity").css("z-index", "-1");
+					// ev.target.html() = document.getElementById(data);
+					// document.getElementById("place-attachment-drag-place-identity").css("z-index", "99");
+					//document.getElementById("place-attachment-drop5").innerHTML = "Waar de stad voor staat";
+					// $("place-attachment-drag-place-identity").css("height", "350px");
+					// $("place-attachment-drag-place-identity").css("width", "350px");
+					// $("place-attachment-drag-place-identity").css("background-color", "indigo");
+					// $("place-attachment-drag-place-identity").css("z-index", "1");
+				}
+			}*/
+
+			// function dropPlaceIdentity(ev) {
+			// 	ev.preventDefault();
+			// 	var data = ev.dataTransfer.getData("text");
+			// 	if (ev.dataTransfer.getData("text") == "place-attachment-drag-place-identity") { 
+			// 		ev.target.appendChild(document.getElementById(data));
+			// 	}
+			// }
+
+			function resetPlaceAttachment() {
+				document.getElementById("place-attachment-drag-item-wrapper").append(document.getElementById("place-attachment-drag-place-identity"));
+				document.getElementById("place-attachment-drag-item-wrapper").append(document.getElementById("place-attachment-drag-place-dependency"));
+				document.getElementById("place-attachment-drag-item-wrapper").append(document.getElementById("place-attachment-drag-nature-bonding"));
+				document.getElementById("place-attachment-drag-item-wrapper").append(document.getElementById("place-attachment-drag-family-bonding"));
+				document.getElementById("place-attachment-drag-item-wrapper").append(document.getElementById("place-attachment-drag-friend-bonding"));
+				// $("#place-attachment-drag-place-identity").after($("#place-attachment-drag-title"));
+			}
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<h2>Waarom woon u in uw stad?</h2>
+			Sleep de eigenschappen (rechts) naar de bijbehorende prioriteit (links). <br/>
+			De eigenschappen die het belangrijkst voor <u title="rode cirkel">u</u> zijn, staan het dichtst bij u (gele cirkel) <br/>
+			en de eigenschappen die u minder belangrijk vind staan verder van u af (paarse cirkel). <br/>
+			Druk op 'Reset' om overnieuw te beginnen. <br/>
+		</div>
+		<div id="place-attachment">
+			<div id="place-attachment-drop">
+<!-- 				<div id="place-attachment-drop5" ondrop="drop5(event)" ondragover="allowDrop(event)">
+					Prioriteit 5 -->
+				<div id="place-attachment-drop5" ondrop="dropPlaceAttachment(event)" ondragover="allowDrop(event)">
+					Prioriteit 5
+					<div id="place-attachment-drop4" ondrop="dropPlaceAttachment(event)" ondragover="allowDrop(event)">
+						Prioriteit 4
+						<div id="place-attachment-drop3" ondrop="dropPlaceAttachment(event)" ondragover="allowDrop(event)">
+							Prioriteit 3
+							<div id="place-attachment-drop2" ondrop="dropPlaceAttachment(event)" ondragover="allowDrop(event)">
+								Prioriteit 2
+								<div id="place-attachment-drop1" ondrop="dropPlaceAttachment(event)" ondragover="allowDrop(event)">
+									Prioriteit 1
+									<div id="place-attachment-you">
+										U
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="place-attachment-drag">
+				<div id="place-attachment-drag-title">
+					<b>Eigenschappen</b>
+					<div id="place-attachment-drag-item-wrapper">
+						<div id="place-attachment-drag-place-identity" class="place-attachment-drag-item" draggable="true" ondragstart="drag(event)">
+							Identiteit
+						</div>
+						<div id="place-attachment-drag-place-dependency" class="place-attachment-drag-item" draggable="true" ondragstart="drag(event)">
+							<u title="De mogelijkheden die de stad biedt.">Mogelijkheden</u>
+						</div>
+						<div id="place-attachment-drag-nature-bonding" class="place-attachment-drag-item" draggable="true" ondragstart="drag(event)">
+							Natuur
+						</div>
+						<div id="place-attachment-drag-family-bonding" class="place-attachment-drag-item" draggable="true" ondragstart="drag(event)">
+							Familie
+						</div>
+						<div id="place-attachment-drag-friend-bonding" class="place-attachment-drag-item" draggable="true" ondragstart="drag(event)">
+							Vrienden
+						</div>
+					</div>
+				</div>
+				<div id="place-attachment-drag-reset" onclick="resetPlaceAttachment()">
+					Reset
+				</div>
+				<br/><a href="test_question9.html"><button type="button"">Next page</button></a><br/> <br/>
+			</div>
+		</div>
+	</body>
+</html>
