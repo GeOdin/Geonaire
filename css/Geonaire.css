@@ -433,26 +433,45 @@ ul #footer-buttons {
 #friction-positive-small {
 	height: 30px;
 	width: 30px;
-	background: #00d800;
+	background: #197119;
 	margin: auto;
 }
 #friction-negative-small {
 	height: 25px;
 	width: 25px;
-	background: #ff6666;
+	background: #bf7fbf;
 	margin: auto;
 }
 #friction-negative-medium {
 	height: 35px;
 	width: 35px;
-	background: #ff1919;
+	background: #a64ca6;
 	margin: auto;
 }
 #friction-negative-large {
 	height: 45px;
 	width: 45px;
-	background: #cc0000;
+	background: #8c198c;
 	margin: auto;
+}
+#scalebar{
+        height: 55px;
+        width: 555px;
+	background-color: #D0D0D0;
+        margin: auto;
+}
+.scalebar-item{
+        display: inline-block;
+	width: 50px;
+	height: 50px;
+}
+.scalebar-black{
+	background-color: #D0D0D0;
+	color: #565656;
+}
+.scalebar-white{
+	background-color: #565656;
+	color: #D0D0D0;
 }
 #toolbar-friction {
 	position: absolute;
@@ -479,7 +498,7 @@ ul #footer-buttons {
 	border-bottom: 1px solid #9D9D9D;
 }
 #reset-button-friction {
-	background-color: #7F0000;
+	background-color: #FF3232;
 	width: 5em;
 	margin: auto;
 	color: white;
