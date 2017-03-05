@@ -157,7 +157,7 @@ var questions = [
 		"cartoon-question10",
 		"<p align='left' style='margin:1em;'>Piet is klaar met wandelen en werkt de rest van de zaterdagmiddag in zijn tuin. Het gras aan de overkant van de straat lijkt groener. Zijn buurman vraagt hem: 'Piet, snap jij waarom het altijd groener is aan de overkant?' Piet: 'Nee.' Wat zij niet weten, was dat er aan de overkant van de straat een buurtactiviteit 'Groene Vingers' gaande was, waarbij bankjes met afgebladderde verf weer overnieuw geverfd werden.</p>",
 		"Hoe betrokken bent u bij uw leefomgeving?",
-		'<form onsubmit="sendQuestionnaire(user);"> Kent u het bestemmingsplan van uw leefomgeving? <br/> <input id="involvement_bestemmingsplan_yes" type="radio" name="involvement_bestemmingsplan" value="yes"> Ja <br/> <input id="involvement_bestemmingsplan_no" type="radio" name="involvement_bestemmingsplan" value="no"> Nee <br/> <br/> Heeft u weleens deelgenomen aan <u title="Hierbij kunt u denken aan deelname aan openbare gesprekken over uw leefomgeving.">publieke participatie</u> in uw leefomgeving? <br/> <input id="involvement_participation_yes" type="radio" name="involvement_participation" value="yes"> Ja <br/> <input id="involvement_participation_no" type="radio" name="involvement_participation" value="no"> Nee <br/> <br/> <input type="submit" value="Verstuur"></form>',
+		'<form onsubmit="sendQuestionnaire(questions, user);"> Kent u het bestemmingsplan van uw leefomgeving? <br/> <input id="involvement_bestemmingsplan_yes" type="radio" name="involvement_bestemmingsplan" value="yes"> Ja <br/> <input id="involvement_bestemmingsplan_no" type="radio" name="involvement_bestemmingsplan" value="no"> Nee <br/> <br/> Heeft u weleens deelgenomen aan <u title="Hierbij kunt u denken aan deelname aan openbare gesprekken over uw leefomgeving.">publieke participatie</u> in uw leefomgeving? <br/> <input id="involvement_participation_yes" type="radio" name="involvement_participation" value="yes"> Ja <br/> <input id="involvement_participation_no" type="radio" name="involvement_participation" value="no"> Nee <br/> <br/> <input type="submit" value="Verstuur"></form>',
 		''
 	],
 	[
@@ -1697,8 +1697,10 @@ function showQuestion9(questions, user) {
 
 function showQuestion10(questions, user) {
 
-	// Save the data from question 9 and add it to the user object
-	saveDataQuestion9(questions, user);
+	if(user.currentQuestion == 9) {
+		// Save the data from question 9 and add it to the user object
+		saveDataQuestion9(questions, user);
+	}
 
 	// Remove the #map from view
 	$("#map").css("display", "none");
@@ -2097,7 +2099,7 @@ function saveDataQuestion10(questions, user) {
 
 // Function that handles sending the information of the user to the server/database
 
-function sendQuestionnaire(user) {
+function sendQuestionnaire(questions, user) {
 
 	// Save the data from question 10 and add it to the user object
 	saveDataQuestion10(questions, user);
@@ -2107,6 +2109,7 @@ function sendQuestionnaire(user) {
 		// Send the data to the server/database
 		// Show a thank you to the user
 		// currentQuestion = 8;
+
 		// $.post("saveData.php");
 		// $.get("saveData.php");
 		window.open("Geonaire.html", "_self");
