@@ -30,7 +30,7 @@ function createUser() {
 	// Set the variables
 	var current_question = 0;
 	var age = 0;
-	var nationality; "Nederland";
+	var nationality = "";
 	var zipcode = "6708PB";
 	var zipcode_city = "";
 	var zipcode_lat = "";
