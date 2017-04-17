@@ -31,7 +31,7 @@ function createUser() {
 	var current_question = 0;
 	var age = 0;
 	var nationality = "";
-	var zipcode = "6708PB";
+	var zipcode = "";  // 6708PB
 	var zipcode_city = "";
 	var zipcode_lat = "";
 	var zipcode_lon = "";
@@ -66,6 +66,7 @@ function createUser() {
 		["type", "lat", "lon", "rad", "north", "south", "east", "west"]
 	];
 	var living_environment = "";
+        var living_environment_wkt = "";
 	var friction_positive_large = "";
 	var friction_positive_medium = "";
 	var friction_positive_small = "";
@@ -117,6 +118,8 @@ function createUser() {
 	this.livingenvironmentproperties = living_environment_properties;
 	// Add the living environment of the user
 	this.livingenvironment = living_environment;
+        // Add the living environment of the user in WKT
+        this.livingenvironmentWKT = living_environment_wkt;
 	
 	// Add the friction of the user
 	this.frictionpositivelarge = friction_positive_large;

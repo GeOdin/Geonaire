@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function showUser(str) {
+  if (str=="") {
+    document.getElementById("txtHint").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else { // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtHint").innerHTML=this.responseText;
+    }
+  }
+
+	nationality = 'Nederlands';
+	zipcode = '6708PG';
+	game_category_genre_action = 1;
+	game_category_genre_action_adventure = 1;
+	game_category_genre_adventure = 1;
+	game_category_genre_facebook = 1;
+	game_category_genre_mobilephone = 1;
+	game_category_genre_roleplaying = 1;
+	game_category_genre_seriousgame = 1;
+	game_category_genre_simulation = 1;
+	game_category_genre_strategy = 1;
+	game_category_genre_sport = 1;
+	game_category_story_fiction = 1;
+	game_category_story_nonfiction = 1;
+	game_category_computer_console = 1;
+	game_category_computer_handheld = 1;
+	game_category_computer_ipad = 1;
+	game_category_computer_mobilephone = 1;
+	game_category_computer_pcmac = 1;
+	game_category_view_2d = 1;
+	game_category_view_3d = 1;
+	game_category_view_firstperson = 1;
+	game_category_view_thirdperson = 1;
+	game_category_view_augmentedreality = 1;
+	game_category_view_virtualreality = 1;
+	game_time_hours = 5;
+	game_time_category = 'days';
+	living_environment_type = 'Polygon';
+	living_environment_size = 1235.34;
+	living_environment_area = 'points for WKT';
+	living_environment_circlecenterlat = 0.123;
+	living_environment_circlecenterlon = 0.234;
+	living_environment_circlecenterradius = 2;
+	friction_positive_large_x = 0;
+	friction_positive_large_y = 0;
+	friction_positive_medium_x = 0;
+	friction_positive_medium_y = 0;
+	friction_positive_small_x = 0;
+	friction_positive_small_y = 0;
+	friction_negative_large_x = 0;
+	friction_negative_large_y = 0;
+	friction_negative_medium_x = 0;
+	friction_negative_medium_y = 0;
+	friction_negative_small_x = 0;
+	friction_negative_small_y = 0;
+	place_attachment_priorrity1 = 'Place identity';
+	place_attachment_priorrity2 = 'Friend bonding';
+	place_attachment_priorrity3 = 'Nature bonding';
+	place_attachment_priorrity4 = 'Place dependency';
+	place_attachment_priorrity5 = 'Family bonding';
+	nature_minimum = 'vegetable garden';
+	involvement_omgevingswet = 0;
+	involvement_participation = 0;
+	email = 'mikkie@gmail.com';
+	send_result_to_user = 0;
+	is_result_send = 0;
+  xmlhttp.open("POST","insert_data_geonaire.php?age="+str+"&nationality="+nationality+"&zipcode="+zipcode+"&game_category_genre_action="+game_category_genre_action+"&game_category_genre_action_adventure="+game_category_genre_action_adventure+"&game_category_genre_adventure="+game_category_genre_adventure+"&game_category_genre_facebook="+game_category_genre_facebook+"&game_category_genre_mobilephone="+game_category_genre_mobilephone+"&game_category_genre_roleplaying="+game_category_genre_roleplaying+"&game_category_genre_seriousgame="+game_category_genre_seriousgame+"&game_category_genre_simulation="+game_category_genre_simulation+"&game_category_genre_sport="+game_category_genre_sport+"&game_category_genre_strategy="+game_category_genre_strategy+"&game_category_story_fiction="+game_category_story_fiction+"&game_category_story_nonfiction="+game_category_story_nonfiction+"&game_category_computer_console="+game_category_computer_console+"&game_category_computer_handheld="+game_category_computer_handheld+"&game_category_computer_ipad="+game_category_computer_ipad+"&game_category_computer_mobilephone="+game_category_computer_mobilephone+"&game_category_computer_pcmac="+game_category_computer_pcmac+"&game_category_view_2d="+game_category_view_2d+"&game_category_view_3d="+game_category_view_3d+"&game_category_view_firstperson="+game_category_view_firstperson+"&game_category_view_thirdperson="+game_category_view_thirdperson+"&game_category_view_augmentedreality="+game_category_view_augmentedreality+"&game_category_view_virtualreality="+game_category_view_virtualreality+"&game_time_hours="+game_time_hours+"&game_time_category="+game_time_category+"&living_environment_type="+living_environment_type+"&living_environment_size="+living_environment_size+"&living_environment_area="+living_environment_area+"&living_environment_circlecenterlat="+living_environment_circlecenterlat+"&living_environment_circlecenterlon="+living_environment_circlecenterlon+"&living_environment_circlecenterradius="+living_environment_circlecenterradius,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<form>
+<select name="users" onchange="showUser(this.value)">
+<option value="">Insert a person:</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+</select>
+</form>
+<br>
+<div id="txtHint"><b>Person info will be listed here.</b></div>
+
+</body>
+</html>

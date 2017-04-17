@@ -108,7 +108,7 @@ var questions = [
 		"cartoon-question3",
 		"<p align='left' style='margin:1em;'>Een jongen uit de buurt van Piet komt op skeelers de straat in met een grote postbodetas. Als hij langs het huis van Piet komt, gooit hij een pakketje naar het huis van Piet. Het pakketje blijkt echter geen post te zijn, maar een pak meel wat langzaam van de muur naar beneden glijdt. Piet stommelt naar beneden en opent de deur om te kijken wat er aan de hand is. Hij roept naar zijn vrouw: 'Schat, we hebben weer meel ontvangen'. Zijn vrouw beantwoordt hem met 'H&egrave; bah!.' Vervolgens skeelert de jongen snel verder en verliest daarbij zijn pet. In de straat is te zien dat niet alleen Piet de dupe is geworden.</p>",
 		"Wat is uw postcode?",
-		'<form onsubmit="showQuestion4(questions, user);">Bijvoorbeeld: 1234AB <br/> <br/> <input id="data-question3" type="text" name="zipcode" maxlength="6" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>',
+		'<form onsubmit="showQuestion4(questions, user);">Bijvoorbeeld: 1234AB <br/> <br/> <input id="data-question3" placeholder="6708PB" type="text" name="zipcode" maxlength="6" class="white-space answer-input-shorttext"> <br/> <input type="submit" value="Volgende"></form>',
 		''
 	],
 	[
@@ -2106,12 +2106,80 @@ function sendQuestionnaire(questions, user) {
 
 	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld? ") == true) {
 		// Add current time to user object
-		// Send the data to the server/database
 		// Show a thank you to the user
-		// currentQuestion = 8;
-
-		// $.post("saveData.php");
-		// $.get("saveData.php");
+		// Add the data to the database
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else { // code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		// xmlhttp.onreadystatechange=function() {
+	        // 		if (this.readyState==4 && this.status==200) {
+		//   		document.getElementById("txtHint").innerHTML=this.responseText;
+		// 	}
+		// }
+		age = user.age;
+		nationality = user.nationality;
+		zipcode = user.zipcode;
+		game_category_genre_action = 1;
+		game_category_genre_action_adventure = 1;
+		game_category_genre_adventure = 1;
+		game_category_genre_facebook = 1;
+		game_category_genre_mobilephone = 1;
+		game_category_genre_roleplaying = 1;
+		game_category_genre_seriousgame = 1;
+		game_category_genre_simulation = 1;
+		game_category_genre_strategy = 1;
+		game_category_genre_sport = 1;
+		game_category_story_fiction = 1;
+		game_category_story_nonfiction = 1;
+		game_category_computer_console = 1;
+		game_category_computer_handheld = 1;
+		game_category_computer_ipad = 1;
+		game_category_computer_mobilephone = 1;
+		game_category_computer_pcmac = 1;
+		game_category_view_2d = 1;
+		game_category_view_3d = 1;
+		game_category_view_firstperson = 1;
+		game_category_view_thirdperson = 1;
+		game_category_view_augmentedreality = 1;
+		game_category_view_virtualreality = 1;
+		game_time_hours = 5;
+		game_time_category = 'days';
+		living_environment_type = 'Polygon';
+		living_environment_size = 1235.34;
+		living_environment_area = 'POLYGON((13.215179443359373 52.588032137196755,13.42803955078125 52.592620721000365,13.454132080078125 52.46897854656702,13.347015380859375 52.45893824522763,13.215179443359373 52.588032137196755))';
+		living_environment_circlecenterlat = 0.123;
+		living_environment_circlecenterlon = 0.234;
+		living_environment_circlecenterradius = 2.1;
+		friction_positive_large_x = 10;
+		friction_positive_large_y = 10;
+		friction_positive_medium_x = 10;
+		friction_positive_medium_y = 10;
+		friction_positive_small_x = 100;
+		friction_positive_small_y = 100;
+		friction_negative_small_x = 100;
+		friction_negative_small_y = 100;
+		friction_negative_medium_x = 10;
+		friction_negative_medium_y = 10;
+		friction_negative_large_x = 100;
+		friction_negative_large_y = 100;
+		place_attachment_priority1 = 'Place identity';
+		place_attachment_priority2 = 'Friend bonding';
+		place_attachment_priority3 = 'Nature bonding';
+		place_attachment_priority4 = 'Place dependency';
+		place_attachment_priority5 = 'Family bonding';
+		nature_minimum = 'vegetable garden';
+		involvement_omgevingswet = 1;
+		involvement_participation = 1;
+		email = 'mikkie@gmail.com';
+		send_result_to_user = 1;
+		is_result_send = 1;
+	        current_datetime = new Date().toISOString().slice(0, 19).replace('T', ' ');
+		xmlhttp.open("POST","insert_data_geonaire.php?age="+age+"&nationality="+nationality+"&zipcode="+zipcode+"&game_category_genre_action="+game_category_genre_action+"&game_category_genre_action_adventure="+game_category_genre_action_adventure+"&game_category_genre_adventure="+game_category_genre_adventure+"&game_category_genre_facebook="+game_category_genre_facebook+"&game_category_genre_mobilephone="+game_category_genre_mobilephone+"&game_category_genre_roleplaying="+game_category_genre_roleplaying+"&game_category_genre_seriousgame="+game_category_genre_seriousgame+"&game_category_genre_simulation="+game_category_genre_simulation+"&game_category_genre_sport="+game_category_genre_sport+"&game_category_genre_strategy="+game_category_genre_strategy+"&game_category_story_fiction="+game_category_story_fiction+"&game_category_story_nonfiction="+game_category_story_nonfiction+"&game_category_computer_console="+game_category_computer_console+"&game_category_computer_handheld="+game_category_computer_handheld+"&game_category_computer_ipad="+game_category_computer_ipad+"&game_category_computer_mobilephone="+game_category_computer_mobilephone+"&game_category_computer_pcmac="+game_category_computer_pcmac+"&game_category_view_2d="+game_category_view_2d+"&game_category_view_3d="+game_category_view_3d+"&game_category_view_firstperson="+game_category_view_firstperson+"&game_category_view_thirdperson="+game_category_view_thirdperson+"&game_category_view_augmentedreality="+game_category_view_augmentedreality+"&game_category_view_virtualreality="+game_category_view_virtualreality+"&game_time_hours="+game_time_hours+"&game_time_category="+game_time_category+"&living_environment_type="+living_environment_type+"&living_environment_size="+living_environment_size+"&living_environment_area="+living_environment_area+"&living_environment_circlecenterlat="+living_environment_circlecenterlat+"&living_environment_circlecenterlon="+living_environment_circlecenterlon+"&living_environment_circlecenterradius="+living_environment_circlecenterradius+"&friction_positive_large_x="+friction_positive_large_x+"&friction_positive_large_y="+friction_positive_large_y+"&friction_positive_medium_x="+friction_positive_medium_x+"&friction_positive_medium_y="+friction_positive_medium_y+"&friction_positive_small_x="+friction_positive_small_x+"&friction_positive_small_y="+friction_positive_small_y+"&friction_negative_small_x="+friction_negative_small_x+"&friction_negative_small_y="+friction_negative_small_y+"&friction_negative_medium_x="+friction_negative_medium_x+"&friction_negative_medium_y="+friction_negative_medium_y+"&friction_negative_large_x="+friction_negative_large_x+"&friction_negative_large_y="+friction_negative_large_y+"&place_attachment_priority1="+place_attachment_priority1+"&place_attachment_priority2="+place_attachment_priority2+"&place_attachment_priority3="+place_attachment_priority3+"&place_attachment_priority4="+place_attachment_priority4+"&place_attachment_priority5="+place_attachment_priority5+"&nature_minimum="+nature_minimum+"&involvement_omgevingswet="+involvement_omgevingswet+"&involvement_participation="+involvement_participation+"&email="+email+"&send_result_to_user="+send_result_to_user+"&is_result_send="+is_result_send+"&current_datetime="+current_datetime,true);
+		xmlhttp.send();
+		alert(user.age);
 		window.open("Geonaire.html", "_self");
 		// return false;
 	} else {
