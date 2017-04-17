@@ -46,8 +46,16 @@ function createUser() {
 		["sports", "no"],
 		["facebook", "no"],
 		["mobilegame", "no"],
-		["augmentedreality", "no"],
 		["seriousgame", "no"]
+	];
+	var user_game_perspective = [
+		["gameperspective", "yes_or_no"],
+		["2d", "no"],
+		["3d", "no"],
+		["firstperson", "no"],
+		["thirdperson", "no"],
+		["augmentedreality", "no"],
+		["virtualreality", "no"]
 	];
 	var user_game_computers = [
 		["gamecomputer", "yes_or_no"],
@@ -56,6 +64,11 @@ function createUser() {
 		["handheld", "no"],
 		["mobilephone", "no"],
 		["ipad", "no"]
+	];
+	var user_game_story = [
+		["gamestory", "yes_or_no"],
+		["fiction", "no"],
+		["nonfiction", "no"]
 	];
 	var gametime_hours = 0;
 	var gametime_categories = "hours";
@@ -99,9 +112,12 @@ function createUser() {
 	
 	// Add the game categories of the user
 	this.gamecategories = user_game_categories;
-	
+	// Add the game perspective of the user
+	this.gameperspective = user_game_perspective;
 	// Add the game computers of the user
 	this.gamecomputers = user_game_computers;
+	// Add the game story of the user
+	this.gamestory = user_game_story;
 	
 	// Add the game time hours of the user
 	this.gametimehours = gametime_hours;

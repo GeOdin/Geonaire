@@ -58,7 +58,7 @@
 // var checkboxesGamecategories //
 //////////////////////////////////
 
-var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions, user);"><table align="center" border="1px solid rgba(00, 00, 00, .46)"><tr style="text-align:center"><th colspan="2">Game categori&euml;n</th><th>Game computer</th></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-action" type="checkbox" name="gamecategories" value="action">Actie</td><td><input id="data-question4-gamecategories-facebook" type="checkbox" name="gamecategories" value="facebook">Facebook spellen</td><td><input id="data-question4-gamecomputers-computer" type="checkbox" name="gamecomputer" value="computer">PC/ Mac</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-actionadventure" type="checkbox" name="gamecategories" value="action_adventure">Actie-avontuur</td><td><input id="data-question4-gamecategories-mobilegame" type="checkbox" name="gamecategories" value="mobilegame">Mobiele telefoon spellen</td><td><input id="data-question4-gamecomputers-console" type="checkbox" name="gamecomputer" value="console">Console</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-adventure" type="checkbox" name="gamecategories" value="adventure">Avontuur</td><td><input id="data-question4-gamecategories-augmentedreality" type="checkbox" name="gamecategories" value="augmentedreality">Augmented reality/ toegevoegde realiteit</td><td><input id="data-question4-gamecomputers-handheld" type="checkbox" name="gamecomputer" value="handheld">Handheld</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-roleplay" type="checkbox" name="gamecategories" value="roleplay">RPG/ rollenspel</td><td><input id="data-question4-gamecategories-seriousgame" type="checkbox" name="gamecategories" value="seriousgame">Educationele/ serious games</td><td><input id="data-question4-gamecomputers-mobilephone" type="checkbox" name="gamecomputer" value="mobilephone">Mobiel</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-simulation" type="checkbox" name="gamecategories" value="simulation">Simulatie</td><td></td><td><input id="data-question4-gamecomputers-ipad" type="checkbox" name="gamecomputer" value="ipad">iPad</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-strategy" type="checkbox" name="gamecategories" value="strategy">Strategie</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-sports" type="checkbox" name="gamecategories" value="sports">Sport</td></tr></table><br/><input type="submit" value="Volgende"></form>';
+var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions, user);"><table align="center" border="1px solid rgba(00, 00, 00, .46)"><tr style="text-align:center"><th>Game categori&euml;n</th><th>Game perspectief</th><th>Game computer</th><th>Game verhaal</th></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-action" type="checkbox" name="gamecategories" value="action">Actie</td><td><input id="data-question4-gameperspective-2d" type="checkbox" name="gameperspective" value="2d">2D</td><td><input id="data-question4-gamecomputers-computer" type="checkbox" name="gamecomputer" value="computer">PC/ Mac</td><td><input id="data-question4-gamestory-fiction" type="checkbox" name="gamestory" value="fiction">Fictie/ niet realistisch</u></td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-actionadventure" type="checkbox" name="gamecategories" value="action_adventure">Actie-avontuur</td><td><input id="data-question4-gameperspective-3d" type="checkbox" name="gameperspective" value="3d">3D</td><td><input id="data-question4-gamecomputers-console" type="checkbox" name="gamecomputer" value="console"><u title="Een spelcomputer zoals bijvoorbeeld de Wii U, een Playstation of een XBOX.">Console</u></td><td><input id="data-question4-gamestory-nonfiction" type="checkbox" name="gamestory" value="nonfiction">Non-fictie/ Realistisch</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-adventure" type="checkbox" name="gamecategories" value="adventure">Avontuur</td><td><input id="data-question4-gameperspective-firstperson" type="checkbox" name="gameperspective" value="firstperson"><u title="Je kijkt door de ogen van het personage (first person).">Eerste persoon</u></td><td><input id="data-question4-gamecomputers-handheld" type="checkbox" name="gamecomputer" value="handheld"><u title="Een spelcomputer die handzaam is en waarmee je makkelijk onderweg kunt spelen.&#013;&#010;Bijvoorbeeld een (Nintendo) DS of een Playstation Vita.">Handheld</u></td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-roleplay" type="checkbox" name="gamecategories" value="roleplay">RPG/ rollenspel</td><td><input id="data-question4-gameperspective-thirdperson" type="checkbox" name="gameperspective" value="thirdperson"><u title="Je ziet het personage tijdens het spelen (third person).">Derde persoon</u></td><td><input id="data-question4-gamecomputers-mobilephone" type="checkbox" name="gamecomputer" value="mobilephone">Mobiel</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-simulation" type="checkbox" name="gamecategories" value="simulation">Simulatie</td><td><input id="data-question4-gameperspective-augmentedreality" type="checkbox" name="gameperspective" value="augmentedreality"><u title="Spellen waarbij een kaart van de echte wereld wordt getoond&#013;&#010;overlapt door niet-bestaande elementen.&#013;&#010;Denk hierbij bijvoorbeeld aan spellen als Pok&eacute;mon GO en Ingress.">Augmented reality/ toegevoegde realiteit</u></td><td><input id="data-question4-gamecomputers-ipad" type="checkbox" name="gamecomputer" value="ipad">iPad</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-strategy" type="checkbox" name="gamecategories" value="strategy">Strategie</td><td><input id="data-question4-gameperspective-virtualreality" type="checkbox" name="gameperspective" value="virtualreality"><u title="Spellen waarbij je een virtual reality bril draagt&#013;&#010;en hiermee de spelwereld waarneemt.">Virtual reality</u></td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-sports" type="checkbox" name="gamecategories" value="sports">Sport</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-facebook" type="checkbox" name="gamecategories" value="facebook">Facebook spellen</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-mobilegame" type="checkbox" name="gamecategories" value="mobilegame">Mobiele telefoon spellen</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-seriousgame" type="checkbox" name="gamecategories" value="seriousgame"><u title="Spellen met als doel iets over de echte wereld te leren aan de spelers.">Educationele/ serious games</u></td></tr></table><br/><input type="submit" value="Volgende"></form>';
 
 ///////////////////////////////
 // var dropdownNationalities //
@@ -594,7 +594,7 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Show the answer
 		$("#answer").html(questions[4][3]);
 
-		// Show the checked user.gamecategories and user.gamecomputers
+		// Show the checked user.gamecategories, user.gameperspective and user.gamecomputers and user.gamestory
 		if (user.gamecategories[1][1] == "yes") {
 			document.getElementById("data-question4-gamecategories-action").checked = true;
 		}
@@ -623,10 +623,25 @@ function toggleQuestions(questions, lastQuestion, user) {
 			document.getElementById("data-question4-gamecategories-mobilegame").checked = true;
 		}
 		if (user.gamecategories[10][1] == "yes") {
-			document.getElementById("data-question4-gamecategories-augmentedreality").checked = true;
-		}
-		if (user.gamecategories[11][1] == "yes") {
 			document.getElementById("data-question4-gamecategories-seriousgame").checked = true;
+		}
+		if (user.gameperspective[1][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-2d").checked = true;
+		}
+		if (user.gameperspective[2][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-3d").checked = true;
+		}
+		if (user.gameperspective[3][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-firstperson").checked = true;
+		}
+		if (user.gameperspective[4][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-thirdperson").checked = true;
+		}
+		if (user.gameperspective[5][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-augmentedreality").checked = true;
+		}
+		if (user.gameperspective[6][1] == "yes") {
+			document.getElementById("data-question4-gameperspective-virtualreality").checked = true;
 		}
 		if (user.gamecomputers[1][1] == "yes") {
 			document.getElementById("data-question4-gamecomputers-computer").checked = true;
@@ -642,6 +657,12 @@ function toggleQuestions(questions, lastQuestion, user) {
 		}
 		if (user.gamecomputers[5][1] == "yes") {
 			document.getElementById("data-question4-gamecomputers-ipad").checked = true;
+		}
+		if (user.gamestory[1][1] == "yes") {
+			document.getElementById("data-question4-gamestory-fiction").checked = true;
+		}
+		if (user.gamestory[2][1] == "yes") {
+			document.getElementById("data-question4-gamestory-nonfiction").checked = true;
 		}
 
 		// Change this button to the active table of contents button
@@ -1344,6 +1365,76 @@ function showQuestion4(questions, user) {
 	$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 	$("#questiontitle").html(questions[4][2]);
 	$("#answer").html(questions[4][3]);
+	// Show the checked user.gamecategories, user.gameperspective and user.gamecomputers and user.gamestory
+	if (user.gamecategories[1][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-action").checked = true;
+	}
+	if (user.gamecategories[2][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-actionadventure").checked = true;
+	}
+	if (user.gamecategories[3][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-adventure").checked = true;
+	}
+	if (user.gamecategories[4][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-roleplay").checked = true;
+	}
+	if (user.gamecategories[5][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-simulation").checked = true;
+	}
+	if (user.gamecategories[6][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-strategy").checked = true;
+	}
+	if (user.gamecategories[7][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-sports").checked = true;
+	}
+	if (user.gamecategories[8][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-facebook").checked = true;
+	}
+	if (user.gamecategories[9][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-mobilegame").checked = true;
+	}
+	if (user.gamecategories[10][1] == "yes") {
+		document.getElementById("data-question4-gamecategories-seriousgame").checked = true;
+	}
+	if (user.gameperspective[1][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-2d").checked = true;
+	}
+	if (user.gameperspective[2][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-3d").checked = true;
+	}
+	if (user.gameperspective[3][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-firstperson").checked = true;
+	}
+	if (user.gameperspective[4][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-thirdperson").checked = true;
+	}
+	if (user.gameperspective[5][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-augmentedreality").checked = true;
+	}
+	if (user.gameperspective[6][1] == "yes") {
+		document.getElementById("data-question4-gameperspective-virtualreality").checked = true;
+	}
+	if (user.gamecomputers[1][1] == "yes") {
+		document.getElementById("data-question4-gamecomputers-computer").checked = true;
+	}
+	if (user.gamecomputers[2][1] == "yes") {
+		document.getElementById("data-question4-gamecomputers-console").checked = true;
+	}
+	if (user.gamecomputers[3][1] == "yes") {
+		document.getElementById("data-question4-gamecomputers-handheld").checked = true;
+	}
+	if (user.gamecomputers[4][1] == "yes") {
+		document.getElementById("data-question4-gamecomputers-mobilephone").checked = true;
+	}
+	if (user.gamecomputers[5][1] == "yes") {
+		document.getElementById("data-question4-gamecomputers-ipad").checked = true;
+	}
+	if (user.gamestory[1][1] == "yes") {
+		document.getElementById("data-question4-gamestory-fiction").checked = true;
+	}
+	if (user.gamestory[2][1] == "yes") {
+		document.getElementById("data-question4-gamestory-nonfiction").checked = true;
+	}
 	$("#tableofcontents-question4").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question4").addClass("tableofcontents-item tableofcontents-active");
@@ -1831,8 +1922,16 @@ function saveDataQuestion4(questions, user) {
 		["sports", "no"],
 		["facebook", "no"],
 		["mobilegame", "no"],
-		["augmentedreality", "no"],
 		["seriousgame", "no"]
+	];
+	var game_perspective = [
+		["gameperspective", "yes_or_no"],
+		["2d", "no"],
+		["3d", "no"],
+		["firstperson", "no"],
+		["thirdperson", "no"],
+		["augmentedreality", "no"],
+		["virtualreality", "no"]
 	];
 	var game_computers = [
 		["gamecomputer", "yes_or_no"],
@@ -1841,6 +1940,11 @@ function saveDataQuestion4(questions, user) {
 		["handheld", "no"],
 		["mobilephone", "no"],
 		["ipad", "no"]
+	];
+	var game_story = [
+		["gamestory", "yes_or_no"],
+		["fiction", "no"],
+		["nonfiction", "no"]
 	];
 
 	// Save the data from question 4 and add it to the user object
@@ -1890,17 +1994,45 @@ function saveDataQuestion4(questions, user) {
 	} else {
 		game_categories[9][1] = "no";
 	}
-	if ($("#data-question4-gamecategories-augmentedreality").is(":checked")) {
+	if ($("#data-question4-gamecategories-seriousgame").is(":checked")) {
 		game_categories[10][1] = "yes";
 	} else {
 		game_categories[10][1] = "no";
 	}
-	if ($("#data-question4-gamecategories-seriousgame").is(":checked")) {
-		game_categories[11][1] = "yes";
-	} else {
-		game_categories[11][1] = "no";
-	}
 	user.gamecategories = game_categories;
+
+	// Save the different game perspectives to the user object
+	if ($("#data-question4-gameperspective-2d").is(":checked")) {
+		game_perspective[1][1] = "yes";
+	} else {
+		game_perspective[1][1] = "no";
+	}
+	if ($("#data-question4-gameperspective-3d").is(":checked")) {
+		game_perspective[2][1] = "yes";
+	} else {
+		game_perspective[2][1] = "no";
+	}
+	if ($("#data-question4-gameperspective-firstperson").is(":checked")) {
+		game_perspective[3][1] = "yes";
+	} else {
+		game_perspective[3][1] = "no";
+	}
+	if ($("#data-question4-gameperspective-thirdperson").is(":checked")) {
+		game_perspective[4][1] = "yes";
+	} else {
+		game_perspective[4][1] = "no";
+	}
+	if ($("#data-question4-gameperspective-augmentedreality").is(":checked")) {
+		game_perspective[5][1] = "yes";
+	} else {
+		game_perspective[5][1] = "no";
+	}
+	if ($("#data-question4-gameperspective-virtualreality").is(":checked")) {
+		game_perspective[6][1] = "yes";
+	} else {
+		game_perspective[6][1] = "no";
+	}
+	user.gameperspective = game_perspective;
 
 	// Save the different game computers to the user object
 	if ($("#data-question4-gamecomputers-computer").is(":checked")) {
@@ -1929,6 +2061,19 @@ function saveDataQuestion4(questions, user) {
 		game_computers[5][1] = "no";
 	}
 	user.gamecomputers = game_computers;
+
+	// Save the different game story to the user object
+	if ($("#data-question4-gamestory-fiction").is(":checked")) {
+		game_story[1][1] = "yes";
+	} else {
+		game_story[1][1] = "no";
+	}
+	if ($("#data-question4-gamestory-nonfiction").is(":checked")) {
+		game_story[2][1] = "yes";
+	} else {
+		game_story[2][1] = "no";
+	}
+	user.gamestory = game_story;
 
 	// Return the user object
 	return user;
