@@ -58,7 +58,7 @@
 // var checkboxesGamecategories //
 //////////////////////////////////
 
-var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions, user);"><table align="center" border="1px solid rgba(00, 00, 00, .46)"><tr style="text-align:center"><th colspan="2">Game categori&euml;n</th><th>Verhaal</th><th>Perspectief</th><th>Game computer</th></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-action" type="checkbox" name="gamecategories" value="action">Actie</td><td><input id="data-question4-gamecategories-facebook" type="checkbox" name="gamecategories" value="facebook">Facebook spellen</td><td><input id="data-question4-gamestories-fiction" type="checkbox" name="gamestories" value="fiction">Fictie</td><td><input id="data-question4-gameperspectives-2d" type="checkbox" name="gameperspectives" value="2d">2D</td><td><input id="data-question4-gamecomputers-computer" type="checkbox" name="gamecomputer" value="computer">PC/ Mac</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-actionadventure" type="checkbox" name="gamecategories" value="action_adventure">Actie-avontuur</td><td><input id="data-question4-gamecategories-mobilegame" type="checkbox" name="gamecategories" value="mobilegame">Mobiele telefoon spellen</td><td><input id="data-question4-gamestories-nonfiction" type="checkbox" name="gamestories" value="nonfiction">Non-fictie</td><td><input id="data-question4-gameperspectives-3d" type="checkbox" name="gameperspectives" value="3d">3D</td><td><input id="data-question4-gamecomputers-console" type="checkbox" name="gamecomputer" value="console">Console</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-adventure" type="checkbox" name="gamecategories" value="adventure">Avontuur</td><td><input id="data-question4-gamecategories-augmentedreality" type="checkbox" name="gamecategories" value="augmentedreality">Augmented reality/ toegevoegde realiteit</td><td></td><td><input id="data-question4-gameperspectives-firstperson" type="checkbox" name="gameperspectives" value="firstperson">First person</td><td><input id="data-question4-gamecomputers-handheld" type="checkbox" name="gamecomputer" value="handheld">Handheld</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-roleplay" type="checkbox" name="gamecategories" value="roleplay">RPG/ rollenspel</td><td><input id="data-question4-gamecategories-seriousgame" type="checkbox" name="gamecategories" value="seriousgame">Educationele/ serious games</td><td></td><td><input id="data-question4-gameperspectives-thirdperson" type="checkbox" name="gameperspectives" value="thirdperson">Third person</td><td><input id="data-question4-gamecomputers-mobilephone" type="checkbox" name="gamecomputer" value="mobilephone">Mobiel</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-simulation" type="checkbox" name="gamecategories" value="simulation">Simulatie</td><td></td><td></td><td><input id="data-question4-gameperspectives-augmentedreality" type="checkbox" name="gameperspectives" value="augmentedreality">Augmented reality</td><td><input id="data-question4-gamecomputers-ipad" type="checkbox" name="gamecomputer" value="ipad">iPad</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-strategy" type="checkbox" name="gamecategories" value="strategy">Strategie</td><td></td><td></td><td><input id="data-question4-gameperspectives-virtualreality" type="checkbox" name="gameperspectives" value="virtualreality">Virtual reality</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-sports" type="checkbox" name="gamecategories" value="sports">Sport</td></tr></table><br/><input type="submit" value="Volgende"></form>';
+var checkboxesGamecategories = '<form onsubmit="showQuestion5(questions, user);"><table align="center" border="1px solid rgba(00, 00, 00, .46)"><tr style="text-align:center"><th colspan="2">Game categori&euml;n</th><th>Game computer</th></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-action" type="checkbox" name="gamecategories" value="action">Actie</td><td><input id="data-question4-gamecategories-facebook" type="checkbox" name="gamecategories" value="facebook">Facebook spellen</td><td><input id="data-question4-gamecomputers-computer" type="checkbox" name="gamecomputer" value="computer">PC/ Mac</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-actionadventure" type="checkbox" name="gamecategories" value="action_adventure">Actie-avontuur</td><td><input id="data-question4-gamecategories-mobilegame" type="checkbox" name="gamecategories" value="mobilegame">Mobiele telefoon spellen</td><td><input id="data-question4-gamecomputers-console" type="checkbox" name="gamecomputer" value="console">Console</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-adventure" type="checkbox" name="gamecategories" value="adventure">Avontuur</td><td><input id="data-question4-gamecategories-augmentedreality" type="checkbox" name="gamecategories" value="augmentedreality">Augmented reality/ toegevoegde realiteit</td><td><input id="data-question4-gamecomputers-handheld" type="checkbox" name="gamecomputer" value="handheld">Handheld</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-roleplay" type="checkbox" name="gamecategories" value="roleplay">RPG/ rollenspel</td><td><input id="data-question4-gamecategories-seriousgame" type="checkbox" name="gamecategories" value="seriousgame">Educationele/ serious games</td><td><input id="data-question4-gamecomputers-mobilephone" type="checkbox" name="gamecomputer" value="mobilephone">Mobiel</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-simulation" type="checkbox" name="gamecategories" value="simulation">Simulatie</td><td></td><td><input id="data-question4-gamecomputers-ipad" type="checkbox" name="gamecomputer" value="ipad">iPad</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-strategy" type="checkbox" name="gamecategories" value="strategy">Strategie</td></tr><tr style="text-align:left"><td><input id="data-question4-gamecategories-sports" type="checkbox" name="gamecategories" value="sports">Sport</td></tr></table><br/><input type="submit" value="Volgende"></form>';
 
 ///////////////////////////////
 // var dropdownNationalities //
@@ -157,14 +157,7 @@ var questions = [
 		"cartoon-question10",
 		"<p align='left' style='margin:1em;'>Piet is klaar met wandelen en werkt de rest van de zaterdagmiddag in zijn tuin. Het gras aan de overkant van de straat lijkt groener. Zijn buurman vraagt hem: 'Piet, snap jij waarom het altijd groener is aan de overkant?' Piet: 'Nee.' Wat zij niet weten, was dat er aan de overkant van de straat een buurtactiviteit 'Groene Vingers' gaande was, waarbij bankjes met afgebladderde verf weer overnieuw geverfd werden.</p>",
 		"Hoe betrokken bent u bij uw leefomgeving?",
-		'<form onsubmit="showQuestion11(questions, user);"> Kent u het bestemmingsplan van uw leefomgeving? <br/> <input id="involvement_bestemmingsplan_yes" type="radio" name="involvement_bestemmingsplan" value="yes"> Ja <br/> <input id="involvement_bestemmingsplan_no" type="radio" name="involvement_bestemmingsplan" value="no"> Nee <br/> <br/> Heeft u weleens deelgenomen aan <u title="Hierbij kunt u denken aan deelname aan openbare gesprekken over uw leefomgeving.">publieke participatie</u> in uw leefomgeving? <br/> <input id="involvement_participation_yes" type="radio" name="involvement_participation" value="yes"> Ja <br/> <input id="involvement_participation_no" type="radio" name="involvement_participation" value="no"> Nee <br/> <br/> <input type="submit" value="Verstuur"></form>',
-		''
-	],
-	[
-		"cartoon-send",
-		"<p style='text-align:center;margin:1em;font-size:2em;'>Hartelijk dank voor uw deelname!</p>",
-		"Hartelijk dank voor uw deelname!",
-		'<form onsubmit="sendDataToDataBase(questions, user);"> Heeft u de vragenlijst naar waarheid ingevuld? <br> Ja <input id="send_truth_yes" type="radio" name="send_truth" value="yes"> Nee <input id="send_truth_no" type="radio" name="send_truth" value="no" checked> <br><br> Wat is uw e-mailadres? <br> <input id="user_email" type="text" name="user_email"> <br><br> Wilt u op de hoogte gehouden worden van de resultaten? <br> Ja <input id="send_email_yes" type="radio" name="send_email" value="yes"> Nee <input id="send_email_no" type="radio" name="send_email" value="no" checked> <br><br> <input type="submit" value="Verstuur"> </form>',
+		'<form onsubmit="sendQuestionnaire(questions, user);"> Kent u het bestemmingsplan van uw leefomgeving? <br/> <input id="involvement_bestemmingsplan_yes" type="radio" name="involvement_bestemmingsplan" value="yes"> Ja <br/> <input id="involvement_bestemmingsplan_no" type="radio" name="involvement_bestemmingsplan" value="no"> Nee <br/> <br/> Heeft u weleens deelgenomen aan <u title="Hierbij kunt u denken aan deelname aan openbare gesprekken over uw leefomgeving.">publieke participatie</u> in uw leefomgeving? <br/> <input id="involvement_participation_yes" type="radio" name="involvement_participation" value="yes"> Ja <br/> <input id="involvement_participation_no" type="radio" name="involvement_participation" value="no"> Nee <br/> <br/> <input type="submit" value="Verstuur"></form>',
 		''
 	],
 	[
@@ -349,9 +342,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -427,9 +417,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -505,9 +492,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -583,9 +567,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -613,7 +594,7 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Show the answer
 		$("#answer").html(questions[4][3]);
 
-		// Show the checked user.gamecategories, user.gamestories, user.gameperspectives and user.gamecomputers
+		// Show the checked user.gamecategories and user.gamecomputers
 		if (user.gamecategories[1][1] == "yes") {
 			document.getElementById("data-question4-gamecategories-action").checked = true;
 		}
@@ -646,30 +627,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		}
 		if (user.gamecategories[11][1] == "yes") {
 			document.getElementById("data-question4-gamecategories-seriousgame").checked = true;
-		}
-		if (user.gamestories[1][1] == "yes") {
-			document.getElementById("data-question4-gamestories-fiction").checked = true;
-		}
-		if (user.gamestories[2][1] == "yes") {
-			document.getElementById("data-question4-gamestories-nonfiction").checked = true;
-		}
-		if (user.gameperspectives[1][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-2d").checked = true;
-		}
-		if (user.gameperspectives[2][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-3d").checked = true;
-		}
-		if (user.gameperspectives[3][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-firstperson").checked = true;
-		}
-		if (user.gameperspectives[4][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-thirdperson").checked = true;
-		}
-		if (user.gameperspectives[5][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-augmentedreality").checked = true;
-		}
-		if (user.gameperspectives[6][1] == "yes") {
-			document.getElementById("data-question4-gameperspectives-virtualreality").checked = true;
 		}
 		if (user.gamecomputers[1][1] == "yes") {
 			document.getElementById("data-question4-gamecomputers-computer").checked = true;
@@ -732,9 +689,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 
 		// Reset the data from the map by clearing the circle and or rectangle if there is any
@@ -812,9 +766,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 		
 		// Show the #map
@@ -910,9 +861,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 		
 		// Don't show the #map
@@ -1006,9 +954,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 		
 		// Don't show the #map
@@ -1098,9 +1043,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 		
 		// Don't show the #map
@@ -1194,9 +1136,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 		// Question 10
 		} else if ($("#questiontitle").html() == questions[10][2]) {
 			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
 		}
 		
 		// Don't show the #map
@@ -1233,94 +1172,6 @@ function toggleQuestions(questions, lastQuestion, user) {
 			document.getElementById("involvement_participation_yes").checked = true;
 		} else if (user.involvement_participation == "no") {
 			document.getElementById("involvement_participation_no").checked = true;
-		}
-
-		// Change this button to the active table of contents button
-		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-		$(this).removeClass("tableofcontents-item");
-		$(this).addClass("tableofcontents-item tableofcontents-active");
-		// $("tableofcontents-nextquestion").display("visible");
-
-		// Show the overview and cartoon footer buttons
-		showFooterButtons(user);
-
-		// Return the user object
-		return user;
-	});
-	$("#tableofcontents-question11").click(function() {
-
-		// Save the data from the previous question and add it to the user object
-		// Question 1
-		if ($("#questiontitle").html() == questions[1][2]) {
-			saveDataQuestion1(questions, user);
-		// Question 2
-		} else if ($("#questiontitle").html() == questions[2][2]) {
-			saveDataQuestion2(questions, user);
-		// Question 3
-		} else if ($("#questiontitle").html() == questions[3][2]) {
-			saveDataQuestion3(questions, user);
-		// Question 4
-		} else if ($("#questiontitle").html() == questions[4][2]) {
-			saveDataQuestion4(questions, user);
-		// Question 5
-		} else if ($("#questiontitle").html() == questions[5][2]) {
-			saveDataQuestion5(questions, user);
-/*
-		// Question 6
-		} else if ($("#questiontitle").html() == questions[6][2]) {
-			saveDataQuestion6(questions, user); */
-		// Question 7
-		} else if ($("#questiontitle").html() == questions[7][2]) {
-			saveDataQuestion7(questions, user);
-		// Question 8
-		} else if ($("#questiontitle").html() == questions[8][2]) {
-			saveDataQuestion8(questions, user);
-		// Question 9
-		} else if ($("#questiontitle").html() == questions[9][2]) {
-			saveDataQuestion9(questions, user);
-		// Question 10
-		} else if ($("#questiontitle").html() == questions[10][2]) {
-			saveDataQuestion10(questions, user);
-		// Question 11
-		} else if ($("#questiontitle").html() == questions[11][2]) {
-			saveDataQuestion11(questions, user);
-		}
-		
-		// Don't show the #map
-		$("#map").css("display", "none");
-
-		// Reset the data from the map by clearing the circle and or rectangle if there is any
-		if (user.livingenvironmentproperties[1][0] == "circle" || user.livingenvironmentproperties[1][0] == "rectangle" || user.livingenvironmentproperties[1][0] == "polygon") {
-			user.livingenvironment.setMap(null);
-		}
-		// Remove the .toolbar-active
-		$("#toolbar-buttons .toolbar-item").removeClass("toolbar-active");
-
-		// Reset the scrollbars to the top
-		$("*").scrollTop(0);
-
-		// Set question 11 as the current question
-		currentQuestion = 11;
-		user.currentQuestion = 11;
-
-		// Show the cartoon
-		$("#header-title-text").html(questions[11][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
-
-		// Show the question
-		$("#questiontitle").html(questions[11][2]);
-
-		// Show the answer
-		$("#answer").html(questions[11][3]);
-		if (user.send_truth == "yes") {
-			document.getElementById("send_truth_yes").checked = true;
-		} else if (user.send_truth == "no") {
-			document.getElementById("send_truth_no").checked = true;
-		}
-		document.getElementById("user_email").value = user.email;
-		if (user.send_email == "yes") {
-			document.getElementById("send_email_yes").checked = true;
-		} else if (user.send_email == "no") {
-			document.getElementById("send_email_no").checked = true;
 		}
 
 		// Change this button to the active table of contents button
@@ -1391,8 +1242,6 @@ function showQuestion1(questions, user) {
 		$("#header-title-text").html(questions[1][1]); // '<img src="img/'+questions[1][0]+'.png" alt="'+questions[1][1]+'">'
 		$("#questiontitle").html(questions[1][2]);
 		$("#answer").html(questions[1][3]);
-		// Show the user age as value of #data-question1
-		document.getElementById("data-question1").value = user.age;
 		$("#tableofcontents-question1").css("display", "block");
 		$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 		$("#tableofcontents-question1").addClass("tableofcontents-item tableofcontents-active");
@@ -1495,79 +1344,6 @@ function showQuestion4(questions, user) {
 	$("#header-title-text").html(questions[4][1]); // '<img src="img/'+questions[4][0]+'.png" alt="'+questions[4][1]+'">'
 	$("#questiontitle").html(questions[4][2]);
 	$("#answer").html(questions[4][3]);
-	// Show the checked user.gamecategories, user.gamestories, user.gameperspectives and user.gamecomputers
-	if (user.gamecategories[1][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-action").checked = true;
-	}
-	if (user.gamecategories[2][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-actionadventure").checked = true;
-	}
-	if (user.gamecategories[3][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-adventure").checked = true;
-	}
-	if (user.gamecategories[4][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-roleplay").checked = true;
-	}
-	if (user.gamecategories[5][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-simulation").checked = true;
-	}
-	if (user.gamecategories[6][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-strategy").checked = true;
-	}
-	if (user.gamecategories[7][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-sports").checked = true;
-	}
-	if (user.gamecategories[8][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-facebook").checked = true;
-	}
-	if (user.gamecategories[9][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-mobilegame").checked = true;
-	}
-	if (user.gamecategories[10][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-augmentedreality").checked = true;
-	}
-	if (user.gamecategories[11][1] == "yes") {
-		document.getElementById("data-question4-gamecategories-seriousgame").checked = true;
-	}
-	if (user.gamestories[1][1] == "yes") {
-		document.getElementById("data-question4-gamestories-fiction").checked = true;
-	}
-	if (user.gamestories[2][1] == "yes") {
-		document.getElementById("data-question4-gamestories-nonfiction").checked = true;
-	}
-	if (user.gameperspectives[1][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-2d").checked = true;
-	}
-	if (user.gameperspectives[2][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-3d").checked = true;
-	}
-	if (user.gameperspectives[3][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-firstperson").checked = true;
-	}
-	if (user.gameperspectives[4][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-thirdperson").checked = true;
-	}
-	if (user.gameperspectives[5][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-augmentedreality").checked = true;
-	}
-	if (user.gameperspectives[6][1] == "yes") {
-		document.getElementById("data-question4-gameperspectives-virtualreality").checked = true;
-	}
-	if (user.gamecomputers[1][1] == "yes") {
-		document.getElementById("data-question4-gamecomputers-computer").checked = true;
-	}
-	if (user.gamecomputers[2][1] == "yes") {
-		document.getElementById("data-question4-gamecomputers-console").checked = true;
-	}
-	if (user.gamecomputers[3][1] == "yes") {
-		document.getElementById("data-question4-gamecomputers-handheld").checked = true;
-	}
-	if (user.gamecomputers[4][1] == "yes") {
-		document.getElementById("data-question4-gamecomputers-mobilephone").checked = true;
-	}
-	if (user.gamecomputers[5][1] == "yes") {
-		document.getElementById("data-question4-gamecomputers-ipad").checked = true;
-	}
 	$("#tableofcontents-question4").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question4").addClass("tableofcontents-item tableofcontents-active");
@@ -1600,10 +1376,6 @@ function showQuestion5(questions, user) {
 	$("#header-title-text").html(questions[5][1]); // '<img src="img/'+questions[5][0]+'.png" alt="'+questions[5][1]+'">'
 	$("#questiontitle").html(questions[5][2]);
 	$("#answer").html(questions[5][3]);
-	// Show the user.gametimehours as value of #data-question5-gametime-hours
-	document.getElementById("data-question5-gametime-hours").value = user.gametimehours;
-	// Show the user.gametimecategories as value of #data-question5-gametime-categories
-	document.getElementById("data-question5-gametime-categories").value = user.gametimecategories;
 	$("#tableofcontents-question5").css("display", "block");
 	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
 	$("#tableofcontents-question5").addClass("tableofcontents-item tableofcontents-active");
@@ -1973,63 +1745,6 @@ function showQuestion10(questions, user) {
 	return user;
 }
 
-/////////////////////////////////////
-// showQuestion10(questions, user) //
-/////////////////////////////////////
-
-// Function for showing question 10
-
-function showQuestion11(questions, user) {
-
-	if(user.currentQuestion == 10) {
-		// Save the data from question 10 and add it to the user object
-		saveDataQuestion10(questions, user);
-	}
-
-	// Remove the #map from view
-	$("#map").css("display", "none");
-
-	// Reset the scrollbars to the top
-	$("*").scrollTop(0);
-
-	// Set question 10 as the current question
-	currentQuestion = 11;
-	user.currentQuestion = 11;
-
-	// Show the new question
-	$("#header-title-text").html(questions[11][1]); // '<img src="img/'+questions[7][0]+'.png" alt="'+questions[7][1]+'">'
-	$("#questiontitle").html(questions[11][2]);
-	$("#answer").html(questions[11][3]);
-	if (user.send_truth == "yes") {
-		document.getElementById("send_truth_yes").checked = true;
-	} else if (user.send_truth == "no") {
-		document.getElementById("send_truth_no").checked = true;
-	}
-	document.getElementById("user_email").value = user.email;
-	if (user.send_email == "yes") {
-		document.getElementById("send_email_yes").checked = true;
-	} else if (user.send_email == "no") {
-		document.getElementById("send_email_no").checked = true;
-	}
-	$("#tableofcontents-question11").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question11").addClass("tableofcontents-item tableofcontents-active");
-
-	// Show #toolbar
-	if ($("#toolbar").css("display").toLowerCase() == "none") {
-		$("#toolbar").css("display", "inline-block");
-	}
-	$("#tableofcontents-question11").css("display", "block");
-	$("#tableofcontents-buttons .tableofcontents-item").removeClass("tableofcontents-active");
-	$("#tableofcontents-question11").addClass("tableofcontents-item tableofcontents-active");
-
-	// Show the overview and cartoon footer buttons
-	showFooterButtons(user);
-
-	// Return the user object
-	return user;
-}
-
 ////////////////////////////////////////
 // saveDataQuestion1(questions, user) //
 ////////////////////////////////////////
@@ -2119,20 +1834,6 @@ function saveDataQuestion4(questions, user) {
 		["augmentedreality", "no"],
 		["seriousgame", "no"]
 	];
-	var game_stories = [
-		["gamestories", "yes_or_no"],
-		["fiction", "no"],
-		["nonfiction", "no"]
-	];
-	var game_perspectives = [
-		["gameperspectives", "yes_or_no"],
-		["2d", "no"],
-		["3d", "no"],
-		["firstperson", "no"],
-		["thirdperson", "no"],
-		["augmentedreality", "no"],
-		["virtualreality", "no"]
-	];
 	var game_computers = [
 		["gamecomputer", "yes_or_no"],
 		["computer", "no"],
@@ -2200,52 +1901,6 @@ function saveDataQuestion4(questions, user) {
 		game_categories[11][1] = "no";
 	}
 	user.gamecategories = game_categories;
-
-	// Save the different game stories to the user object
-	if ($("#data-question4-gamestories-fiction").is(":checked")) {
-		game_stories[1][1] = "yes";
-	} else {
-		game_stories[1][1] = "no";
-	}
-	if ($("#data-question4-gamestories-nonfiction").is(":checked")) {
-		game_stories[2][1] = "yes";
-	} else {
-		game_stories[2][1] = "no";
-	}
-	user.gamestories = game_stories;
-
-	// Save the different game perspectives to the user object
-	if ($("#data-question4-gameperspectives-2d").is(":checked")) {
-		game_perspectives[1][1] = "yes";
-	} else {
-		game_perspectives[1][1] = "no";
-	}
-	if ($("#data-question4-gameperspectives-3d").is(":checked")) {
-		game_perspectives[2][1] = "yes";
-	} else {
-		game_perspectives[2][1] = "no";
-	}
-	if ($("#data-question4-gameperspectives-firstperson").is(":checked")) {
-		game_perspectives[3][1] = "yes";
-	} else {
-		game_perspectives[3][1] = "no";
-	}
-	if ($("#data-question4-gameperspectives-thirdperson").is(":checked")) {
-		game_perspectives[4][1] = "yes";
-	} else {
-		game_perspectives[4][1] = "no";
-	}
-	if ($("#data-question4-gameperspectives-augmentedreality").is(":checked")) {
-		game_perspectives[5][1] = "yes";
-	} else {
-		game_perspectives[5][1] = "no";
-	}
-	if ($("#data-question4-gameperspectives-virtualreality").is(":checked")) {
-		game_perspectives[6][1] = "yes";
-	} else {
-		game_perspectives[6][1] = "no";
-	}
-	user.gameperspectives = game_perspectives;
 
 	// Save the different game computers to the user object
 	if ($("#data-question4-gamecomputers-computer").is(":checked")) {
@@ -2438,264 +2093,103 @@ function saveDataQuestion10(questions, user) {
 	return user;
 }
 
-////////////////////////////////////////
-// saveDataQuestion10(questions, user) //
-////////////////////////////////////////
-
-// Function to save the data from question 10 and add it to the user object
-
-function saveDataQuestion11(questions, user) {
-
-	// Save the data about whether the user told the truth in the questionnaire
-	if (document.getElementById("send_truth_yes").checked) {
-		user.send_truth = "yes";
-	} else if (document.getElementById("send_truth_no").checked) {
-		user.send_truth = "no";
-	}
-
-	// Save the user's email
-	user.email = $("#user_email").val();
-
-	// Save the data about whether the user wants an update about the results
-	if (document.getElementById("send_email_yes").checked) {
-		user.send_email = "yes";
-	} else if (document.getElementById("send_email_no").checked) {
-		user.send_email = "no";
-	}
-
-	// Return the user object
-	return user;
-}
-
 /////////////////////////////
 // sendQuestionnaire(user) //
 /////////////////////////////
 
 // Function that handles sending the information of the user to the server/database
 
-
-
-// Function that handles sending the information of the user to the server/database
-
-// function sendQuestionnaire(questions, user) {
-
-// 	// Save the data from question 10 and add it to the user object
-// 	saveDataQuestion10(questions, user);
-
-// 	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld? ") == true) {
-
-// 		$("#popup").css("display", "block");
-// 		$("#popup-header").html("Dank u voor uw deelname!");
-// 		var sendQuestionnareForm = '<form> Heeft u de vragenlijst naar waarheid ingevuld? <br> Ja <input type="radio" name="sendTruth" value="yes"> 	Nee <input type="radio" name="sendTruth" value="no" checked> <br><br> Wat is uw e-mailadres? <br> <input type="text" name="sendEmail"> <br><br> Wilt u op de hoogte gehouden worden van de resultaten? <br> Ja <input type="radio" name="sendResults" value="yes"> Nee <input type="radio" name="sendResults" value="no" checked> <br><br> <button onClick="dontSendQuestionnaire(questions,user);"> Terug </button> <button onClick="sendDataToDatabase(questions,user);"> Verstuur </button> </form>';
-// 		$("#popup-main").html(sendQuestionnaireForm);
-
-// 		// Add current time to user object
-// 		// Show a thank you to the user
-// 		// Add the data to the database
-// 		if (window.XMLHttpRequest) {
-// 			// code for IE7+, Firefox, Chrome, Opera, Safari
-// 			xmlhttp = new XMLHttpRequest();
-// 		} else { // code for IE6, IE5
-// 			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-// 		}
-// 		// xmlhttp.onreadystatechange=function() {
-// 	        // 		if (this.readyState==4 && this.status==200) {
-// 		//   		document.getElementById("txtHint").innerHTML=this.responseText;
-// 		// 	}
-// 		// }
-// 		age = user.age;
-// 		nationality = user.nationality;
-// 		zipcode = user.zipcode;
-// 		game_category_genre_action = 1;
-// 		game_category_genre_action_adventure = 1;
-// 		game_category_genre_adventure = 1;
-// 		game_category_genre_facebook = 1;
-// 		game_category_genre_mobilephone = 1;
-// 		game_category_genre_roleplaying = 1;
-// 		game_category_genre_seriousgame = 1;
-// 		game_category_genre_simulation = 1;
-// 		game_category_genre_strategy = 1;
-// 		game_category_genre_sport = 1;
-// 		game_category_story_fiction = 1;
-// 		game_category_story_nonfiction = 1;
-// 		game_category_computer_console = 1;
-// 		game_category_computer_handheld = 1;
-// 		game_category_computer_ipad = 1;
-// 		game_category_computer_mobilephone = 1;
-// 		game_category_computer_pcmac = 1;
-// 		game_category_view_2d = 1;
-// 		game_category_view_3d = 1;
-// 		game_category_view_firstperson = 1;
-// 		game_category_view_thirdperson = 1;
-// 		game_category_view_augmentedreality = 1;
-// 		game_category_view_virtualreality = 1;
-// 		game_time_hours = 5;
-// 		game_time_category = 'days';
-// 		living_environment_type = user.livingenvironmentproperties[1][0];
-// 		living_environment_size = 1235.34;
-// 		living_environment_area = 'POLYGON((13.215179443359373 52.588032137196755,13.42803955078125 52.592620721000365,13.454132080078125 52.46897854656702,13.347015380859375 52.45893824522763,13.215179443359373 52.588032137196755))';
-// 		living_environment_circlecenterlat = 0.123;
-// 		living_environment_circlecenterlon = 0.234;
-// 		living_environment_circlecenterradius = 2.1;
-//                 // alert(user.frictionpositivelargex);  //works
-// 		friction_positive_large_x = 1;
-//                 // alert(friction_positive_large_x);  //works
-// 		friction_positive_large_y = user.frictionpositivelargey;
-//                 // alert(user.frictionpositivelargey); // works
-// 		friction_positive_medium_x = 2;
-//                 // alert(user.frictionpositivemediumx);  // works
-// 		friction_positive_medium_y = 2;
-//                 // alert(user.frictionpositivemediumy); // works
-// 		friction_positive_small_x = 100;
-// 		friction_positive_small_y = 100;
-// 		friction_negative_small_x = 100;
-// 		friction_negative_small_y = 100;
-// 		friction_negative_medium_x = 10;
-// 		friction_negative_medium_y = 10;
-// 		friction_negative_large_x = 1;
-// 		friction_negative_large_y = user.frictionnegativelargey;
-// 		place_attachment_priority1 = 'Place identity';
-// 		place_attachment_priority2 = 'Friend bonding';
-// 		place_attachment_priority3 = 'Nature bonding';
-// 		place_attachment_priority4 = 'Place dependency';
-// 		place_attachment_priority5 = 'Family bonding';
-// 		nature_minimum = 'vegetable garden';
-// 		involvement_omgevingswet = 1;
-// 		involvement_participation = 1;
-// 		email = 'mikkie@gmail.com';
-// 		send_result_to_user = 1;
-// 		is_result_send = 1;
-// 	        current_datetime = new Date().toISOString().slice(0, 19).replace('T', ' ');
-// 		xmlhttp.open("POST","insert_data_geonaire.php?age="+age+"&nationality="+nationality+"&zipcode="+zipcode+"&game_category_genre_action="+game_category_genre_action+"&game_category_genre_action_adventure="+game_category_genre_action_adventure+"&game_category_genre_adventure="+game_category_genre_adventure+"&game_category_genre_facebook="+game_category_genre_facebook+"&game_category_genre_mobilephone="+game_category_genre_mobilephone+"&game_category_genre_roleplaying="+game_category_genre_roleplaying+"&game_category_genre_seriousgame="+game_category_genre_seriousgame+"&game_category_genre_simulation="+game_category_genre_simulation+"&game_category_genre_sport="+game_category_genre_sport+"&game_category_genre_strategy="+game_category_genre_strategy+"&game_category_story_fiction="+game_category_story_fiction+"&game_category_story_nonfiction="+game_category_story_nonfiction+"&game_category_computer_console="+game_category_computer_console+"&game_category_computer_handheld="+game_category_computer_handheld+"&game_category_computer_ipad="+game_category_computer_ipad+"&game_category_computer_mobilephone="+game_category_computer_mobilephone+"&game_category_computer_pcmac="+game_category_computer_pcmac+"&game_category_view_2d="+game_category_view_2d+"&game_category_view_3d="+game_category_view_3d+"&game_category_view_firstperson="+game_category_view_firstperson+"&game_category_view_thirdperson="+game_category_view_thirdperson+"&game_category_view_augmentedreality="+game_category_view_augmentedreality+"&game_category_view_virtualreality="+game_category_view_virtualreality+"&game_time_hours="+game_time_hours+"&game_time_category="+game_time_category+"&living_environment_type="+living_environment_type+"&living_environment_size="+living_environment_size+"&living_environment_area="+living_environment_area+"&living_environment_circlecenterlat="+living_environment_circlecenterlat+"&living_environment_circlecenterlon="+living_environment_circlecenterlon+"&living_environment_circlecenterradius="+living_environment_circlecenterradius+"&friction_positive_large_x="+friction_positive_large_x+"&friction_positive_large_y="+friction_positive_large_y+"&friction_positive_medium_x="+friction_positive_medium_x+"&friction_positive_medium_y="+friction_positive_medium_y+"&friction_positive_small_x="+friction_positive_small_x+"&friction_positive_small_y="+friction_positive_small_y+"&friction_negative_small_x="+friction_negative_small_x+"&friction_negative_small_y="+friction_negative_small_y+"&friction_negative_medium_x="+friction_negative_medium_x+"&friction_negative_medium_y="+friction_negative_medium_y+"&friction_negative_large_x="+friction_negative_large_x+"&friction_negative_large_y="+friction_negative_large_y+"&place_attachment_priority1="+place_attachment_priority1+"&place_attachment_priority2="+place_attachment_priority2+"&place_attachment_priority3="+place_attachment_priority3+"&place_attachment_priority4="+place_attachment_priority4+"&place_attachment_priority5="+place_attachment_priority5+"&nature_minimum="+nature_minimum+"&involvement_omgevingswet="+involvement_omgevingswet+"&involvement_participation="+involvement_participation+"&email="+email+"&send_result_to_user="+send_result_to_user+"&is_result_send="+is_result_send+"&current_datetime="+current_datetime,true);
-// 		xmlhttp.send();
-// 		window.open("Geonaire.html", "_self");
-// 		// return false;
-// 	} else {
-//        // Show question 10 again
-//        showQuestion10(questions, user);
-//     }
-// }
-
-// // function sendQuestionnaire(questions, user) {
-
-// // 	// Save the data from question 10 and add it to the user object
-// // 	saveDataQuestion10(questions, user);
-
-// // 	$("#popup").css("display", "block");
-// // 	$("#popup-header").html("Dank u voor uw deelname!");
-// // 	var sendQuestionnareForm = 1;
-// // 	$("#popup-main").html(sendQuestionnaireForm);
-
-// // 	// if (confirm("Heeft u de vragenlijst naar waarheid ingevuld? ") == true) {
-// // 	// 	// Create request and send to database
-// // 	// 	// return false;
-// // 	// } else {
-// //  //       // Show question 10 again
-// //  //       showQuestion10(questions, user);
-// //  //    }
-
-// //  	// Return the user
-// //  	return user;
-// // }
-
-//////////////////////////////
-// sendDataToDatabase(user) //
-//////////////////////////////
-
-// Function to send the data from the questionnaire to the database
-
-function sendDataToDatabase(questions, user) {
+function sendQuestionnaire(questions, user) {
 
 	// Save the data from question 10 and add it to the user object
-	saveDataQuestion11(questions, user);
-	// Add current time to user object
-	// Show a thank you to the user
-	// Add the data to the database
-	if (window.XMLHttpRequest) {
-		// code for IE7+, Firefox, Chrome, Opera, Safari
-		xmlhttp = new XMLHttpRequest();
-	} else { // code for IE6, IE5
-		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	}
-	// xmlhttp.onreadystatechange=function() {
-        // 		if (this.readyState==4 && this.status==200) {
-	//   		document.getElementById("txtHint").innerHTML=this.responseText;
-	// 	}
-	// }
-	age = user.age;
-	nationality = user.nationality;
-	zipcode = user.zipcode;
-	game_category_genre_action = 1;
-	game_category_genre_action_adventure = 1;
-	game_category_genre_adventure = 1;
-	game_category_genre_facebook = 1;
-	game_category_genre_mobilephone = 1;
-	game_category_genre_roleplaying = 1;
-	game_category_genre_seriousgame = 1;
-	game_category_genre_simulation = 1;
-	game_category_genre_strategy = 1;
-	game_category_genre_sport = 1;
-	game_category_story_fiction = 1;
-	game_category_story_nonfiction = 1;
-	game_category_computer_console = 1;
-	game_category_computer_handheld = 1;
-	game_category_computer_ipad = 1;
-	game_category_computer_mobilephone = 1;
-	game_category_computer_pcmac = 1;
-	game_category_view_2d = 1;
-	game_category_view_3d = 1;
-	game_category_view_firstperson = 1;
-	game_category_view_thirdperson = 1;
-	game_category_view_augmentedreality = 1;
-	game_category_view_virtualreality = 1;
-	game_time_hours = 5;
-	game_time_category = 'days';
-	living_environment_type = user.livingenvironmentproperties[1][0];
-	living_environment_size = 1235.34;
-	living_environment_area = 'POLYGON((13.215179443359373 52.588032137196755,13.42803955078125 52.592620721000365,13.454132080078125 52.46897854656702,13.347015380859375 52.45893824522763,13.215179443359373 52.588032137196755))';
-	living_environment_circlecenterlat = 0.123;
-	living_environment_circlecenterlon = 0.234;
-	living_environment_circlecenterradius = 2.1;
-            // alert(user.frictionpositivelargex);  //works
-	friction_positive_large_x = 1;
-            // alert(friction_positive_large_x);  //works
-	friction_positive_large_y = 1;
-	friction_positive_medium_x = 2;
-	friction_positive_medium_y = 2;
-	friction_positive_small_x = 3;
-	friction_positive_small_y = 3;
-	friction_negative_small_x = 100;
-	friction_negative_small_y = 100;
-	friction_negative_medium_x = 10;
-	friction_negative_medium_y = 10;
-	friction_negative_large_x = 1;
-	friction_negative_large_y = 1;
-	place_attachment_priority1 = 'Place identity';
-	place_attachment_priority2 = 'Friend bonding';
-	place_attachment_priority3 = 'Nature bonding';
-	place_attachment_priority4 = 'Place dependency';
-	place_attachment_priority5 = 'Family bonding';
-	nature_minimum = 'vegetable garden';
-	involvement_omgevingswet = 1;
-	involvement_participation = 1;
-	email = 'mikkie@gmail.com';
-	send_result_to_user = 1;
-	is_result_send = 1;
-        current_datetime = new Date().toISOString().slice(0, 19).replace('T', ' ');
-	xmlhttp.open("POST","insert_data_geonaire.php?age="+age+"&nationality="+nationality+"&zipcode="+zipcode+"&game_category_genre_action="+game_category_genre_action+"&game_category_genre_action_adventure="+game_category_genre_action_adventure+"&game_category_genre_adventure="+game_category_genre_adventure+"&game_category_genre_facebook="+game_category_genre_facebook+"&game_category_genre_mobilephone="+game_category_genre_mobilephone+"&game_category_genre_roleplaying="+game_category_genre_roleplaying+"&game_category_genre_seriousgame="+game_category_genre_seriousgame+"&game_category_genre_simulation="+game_category_genre_simulation+"&game_category_genre_sport="+game_category_genre_sport+"&game_category_genre_strategy="+game_category_genre_strategy+"&game_category_story_fiction="+game_category_story_fiction+"&game_category_story_nonfiction="+game_category_story_nonfiction+"&game_category_computer_console="+game_category_computer_console+"&game_category_computer_handheld="+game_category_computer_handheld+"&game_category_computer_ipad="+game_category_computer_ipad+"&game_category_computer_mobilephone="+game_category_computer_mobilephone+"&game_category_computer_pcmac="+game_category_computer_pcmac+"&game_category_view_2d="+game_category_view_2d+"&game_category_view_3d="+game_category_view_3d+"&game_category_view_firstperson="+game_category_view_firstperson+"&game_category_view_thirdperson="+game_category_view_thirdperson+"&game_category_view_augmentedreality="+game_category_view_augmentedreality+"&game_category_view_virtualreality="+game_category_view_virtualreality+"&game_time_hours="+game_time_hours+"&game_time_category="+game_time_category+"&living_environment_type="+living_environment_type+"&living_environment_size="+living_environment_size+"&living_environment_area="+living_environment_area+"&living_environment_circlecenterlat="+living_environment_circlecenterlat+"&living_environment_circlecenterlon="+living_environment_circlecenterlon+"&living_environment_circlecenterradius="+living_environment_circlecenterradius+"&friction_positive_large_x="+friction_positive_large_x+"&friction_positive_large_y="+friction_positive_large_y+"&friction_positive_medium_x="+friction_positive_medium_x+"&friction_positive_medium_y="+friction_positive_medium_y+"&friction_positive_small_x="+friction_positive_small_x+"&friction_positive_small_y="+friction_positive_small_y+"&friction_negative_small_x="+friction_negative_small_x+"&friction_negative_small_y="+friction_negative_small_y+"&friction_negative_medium_x="+friction_negative_medium_x+"&friction_negative_medium_y="+friction_negative_medium_y+"&friction_negative_large_x="+friction_negative_large_x+"&friction_negative_large_y="+friction_negative_large_y+"&place_attachment_priority1="+place_attachment_priority1+"&place_attachment_priority2="+place_attachment_priority2+"&place_attachment_priority3="+place_attachment_priority3+"&place_attachment_priority4="+place_attachment_priority4+"&place_attachment_priority5="+place_attachment_priority5+"&nature_minimum="+nature_minimum+"&involvement_omgevingswet="+involvement_omgevingswet+"&involvement_participation="+involvement_participation+"&email="+email+"&send_result_to_user="+send_result_to_user+"&is_result_send="+is_result_send+"&current_datetime="+current_datetime,true);
-	xmlhttp.send();
-	window.open("Geonaire.html", "_self");
-}
+	saveDataQuestion10(questions, user);
 
-/////////////////////////////////
-// dontSendQuestionnaire(user) //
-/////////////////////////////////
-
-function dontSendQuestionnaire(questions, user) {
-	$("#popup").css("display", "none");
-
-	// Return the user
-	return user;
+	if (confirm("Heeft u de vragenlijst naar waarheid ingevuld? ") == true) {
+		// Add current time to user object
+		// Show a thank you to the user
+		// Add the data to the database
+		if (window.XMLHttpRequest) {
+			// code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else { // code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		// xmlhttp.onreadystatechange=function() {
+	        // 		if (this.readyState==4 && this.status==200) {
+		//   		document.getElementById("txtHint").innerHTML=this.responseText;
+		// 	}
+		// }
+		age = user.age;
+		nationality = user.nationality;
+		zipcode = user.zipcode;
+		game_category_genre_action = 1;
+		game_category_genre_action_adventure = 1;
+		game_category_genre_adventure = 1;
+		game_category_genre_facebook = 1;
+		game_category_genre_mobilephone = 1;
+		game_category_genre_roleplaying = 1;
+		game_category_genre_seriousgame = 1;
+		game_category_genre_simulation = 1;
+		game_category_genre_strategy = 1;
+		game_category_genre_sport = 1;
+		game_category_story_fiction = 1;
+		game_category_story_nonfiction = 1;
+		game_category_computer_console = 1;
+		game_category_computer_handheld = 1;
+		game_category_computer_ipad = 1;
+		game_category_computer_mobilephone = 1;
+		game_category_computer_pcmac = 1;
+		game_category_view_2d = 1;
+		game_category_view_3d = 1;
+		game_category_view_firstperson = 1;
+		game_category_view_thirdperson = 1;
+		game_category_view_augmentedreality = 1;
+		game_category_view_virtualreality = 1;
+		game_time_hours = 5;
+		game_time_category = 'days';
+		living_environment_type = user.livingenvironmentproperties[1][0];
+		living_environment_size = 1235.34;
+		living_environment_area = 'POLYGON((13.215179443359373 52.588032137196755,13.42803955078125 52.592620721000365,13.454132080078125 52.46897854656702,13.347015380859375 52.45893824522763,13.215179443359373 52.588032137196755))';
+		living_environment_circlecenterlat = 0.123;
+		living_environment_circlecenterlon = 0.234;
+		living_environment_circlecenterradius = 2.1;
+                // alert(user.frictionpositivelargex);  //works
+		friction_positive_large_x = 1;
+                // alert(friction_positive_large_x);  //works
+		friction_positive_large_y = user.frictionpositivelargey;
+                // alert(user.frictionpositivelargey); // works
+		friction_positive_medium_x = 2;
+                // alert(user.frictionpositivemediumx);  // works
+		friction_positive_medium_y = 2;
+                // alert(user.frictionpositivemediumy); // works
+		friction_positive_small_x = 100;
+		friction_positive_small_y = 100;
+		friction_negative_small_x = 100;
+		friction_negative_small_y = 100;
+		friction_negative_medium_x = 10;
+		friction_negative_medium_y = 10;
+		friction_negative_large_x = 1;
+		friction_negative_large_y = user.frictionnegativelargey;
+		place_attachment_priority1 = 'Place identity';
+		place_attachment_priority2 = 'Friend bonding';
+		place_attachment_priority3 = 'Nature bonding';
+		place_attachment_priority4 = 'Place dependency';
+		place_attachment_priority5 = 'Family bonding';
+		nature_minimum = 'vegetable garden';
+		involvement_omgevingswet = 1;
+		involvement_participation = 1;
+		email = 'mikkie@gmail.com';
+		send_result_to_user = 1;
+		is_result_send = 1;
+	        current_datetime = new Date().toISOString().slice(0, 19).replace('T', ' ');
+		xmlhttp.open("POST","insert_data_geonaire.php?age="+age+"&nationality="+nationality+"&zipcode="+zipcode+"&game_category_genre_action="+game_category_genre_action+"&game_category_genre_action_adventure="+game_category_genre_action_adventure+"&game_category_genre_adventure="+game_category_genre_adventure+"&game_category_genre_facebook="+game_category_genre_facebook+"&game_category_genre_mobilephone="+game_category_genre_mobilephone+"&game_category_genre_roleplaying="+game_category_genre_roleplaying+"&game_category_genre_seriousgame="+game_category_genre_seriousgame+"&game_category_genre_simulation="+game_category_genre_simulation+"&game_category_genre_sport="+game_category_genre_sport+"&game_category_genre_strategy="+game_category_genre_strategy+"&game_category_story_fiction="+game_category_story_fiction+"&game_category_story_nonfiction="+game_category_story_nonfiction+"&game_category_computer_console="+game_category_computer_console+"&game_category_computer_handheld="+game_category_computer_handheld+"&game_category_computer_ipad="+game_category_computer_ipad+"&game_category_computer_mobilephone="+game_category_computer_mobilephone+"&game_category_computer_pcmac="+game_category_computer_pcmac+"&game_category_view_2d="+game_category_view_2d+"&game_category_view_3d="+game_category_view_3d+"&game_category_view_firstperson="+game_category_view_firstperson+"&game_category_view_thirdperson="+game_category_view_thirdperson+"&game_category_view_augmentedreality="+game_category_view_augmentedreality+"&game_category_view_virtualreality="+game_category_view_virtualreality+"&game_time_hours="+game_time_hours+"&game_time_category="+game_time_category+"&living_environment_type="+living_environment_type+"&living_environment_size="+living_environment_size+"&living_environment_area="+living_environment_area+"&living_environment_circlecenterlat="+living_environment_circlecenterlat+"&living_environment_circlecenterlon="+living_environment_circlecenterlon+"&living_environment_circlecenterradius="+living_environment_circlecenterradius+"&friction_positive_large_x="+friction_positive_large_x+"&friction_positive_large_y="+friction_positive_large_y+"&friction_positive_medium_x="+friction_positive_medium_x+"&friction_positive_medium_y="+friction_positive_medium_y+"&friction_positive_small_x="+friction_positive_small_x+"&friction_positive_small_y="+friction_positive_small_y+"&friction_negative_small_x="+friction_negative_small_x+"&friction_negative_small_y="+friction_negative_small_y+"&friction_negative_medium_x="+friction_negative_medium_x+"&friction_negative_medium_y="+friction_negative_medium_y+"&friction_negative_large_x="+friction_negative_large_x+"&friction_negative_large_y="+friction_negative_large_y+"&place_attachment_priority1="+place_attachment_priority1+"&place_attachment_priority2="+place_attachment_priority2+"&place_attachment_priority3="+place_attachment_priority3+"&place_attachment_priority4="+place_attachment_priority4+"&place_attachment_priority5="+place_attachment_priority5+"&nature_minimum="+nature_minimum+"&involvement_omgevingswet="+involvement_omgevingswet+"&involvement_participation="+involvement_participation+"&email="+email+"&send_result_to_user="+send_result_to_user+"&is_result_send="+is_result_send+"&current_datetime="+current_datetime,true);
+		xmlhttp.send();
+		window.open("Geonaire.html", "_self");
+		// return false;
+	} else {
+       // Show question 10 again
+       showQuestion10(questions, user);
+    }
 }
 
 ///////////////////
@@ -2727,65 +2221,149 @@ function drag(ev) {
 function dropFriction(ev) {
 	ev.preventDefault();
 	var data = ev.dataTransfer.getData("text");
-    x = 0;
-    y = 0;
-    if (ev.target.id == "td1") {
-       x = -100000;
-       y = 100000;
-    } else if (ev.target.id == "td2") {
-        x = -10000;
-        y = 100000;
-    } else if (ev.target.id == "td3") {
-        x = -1000;
-        y = 100000;
-    } else if (ev.target.id == "td4") {
-        x = -100;
-        y = 100000;
-    } else if (ev.target.id == "td5") {
-        x = -10;
-        y = 100000;
-    } else if (ev.target.id == "td6") {
-       x = 10;
-       y = 100000;
-   } else if (ev.target.id == "td7") {
-        x = 100;
-        y = 100000;
-    } else if (ev.target.id == "td8") {
-        x = 1000;
-        y = 100000;
-    } else if (ev.target.id == "td9") {
-        x = 10000;
-        y = 100000;
-    } else if (ev.target.id == "td10") {
-        x = 100000;
-        y = 100000;
-    }
-	if (data == "friction-positive-large") {
-		user.frictionpositivelargex = x;
-        alert(user.frictionpositivelargex);
-		user.frictionpositivelargey = y;
-	} else if (data == "friction-positive-medium") {
-		user.frictionpositivemediumx = x;
-		user.frictionpositivemediumy = y;
-	} else if (data == "friction-positive-small") {
-	} else if (data == "friction-negative-small") {
-	} else if (data == "friction-negative-medium") {
-	} else if (data == "friction-negative-large") {
+	switch(ev.target.id) {
+		case("td1"):
+			x = -100000;
+			y = 100000;
+		case("td2"):
+			x = -10000;
+			y = 100000;
+		case("td3"):
+			x = -1000;
+			y = 100000;
+		case("td4"):
+			x = -100;
+			y = 100000;
+		case("td5"):
+			x = -10;
+			y = 100000;
+		case("td6"):
+			x = 10;
+			y = 100000;
+		case("td7"):
+			x = 100;
+			y = 100000;
+		case("td8"):
+			x = 1000;
+			y = 100000;
+		case("td9"):
+			x = 10000;
+			y = 100000;
+		case("td10"):
+			x = 100000;
+			y = 100000;
+		case("td11"):
+		case("td12"):
+		case("td13"):
+		case("td14"):
+		case("td15"):
+		case("td16"):
+		case("td17"):
+		case("td18"):
+		case("td19"):
+		case("td20"):
+		case("td21"):
+		case("td22"):
+		case("td23"):
+		case("td24"):
+		case("td25"):
+		case("td26"):
+		case("td27"):
+		case("td28"):
+		case("td29"):
+		case("td30"):
+		case("td31"):
+		case("td32"):
+		case("td33"):
+		case("td34"):
+		case("td35"):
+		case("td36"):
+		case("td37"):
+		case("td38"):
+		case("td39"):
+		case("td40"):
+		case("td41"):
+		case("td42"):
+		case("td43"):
+		case("td44"):
+		case("td45"):
+		case("td46"):
+		case("td47"):
+		case("td48"):
+		case("td49"):
+		case("td50"):
+		case("td51"):
+		case("td52"):
+		case("td53"):
+		case("td54"):
+		case("td55"):
+		case("td56"):
+		case("td57"):
+		case("td58"):
+		case("td59"):
+		case("td60"):
+		case("td61"):
+		case("td62"):
+		case("td63"):
+		case("td64"):
+		case("td65"):
+		case("td66"):
+		case("td67"):
+		case("td68"):
+		case("td69"):
+		case("td70"):
+		case("td71"):
+		case("td72"):
+		case("td73"):
+		case("td74"):
+		case("td75"):
+		case("td76"):
+		case("td77"):
+		case("td78"):
+		case("td79"):
+		case("td80"):
+		case("td81"):
+		case("td82"):
+		case("td83"):
+		case("td84"):
+		case("td85"):
+		case("td86"):
+		case("td87"):
+		case("td88"):
+		case("td89"):
+		case("td90"):
+		case("td91"):
+		case("td92"):
+		case("td93"):
+		case("td94"):
+		case("td95"):
+		case("td96"):
+		case("td97"):
+		case("td98"):
+		case("td99"):
+		case("td100"):
+			x = 100000;
+			y = 100000;
+			if (data == "friction-positive-large") {
+				user.frictionpositivelarge = ev.target.id;
+				user.frictionpositivelargex = x;
+				user.frictionpositivelargey = y;
+			} else if (data == "friction-positive-medium") {
+				user.frictionpositivemedium = ev.target.id;
+			} else if (data == "friction-positive-small") {
+				user.frictionpositivesmall = ev.target.id;
+			} else if (data == "friction-negative-small") {
+				user.frictionnegativesmall = ev.target.id;
+			} else if (data == "friction-negative-medium") {
+				user.frictionnegativemedium = ev.target.id;
+			}  else if (data == "friction-negative-large") {
+				user.frictionnegativelarge = ev.target.id;
+				user.frictionnegativelargex = x;
+				user.frictionnegativelargey = y;
+			}
+			ev.target.appendChild(document.getElementById(data));
+			break;
 	}
-	if (data == "friction-positive-large") {
-		user.frictionpositivelarge = ev.target.id;
-	} else if (data == "friction-positive-medium") {
-		user.frictionpositivemedium = ev.target.id;
-	} else if (data == "friction-positive-small") {
-		 user.frictionpositivesmall = ev.target.id;
-	} else if (data == "friction-negative-small") {
-		user.frictionnegativesmall = ev.target.id;
-	} else if (data == "friction-negative-medium") {
-		user.frictionnegativemedium = ev.target.id;
-	}  else if (data == "friction-negative-large") {
-		user.frictionnegativelarge = ev.target.id;
-	}
-	ev.target.appendChild(document.getElementById(data));
 }
 
 ///////////////////////////

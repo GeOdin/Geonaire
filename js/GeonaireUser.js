@@ -29,7 +29,7 @@ var user;
 function createUser() {
 	// Set the variables
 	var current_question = 0;
-	var age = "";
+	var age = 0;
 	var nationality = "";
 	var zipcode = "";  // 6708PB
 	var zipcode_city = "";
@@ -46,21 +46,8 @@ function createUser() {
 		["sports", "no"],
 		["facebook", "no"],
 		["mobilegame", "no"],
-		["seriousgame", "no"]
-	];
-	var user_game_stories = [
-		["gamestories", "yes_or_no"],
-		["fiction", "no"],
-		["nonfiction", "no"]
-	];
-	var user_game_perspectives = [
-		["gameperspectives", "yes_or_no"],
-		["2d", "no"],
-		["3d", "no"],
-		["firstperson", "no"],
-		["thirdperson", "no"],
 		["augmentedreality", "no"],
-		["virtualreality", "no"]
+		["seriousgame", "no"]
 	];
 	var user_game_computers = [
 		["gamecomputer", "yes_or_no"],
@@ -79,7 +66,7 @@ function createUser() {
 		["type", "lat", "lon", "rad", "north", "south", "east", "west"]
 	];
 	var living_environment = "";
-    var living_environment_wkt = "";
+        var living_environment_wkt = "";
 	var friction_positive_large = "";
 	var friction_positive_large_x = 10;
 	var friction_positive_large_y = 10;
@@ -106,9 +93,6 @@ function createUser() {
 	var minimum_nature = "";
 	var involvement_bestemmingsplan = "";
 	var involvement_participation = "";
-	var send_truth = "no";
-	var email = "";
-	var send_email = "no";
 
 	// Add the current question to the user object
 	this.currentQuestion = current_question;
@@ -127,15 +111,13 @@ function createUser() {
 	
 	// Add the game categories of the user
 	this.gamecategories = user_game_categories;
-	// Add the game story of the user
-	this.gamestories = user_game_stories;
-	// Add the game perspective of the user
-	this.gameperspectives = user_game_perspectives;
+	
 	// Add the game computers of the user
 	this.gamecomputers = user_game_computers;
 	
 	// Add the game time hours of the user
 	this.gametimehours = gametime_hours;
+	
 	// Add the game time category of the user
 	this.gametimecategories = gametime_categories;
 
@@ -164,9 +146,9 @@ function createUser() {
 	this.frictionnegativesmall = friction_negative_small;
 	this.frictionnegativesmallx = friction_negative_small_x;
 	this.frictionnegativesmally = friction_negative_small_y;
-	this.frictionnegativemedium = friction_positive_medium;
-	this.frictionnegativemediumx = friction_positive_medium_x;
-	this.frictionnegativemediumy = friction_positive_medium_y;
+	this.frictionnegativemedium = friction_negative_medium;
+	this.frictionnegativemediumx = friction_negative_medium_x;
+	this.frictionnegativemediumy = friction_negative_medium_y;
 	this.frictionnegativelarge = friction_negative_large;
 	this.frictionnegativelargex = friction_negative_large_x;
 	this.frictionnegativelargey = friction_negative_large_y;
@@ -184,9 +166,4 @@ function createUser() {
 	// Add the involvement of the user
 	this.involvement_bestemmingsplan = involvement_bestemmingsplan;
 	this.involvement_participation = involvement_participation;
-
-    // Add the email of the user, including if the user wants an email about the results and whether he has said the truth in the questionnaire
-    this.send_truth = send_truth;
-    this.email = email;
-    this.send_email = send_email;
 }

@@ -36,7 +36,7 @@
 	$living_environment_circlecenterradius = floatval($_GET['living_environment_circlecenterradius']);
 	$friction_positive_large_x = intval($_GET['friction_positive_large_x']);
 	$friction_positive_large_y = intval($_GET['friction_positive_large_y']);
-	$friction_positive_medium_x = intval($_GET['friction_positive_medium_x']);
+	$friction_positive_medium_x = (int)$_GET['friction_positive_medium_x'];
 	$friction_positive_medium_y = intval($_GET['friction_positive_medium_y']);
 	$friction_positive_small_x = intval($_GET['friction_positive_small_x']);
 	$friction_positive_small_y = intval($_GET['friction_positive_small_y']);
@@ -79,13 +79,4 @@
 	mysqli_select_db($con_test,'geonaire');
 	$query = mysqli_query($con_test, $sql);
 	mysqli_close($con_test);
-
-	// Put the data in the extra back-up MySQL database (geonaire table in geonaire2 database)
-	$con_geonaire = mysqli_connect('sql105.website.tk','wetk_19226145','W3tFMe','wetk_19226145_geonaire2');
-	if (!$con_geonaire) {
-	    die('Could not connect: ' . mysqli_error($con_geonaire));
-	}
-	mysqli_select_db($con_geonaire,'geonaire');
-	$query = mysqli_query($con_geonaire, $sql);
-	mysqli_close($con_geonaire);
 ?>

@@ -42,12 +42,14 @@ input[type=submit]{
 	box-shadow: 0 1px #666;
 	cursor: pointer;
 }
+
 input[type=submit]:hover{
 	background-color: #9d9d9d;
 	color: white;
 	text-shadow: 1px 1px black;
 	box-shadow: 0 1px #666;
 }
+
 input[type=submit]:active{
 	background-color: #686868;
 	color: white;
@@ -258,10 +260,6 @@ ul {
 }
 
 #tableofcontents-question10{
-	display: none;
-}
-
-#tableofcontents-question11{
 	display: none;
 }
 
@@ -734,7 +732,6 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
   background: #2196F3;
 }
-
 #popup{
 	display: none;
 	left: 25%;
