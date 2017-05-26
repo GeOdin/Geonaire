@@ -29,7 +29,7 @@ var user;
 function createUser() {
 	// Set the variables
 	var current_question = 0;
-	var age = 0;
+	var age = "";
 	var nationality = "";
 	var zipcode = "";  // 6708PB
 	var zipcode_city = "";
@@ -48,8 +48,13 @@ function createUser() {
 		["mobilegame", "no"],
 		["seriousgame", "no"]
 	];
-	var user_game_perspective = [
-		["gameperspective", "yes_or_no"],
+	var user_game_stories = [
+		["gamestories", "yes_or_no"],
+		["fiction", "no"],
+		["nonfiction", "no"]
+	];
+	var user_game_perspectives = [
+		["gameperspectives", "yes_or_no"],
 		["2d", "no"],
 		["3d", "no"],
 		["firstperson", "no"],
@@ -65,11 +70,6 @@ function createUser() {
 		["mobilephone", "no"],
 		["ipad", "no"]
 	];
-	var user_game_story = [
-		["gamestory", "yes_or_no"],
-		["fiction", "no"],
-		["nonfiction", "no"]
-	];
 	var gametime_hours = 0;
 	var gametime_categories = "hours";
 	var map = "map";
@@ -79,13 +79,25 @@ function createUser() {
 		["type", "lat", "lon", "rad", "north", "south", "east", "west"]
 	];
 	var living_environment = "";
-        var living_environment_wkt = "";
+    var living_environment_wkt = "";
 	var friction_positive_large = "";
+	var friction_positive_large_x = 10;
+	var friction_positive_large_y = 10;
 	var friction_positive_medium = "";
+	var friction_positive_medium_x = 10;
+	var friction_positive_medium_y = 10;
 	var friction_positive_small = "";
+	var friction_positive_small_x = 10;
+	var friction_positive_small_y = 10;
 	var friction_negative_small = "";
+	var friction_negative_small_x = 10;
+	var friction_negative_small_y = 10;
 	var friction_negative_medium = "";
+	var friction_negative_medium_x = 10;
+	var friction_negative_medium_y = 10;
 	var friction_negative_large = "";
+	var friction_negative_large_x = 10;
+	var friction_negative_large_y = 10;
 	var priority_1 = "";
 	var priority_2 = "";
 	var priority_3 = "";
@@ -94,6 +106,9 @@ function createUser() {
 	var minimum_nature = "";
 	var involvement_bestemmingsplan = "";
 	var involvement_participation = "";
+	var send_truth = "no";
+	var email = "";
+	var send_email = "no";
 
 	// Add the current question to the user object
 	this.currentQuestion = current_question;
@@ -112,16 +127,15 @@ function createUser() {
 	
 	// Add the game categories of the user
 	this.gamecategories = user_game_categories;
+	// Add the game story of the user
+	this.gamestories = user_game_stories;
 	// Add the game perspective of the user
-	this.gameperspective = user_game_perspective;
+	this.gameperspectives = user_game_perspectives;
 	// Add the game computers of the user
 	this.gamecomputers = user_game_computers;
-	// Add the game story of the user
-	this.gamestory = user_game_story;
 	
 	// Add the game time hours of the user
 	this.gametimehours = gametime_hours;
-	
 	// Add the game time category of the user
 	this.gametimecategories = gametime_categories;
 
@@ -139,11 +153,23 @@ function createUser() {
 	
 	// Add the friction of the user
 	this.frictionpositivelarge = friction_positive_large;
+	this.frictionpositivelargex = friction_positive_large_x;
+	this.frictionpositivelargey = friction_positive_large_y;
 	this.frictionpositivemedium = friction_positive_medium;
+	this.frictionpositivemediumx = friction_positive_medium_x;
+	this.frictionpositivemediumy = friction_positive_medium_y;
 	this.frictionpositivesmall = friction_positive_small;
+	this.frictionpositivesmallx = friction_positive_small_x;
+	this.frictionpositivesmally = friction_positive_small_y;
 	this.frictionnegativesmall = friction_negative_small;
+	this.frictionnegativesmallx = friction_negative_small_x;
+	this.frictionnegativesmally = friction_negative_small_y;
 	this.frictionnegativemedium = friction_positive_medium;
+	this.frictionnegativemediumx = friction_positive_medium_x;
+	this.frictionnegativemediumy = friction_positive_medium_y;
 	this.frictionnegativelarge = friction_negative_large;
+	this.frictionnegativelargex = friction_negative_large_x;
+	this.frictionnegativelargey = friction_negative_large_y;
 
 	// Add the priorities of the user
 	this.priority1 = priority_1;
@@ -158,4 +184,9 @@ function createUser() {
 	// Add the involvement of the user
 	this.involvement_bestemmingsplan = involvement_bestemmingsplan;
 	this.involvement_participation = involvement_participation;
+
+    // Add the email of the user, including if the user wants an email about the results and whether he has said the truth in the questionnaire
+    this.send_truth = send_truth;
+    this.email = email;
+    this.send_email = send_email;
 }
